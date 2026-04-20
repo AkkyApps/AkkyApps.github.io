@@ -151,15 +151,15 @@
       height: 60px;
       border-radius: 14px;
       flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      overflow: hidden;
     }
-    .icon-ptimer   { background: linear-gradient(145deg, #ff6b6b, #ff8e53); }
-    .icon-prompter { background: linear-gradient(145deg, #5c67f2, #7b5ea7); }
-    .icon-coincase { background: linear-gradient(145deg, #f7971e, #ffd200); }
+    .app-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     .app-meta { flex: 1; min-width: 0; }
     .app-name {
@@ -301,7 +301,7 @@
     <!-- PTimer -->
     <div class="app-card">
       <div class="app-header">
-        <div class="app-icon icon-ptimer">⏱</div>
+        <div class="app-icon"><img src="icons/ptimer.png" alt="PTimer"></div>
         <div class="app-meta">
           <div class="app-name">PTimer</div>
           <div class="app-category">Productivity · Timer</div>
@@ -320,7 +320,7 @@
     <!-- Prompter -->
     <div class="app-card">
       <div class="app-header">
-        <div class="app-icon icon-prompter">📝</div>
+        <div class="app-icon"><img src="icons/prompter.png" alt="Prompter"></div>
         <div class="app-meta">
           <div class="app-name">Prompter</div>
           <div class="app-category">Productivity · Teleprompter</div>
@@ -339,7 +339,7 @@
     <!-- CoinCase -->
     <div class="app-card">
       <div class="app-header">
-        <div class="app-icon icon-coincase">₿</div>
+        <div class="app-icon"><img src="icons/coincase.png" alt="CoinCase"></div>
         <div class="app-meta">
           <div class="app-name">CoinCase</div>
           <div class="app-category">Finance · Crypto</div>
