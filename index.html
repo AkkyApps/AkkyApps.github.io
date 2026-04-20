@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AkkyApps</title>
+  <meta name="description" content="AkkyApps — iOS app developer. Simple, useful apps for everyday life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:        #007AFF;
+      --blue-light:  #e8f2ff;
+      --blue-dark:   #0055CC;
+      --text:        #1C1C1E;
+      --text-2:      #3A3A3C;
+      --text-3:      #6e6e73;
+      --sep:         #e5e5ea;
+      --bg:          #ffffff;
+      --bg-2:        #f5f5f7;
+      --radius:      18px;
+      --radius-sm:   12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      line-height: 1.5;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--sep);
+    }
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--blue); }
+    .nav-link {
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .nav-link:hover { opacity: 0.7; }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 80px 24px 64px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--blue);
+    }
+    .hero p {
+      font-size: clamp(16px, 2vw, 19px);
+      color: var(--text-3);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.65;
+      font-weight: 400;
+    }
+
+    /* ── APPS ── */
+    .apps-section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 16px 24px 80px;
+    }
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 24px;
+    }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .app-card {
+      background: var(--bg-2);
+      border-radius: var(--radius);
+      padding: 28px 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .app-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    .app-header { display: flex; align-items: center; gap: 16px; }
+
+    .app-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+    .icon-ptimer   { background: linear-gradient(145deg, #ff6b6b, #ff8e53); }
+    .icon-prompter { background: linear-gradient(145deg, #5c67f2, #7b5ea7); }
+    .icon-coincase { background: linear-gradient(145deg, #f7971e, #ffd200); }
+
+    .app-meta { flex: 1; min-width: 0; }
+    .app-name {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: var(--text);
+    }
+    .app-category {
+      font-size: 13px;
+      color: var(--text-3);
+      margin-top: 2px;
+    }
+
+    .app-desc {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .app-store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--text);
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 18px;
+      border-radius: var(--radius-sm);
+      width: fit-content;
+      transition: opacity 0.15s;
+      letter-spacing: -0.1px;
+    }
+    .app-store-btn:hover { opacity: 0.78; }
+    .app-store-btn svg { flex-shrink: 0; }
+
+    /* ── ABOUT ── */
+    .about-section {
+      background: var(--bg-2);
+      border-top: 1px solid var(--sep);
+      border-bottom: 1px solid var(--sep);
+    }
+    .about-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+    .about-avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue), #5ac8fa);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -1px;
+      margin-bottom: 4px;
+    }
+    .about-inner h2 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .about-inner p {
+      font-size: 16px;
+      color: var(--text-3);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .footer-copy {
+      font-size: 13px;
+      color: var(--text-3);
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+    .footer-links a {
+      font-size: 13px;
+      color: var(--blue);
+      text-decoration: none;
+    }
+    .footer-links a:hover { opacity: 0.7; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 480px) {
+      .hero { padding: 56px 20px 48px; }
+      .apps-section { padding: 8px 20px 60px; }
+      .apps-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#"><span>Akky</span>Apps</a>
+    <a class="nav-link" href="#apps">Apps</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">iOS Developer</div>
+  <h1>Simple apps,<br><em>crafted with care.</em></h1>
+  <p>AkkyApps は、日常をちょっとだけ便利にする iOS アプリを個人で開発しています。</p>
+</section>
+
+<!-- APPS -->
+<section class="apps-section" id="apps">
+  <div class="section-label">Apps</div>
+  <div class="apps-grid">
+
+    <!-- PTimer -->
+    <div class="app-card">
+      <div class="app-header">
+        <div class="app-icon icon-ptimer">⏱</div>
+        <div class="app-meta">
+          <div class="app-name">PTimer</div>
+          <div class="app-category">Productivity · Timer</div>
+        </div>
+      </div>
+      <p class="app-desc">シンプルで使いやすいタイマーアプリ。作業・料理・運動など、あらゆるシーンで活躍します。</p>
+      <a class="app-store-btn" href="#" aria-label="Download PTimer on the App Store">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/>
+          <path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/>
+        </svg>
+        App Store
+      </a>
+    </div>
+
+    <!-- Prompter -->
+    <div class="app-card">
+      <div class="app-header">
+        <div class="app-icon icon-prompter">📝</div>
+        <div class="app-meta">
+          <div class="app-name">Prompter</div>
+          <div class="app-category">Productivity · Teleprompter</div>
+        </div>
+      </div>
+      <p class="app-desc">スピーチ・動画撮影・プレゼンに。テキストをスムーズにスクロールするプロンプターアプリ。</p>
+      <a class="app-store-btn" href="#" aria-label="Download Prompter on the App Store">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/>
+          <path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/>
+        </svg>
+        App Store
+      </a>
+    </div>
+
+    <!-- CoinCase -->
+    <div class="app-card">
+      <div class="app-header">
+        <div class="app-icon icon-coincase">₿</div>
+        <div class="app-meta">
+          <div class="app-name">CoinCase</div>
+          <div class="app-category">Finance · Crypto</div>
+        </div>
+      </div>
+      <p class="app-desc">暗号資産のポートフォリオをシンプルに管理。主要コインの価格をリアルタイムで確認できます。</p>
+      <a class="app-store-btn" href="#" aria-label="Download CoinCase on the App Store">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/>
+          <path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/>
+        </svg>
+        App Store
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section">
+  <div class="about-inner">
+    <div class="about-avatar">A</div>
+    <h2>AkkyApps</h2>
+    <p>「使っていて気持ちいい」アプリを目指して、個人で iOS アプリを開発しています。シンプルさと使いやすさを大切に。</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-copy">© 2026 AkkyApps. All rights reserved.</span>
+  <nav class="footer-links">
+    <a href="https://akkyapps.github.io/akkyapps-legal/privacy-policy" target="_blank" rel="noopener">プライバシーポリシー</a>
+  </nav>
+</footer>
+
+</body>
+</html>
