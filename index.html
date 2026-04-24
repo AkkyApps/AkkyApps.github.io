@@ -62,6 +62,11 @@
       text-decoration: none;
     }
     .nav-logo span { color: var(--blue); }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
     .nav-link {
       font-size: 15px;
       font-weight: 400;
@@ -110,7 +115,7 @@
       font-weight: 400;
     }
 
-    /* ── APPS ── */
+    /* ── APPS / TOOLS ── */
     .apps-section {
       max-width: 960px;
       margin: 0 auto;
@@ -197,6 +202,52 @@
       letter-spacing: -0.1px;
     }
     .app-store-btn:hover { opacity: 0.78; }
+    .open-tool-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: transparent;
+      color: var(--blue);
+      border: 1.5px solid var(--blue);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 9px 18px;
+      border-radius: var(--radius-sm);
+      width: fit-content;
+      transition: background 0.15s, color 0.15s;
+      letter-spacing: -0.1px;
+    }
+    .open-tool-btn:hover {
+      background: var(--blue);
+      color: #fff;
+    }
+    .tool-features {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+    .tool-features li {
+      font-size: 13px;
+      color: var(--text-3);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tool-features li::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex-shrink: 0;
+      opacity: 0.7;
+    }
+    .icon-tool { background: linear-gradient(145deg, #636366, #48484a); }
     .app-store-btn svg { flex-shrink: 0; }
     .app-store-btn--disabled {
       background: var(--text-3);
@@ -320,7 +371,10 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="#"><span>Akky</span>Apps</a>
-    <a class="nav-link" href="#apps">Apps</a>
+    <div class="nav-links">
+      <a class="nav-link" href="#apps">Apps</a>
+      <a class="nav-link" href="#tools">Tools</a>
+    </div>
   </div>
 </nav>
 
@@ -388,6 +442,34 @@
           App Store
         </a>
       </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="apps-section" id="tools">
+  <div class="section-label">Tools</div>
+  <div class="apps-grid">
+
+    <!-- Screenshot Resizer -->
+    <div class="app-card">
+      <div class="app-header">
+        <div class="app-icon icon-tool" style="display:flex;align-items:center;justify-content:center;font-size:28px;">✂️</div>
+        <div class="app-meta">
+          <div class="app-name">Screenshot Resizer</div>
+          <div class="app-category">Web Tool · Free</div>
+        </div>
+      </div>
+      <p class="app-desc">App Store Connect にスクショのサイズ違いで弾かれるのがつらかったので作りました。ブラウザ上でそのままトリミングして PNG 書き出しできます。</p>
+      <ul class="tool-features">
+        <li>iPhone / iPad / Apple Watch のプリセット入り</li>
+        <li>ドラッグ&amp;ドロップ対応</li>
+        <li>画像はローカル処理で外に送られません</li>
+      </ul>
+      <a class="open-tool-btn" href="https://akkyapps.github.io/app-store-screenshot-resizer/" target="_blank" rel="noopener" aria-label="Open Screenshot Resizer">
+        Open Tool →
+      </a>
     </div>
 
   </div>
