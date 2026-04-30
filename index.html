@@ -165,6 +165,66 @@
       object-fit: cover;
       display: block;
     }
+    .app-icon-pair {
+      position: relative;
+      width: 112px;
+      height: 74px;
+      flex-shrink: 0;
+      perspective: 420px;
+    }
+    .mode-icon {
+      position: absolute;
+      top: 8px;
+      left: 27px;
+      width: 58px;
+      height: 58px;
+      border-radius: 13px;
+      object-fit: cover;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.16);
+      transition: transform 0.34s cubic-bezier(.2,.75,.18,1), box-shadow 0.34s ease;
+      will-change: transform;
+    }
+    .mode-icon--light {
+      z-index: 3;
+      transform: translate(-12px, 5px) rotate(-7deg);
+      box-shadow: 0 12px 22px rgba(29,184,104,0.12);
+    }
+    .mode-icon--dark {
+      z-index: 2;
+      transform: translate(14px, -5px) rotate(8deg) scale(0.96);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+    }
+    .app-card:hover .mode-icon,
+    .app-card:focus-within .mode-icon {
+      box-shadow: 0 10px 24px rgba(0,0,0,0.14);
+    }
+    .app-card:hover .mode-icon--light,
+    .app-card:focus-within .mode-icon--light {
+      transform: translate(-28px, 0) rotate(0deg) scale(0.84);
+    }
+    .app-card:hover .mode-icon--dark,
+    .app-card:focus-within .mode-icon--dark {
+      transform: translate(28px, 0) rotate(0deg) scale(0.84);
+    }
+    .app-icon--silhouette {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(145deg, #f8faf7, #e5eee8);
+      border: 1px solid rgba(29,184,104,0.18);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .app-icon--silhouette svg {
+      width: 38px;
+      height: 38px;
+      color: var(--blue);
+      opacity: 0.62;
+      stroke-width: 1.9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke: currentColor;
+      fill: none;
+    }
 
     .app-meta { flex: 1; min-width: 0; }
     .app-name {
@@ -184,6 +244,9 @@
       color: var(--text-2);
       line-height: 1.6;
       flex: 1;
+    }
+    .app-card--coming .app-desc {
+      color: var(--text-3);
     }
 
     .app-store-btn {
@@ -249,10 +312,12 @@
     }
     .icon-tool { background: linear-gradient(145deg, #636366, #48484a); }
     .app-store-btn svg { flex-shrink: 0; }
-    .app-store-btn--disabled {
-      background: var(--text-3);
-      pointer-events: none;
-      cursor: default;
+
+    @media (prefers-reduced-motion: reduce) {
+      .app-card,
+      .mode-icon {
+        transition: none;
+      }
     }
 
     /* ── COMING SOON ── */
@@ -393,7 +458,10 @@
     <!-- Prompter -->
     <div class="app-card">
       <div class="app-header">
-        <div class="app-icon"><img src="icons/prompter.png" alt="Prompter"></div>
+        <div class="app-icon-pair" aria-label="Prompter app icon, light and dark modes">
+          <img class="mode-icon mode-icon--light" src="icons/prompter-light.png" alt="">
+          <img class="mode-icon mode-icon--dark" src="icons/prompter-dark.png" alt="">
+        </div>
         <div class="app-meta">
           <div class="app-name">Prompter</div>
           <div class="app-category">Productivity · Teleprompter</div>
@@ -409,7 +477,10 @@
     <!-- PTimer -->
     <div class="app-card">
       <div class="app-header">
-        <div class="app-icon"><img src="icons/ptimer.png" alt="PTimer"></div>
+        <div class="app-icon-pair" aria-label="PTimer app icon, light and dark modes">
+          <img class="mode-icon mode-icon--light" src="icons/ptimer-light.png" alt="">
+          <img class="mode-icon mode-icon--dark" src="icons/ptimer-dark.png" alt="">
+        </div>
         <div class="app-meta">
           <div class="app-name">PTimer</div>
           <div class="app-category">Productivity · Pomodoro Timer</div>
@@ -424,22 +495,66 @@
       </div>
     </div>
 
-    <!-- CoinCase -->
-    <div class="app-card">
+    <!-- Phonoria -->
+    <div class="app-card app-card--coming">
       <div class="app-header">
-        <div class="app-icon"><img src="icons/coincase.png" alt="CoinCase"></div>
+        <div class="app-icon-pair" aria-label="Phonoria app icon, light and dark modes">
+          <img class="mode-icon mode-icon--light" src="icons/phonoria-light.png" alt="">
+          <img class="mode-icon mode-icon--dark" src="icons/phonoria-dark.png" alt="">
+        </div>
         <div class="app-meta">
-          <div class="app-name">CoinCase</div>
-          <div class="app-category">Finance · Crypto Wallet</div>
+          <div class="app-name">Phonoria</div>
+          <div class="app-category">Music · Local Player</div>
         </div>
       </div>
-      <p class="app-desc">JPYC（日本円ステーブルコイン）に対応した、シンプルな暗号資産ウォレット。送受金・残高確認をすっきりとした UI で。</p>
+      <p class="app-desc">iCloud Drive 上の音源を読み込み、自分のライブラリとして楽しむ音楽プレーヤー。</p>
       <div class="app-footer">
         <span class="coming-soon-badge">Coming Soon</span>
-        <a class="app-store-btn app-store-btn--disabled" href="#" aria-label="Download CoinCase on the App Store" tabindex="-1">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
-          App Store
-        </a>
+      </div>
+    </div>
+
+    <!-- PoseSnap -->
+    <div class="app-card app-card--coming">
+      <div class="app-header">
+        <div class="app-icon app-icon--silhouette" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <path d="M15 17h18l4 5v16H11V22l4-5z" />
+            <path d="M19 17l2.5-5h5L29 17" />
+            <path d="M18 29a6 6 0 1 0 12 0 6 6 0 0 0-12 0z" />
+            <path d="M34 24h.1" />
+          </svg>
+        </div>
+        <div class="app-meta">
+          <div class="app-name">PoseSnap</div>
+          <div class="app-category">Photo · Selfie Camera</div>
+        </div>
+      </div>
+      <p class="app-desc">表情と手のお題に合わせるだけで、いつもの自撮りにひとネタ足せるカメラアプリ。</p>
+      <div class="app-footer">
+        <span class="coming-soon-badge">Coming Soon</span>
+      </div>
+    </div>
+
+    <!-- CourtRec -->
+    <div class="app-card app-card--coming">
+      <div class="app-header">
+        <div class="app-icon app-icon--silhouette" aria-hidden="true">
+          <svg viewBox="0 0 48 48">
+            <path d="M12 14h24v26H12z" />
+            <path d="M12 27h24" />
+            <path d="M24 14v26" />
+            <path d="M18 14c0 4.2 2.7 7.6 6 7.6s6-3.4 6-7.6" />
+            <path d="M18 40c0-4.2 2.7-7.6 6-7.6s6 3.4 6 7.6" />
+          </svg>
+        </div>
+        <div class="app-meta">
+          <div class="app-name">CourtRec</div>
+          <div class="app-category">Sports · Score Recorder</div>
+        </div>
+      </div>
+      <p class="app-desc">バスケのスコア記録と録画をまとめて残せる、コート上のプレー記録アプリ。</p>
+      <div class="app-footer">
+        <span class="coming-soon-badge">Coming Soon</span>
       </div>
     </div>
 
