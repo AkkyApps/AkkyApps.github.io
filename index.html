@@ -412,7 +412,13 @@
     }
     .footer-links {
       display: flex;
+      flex-wrap: wrap;
       gap: 20px;
+      position: static;
+      background: transparent;
+      border-bottom: 0;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
     .footer-links a {
       font-size: 13px;
@@ -630,6 +636,8 @@
   <span class="footer-copy">© 2026 AkkyApps. All rights reserved.</span>
   <nav class="footer-links">
     <a href="https://akkyapps.github.io/akkyapps-legal/privacy-policy" target="_blank" rel="noopener">プライバシーポリシー</a>
+    <a href="https://akkyapps.github.io/akkyapps-legal/support" target="_blank" rel="noopener">サポート</a>
+    <a href="https://akkyapps.github.io/akkyapps-legal/terms" target="_blank" rel="noopener">利用規約</a>
   </nav>
 </footer>
 
