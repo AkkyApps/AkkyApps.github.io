@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>掛け算の筆算マスター3・4年生 使い方</title>
+  <style>
+    :root {
+      --green: #59c978;
+      --green-dark: #2f8050;
+      --green-soft: #e4f8ec;
+      --green-pale: #f3fcf6;
+      --yellow-soft: #fff8df;
+      --ink: #142033;
+      --text: #334155;
+      --muted: #697586;
+      --line: #dce8df;
+      --surface: #ffffff;
+      --shadow: 0 18px 42px rgba(36, 84, 55, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(89, 201, 120, 0.18), transparent 34rem),
+        linear-gradient(180deg, #f7fff9 0%, #fffdf1 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(1120px, 100%);
+      margin: 0 auto;
+      padding: 32px 22px 72px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: end;
+      padding: 34px 0 28px;
+      border-bottom: 2px solid rgba(47, 128, 80, 0.18);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      padding: 5px 12px;
+      border: 1px solid rgba(47, 128, 80, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 820px;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 18px 0 0;
+      color: var(--text);
+      font-size: clamp(17px, 2vw, 21px);
+      font-weight: 600;
+    }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      max-width: 360px;
+    }
+
+    .quick-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 7px 12px;
+      border: 1px solid rgba(47, 128, 80, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.78);
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 5px 14px rgba(36, 84, 55, 0.06);
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 28px 0 18px;
+    }
+
+    .intro-card {
+      min-height: 100%;
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(47, 128, 80, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 10px 28px rgba(36, 84, 55, 0.08);
+    }
+
+    .intro-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 17px;
+    }
+
+    .intro-card p {
+      margin: 0;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    main {
+      display: grid;
+      gap: 26px;
+      margin-top: 28px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: minmax(260px, 420px) minmax(0, 1fr);
+      gap: clamp(20px, 4vw, 42px);
+      align-items: center;
+      padding: clamp(18px, 3vw, 30px);
+      border: 1px solid rgba(47, 128, 80, 0.14);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow);
+      scroll-margin-top: 18px;
+    }
+
+    .step:nth-child(even) {
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
+    }
+
+    .step:nth-child(even) .shot-wrap {
+      order: 2;
+    }
+
+    .shot-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .device {
+      width: min(100%, 390px);
+      padding: 10px;
+      border: 1px solid rgba(47, 128, 80, 0.16);
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 18px 38px rgba(20, 32, 51, 0.14);
+    }
+
+    .device img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      background: var(--green-pale);
+    }
+
+    .shot-pair {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      width: min(100%, 560px);
+    }
+
+    .shot-pair .device {
+      width: 100%;
+      padding: 8px;
+      border-radius: 14px;
+    }
+
+    .shot-pair .device img {
+      border-radius: 8px;
+    }
+
+    .copy {
+      min-width: 0;
+    }
+
+    .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .label span {
+      display: inline-grid;
+      width: 28px;
+      height: 28px;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--green);
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(25px, 4vw, 38px);
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+
+    .summary {
+      margin: 0 0 18px;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .points {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: point;
+    }
+
+    .points li {
+      display: grid;
+      grid-template-columns: 34px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      min-height: 48px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffffff 0%, var(--green-pale) 100%);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .points li::before {
+      counter-increment: point;
+      content: counter(point);
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green-soft);
+      color: var(--green-dark);
+      font-weight: 900;
+    }
+
+    .note {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border: 1px solid #f0df9c;
+      border-radius: 8px;
+      background: var(--yellow-soft);
+      color: #6b5317;
+      font-weight: 700;
+    }
+
+    .finish {
+      margin-top: 28px;
+      padding: 26px;
+      border: 1px solid rgba(47, 128, 80, 0.14);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: var(--shadow);
+    }
+
+    .finish h2 {
+      font-size: clamp(24px, 4vw, 34px);
+    }
+
+    .finish p {
+      margin: 0;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(47, 128, 80, 0.18);
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .intro,
+      .step,
+      .step:nth-child(even) {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-nav {
+        justify-content: flex-start;
+        max-width: none;
+      }
+
+      .step:nth-child(even) .shot-wrap {
+        order: 0;
+      }
+
+      .device {
+        width: min(100%, 390px);
+      }
+
+      .shot-pair {
+        grid-template-columns: 1fr;
+        width: min(100%, 390px);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        padding: 22px 14px 50px;
+      }
+
+      .hero {
+        padding-top: 22px;
+      }
+
+      .quick-nav a {
+        min-height: 38px;
+        font-size: 13px;
+      }
+
+      .intro-card,
+      .step,
+      .finish {
+        padding: 16px;
+      }
+
+      .device {
+        width: min(100%, 330px);
+        padding: 9px;
+        border-radius: 16px;
+      }
+
+      .device img {
+        border-radius: 9px;
+      }
+
+      .summary,
+      .finish p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div>
+        <div class="eyebrow">3年生向け 使い方</div>
+        <h1>掛け算の筆算マスター3・4年生</h1>
+        <p class="lead">レベルと時間をえらんで、筆算のマスに数字を書いていきます。まちがえた問題は、あとでもう一度出てきます。</p>
+      </div>
+      <nav class="quick-nav" aria-label="使い方の目次">
+        <a href="#start">はじめる</a>
+        <a href="#write">書く</a>
+        <a href="#fix">直す</a>
+        <a href="#check">進む</a>
+        <a href="#result">結果</a>
+      </nav>
+    </header>
+
+    <section class="intro" aria-label="はじめる前に">
+      <div class="intro-card">
+        <strong>用意するもの</strong>
+        <p>iPadと、指またはApple Pencilを使います。</p>
+      </div>
+      <div class="intro-card">
+        <strong>書くところ</strong>
+        <p>緑の枠のマスに、数字を1つずつ書きます。</p>
+      </div>
+      <div class="intro-card">
+        <strong>大事なこと</strong>
+        <p>あわてず、1問ずつ筆算の形をたしかめます。</p>
+      </div>
+    </section>
+
+    <main>
+      <section class="step" id="start">
+        <div class="shot-wrap">
+          <div class="device">
+            <img src="images/home.png" alt="ホーム画面。レベル、時間、スタートボタンが表示されている。">
+          </div>
+        </div>
+        <div class="copy">
+          <div class="label"><span>1</span>ホーム画面</div>
+          <h2>レベルと時間をえらぶ</h2>
+          <p class="summary">今日の練習に合うレベルと時間をえらんで、スタートします。</p>
+          <ol class="points">
+            <li>「レベル」で、練習したいむずかしさをえらびます。</li>
+            <li>「時間」で、5分、10分、15分、20分からえらびます。</li>
+            <li>えらべたら、緑の「スタート」を押します。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="step" id="write">
+        <div class="shot-wrap">
+          <div class="device">
+            <img src="images/practice-empty.png" alt="練習画面。問題と空の筆算マスが表示されている。">
+          </div>
+        </div>
+        <div class="copy">
+          <div class="label"><span>2</span>練習画面</div>
+          <h2>問題を見て書き始める</h2>
+          <p class="summary">上の問題を見て、緑の枠のマスに数字を書いていきます。</p>
+          <ol class="points">
+            <li>左上の「問題」を見て、割る数と割られる数をたしかめます。</li>
+            <li>商、引き算、残りの数を、マスに1つずつ書きます。</li>
+            <li>下向きの矢印があるときは、次に書く場所の目印です。</li>
+          </ol>
+          <div class="note">ポイント: 数字は大きく、1つのマスに1つだけ書くと読み取りやすくなります。</div>
+        </div>
+      </section>
+
+      <section class="step" id="fix">
+        <div class="shot-wrap">
+          <div class="shot-pair">
+            <div class="device">
+              <img src="images/practice-long-step.png" alt="練習画面。商の一の位を書いたあと、読み取り候補を確認している。">
+            </div>
+            <div class="device">
+              <img src="images/practice-long-scroll.png" alt="練習画面。商の一の位の読み取りを候補で直している。">
+            </div>
+          </div>
+        </div>
+        <div class="copy">
+          <div class="label"><span>3</span>読み取りを直す</div>
+          <h2>候補から数字を選び直す</h2>
+          <p class="summary">読み取りがちがうときは、上の候補ボタンで自分で直します。</p>
+          <ol class="points">
+            <li>書いた数字の候補が、上の小さな数字ボタンに出ます。</li>
+            <li>商の一の位など、ちがう数字になっていたら正しい数字を押します。</li>
+            <li>直し終わるまで、「次の問題へ」は灰色のままです。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="step" id="check">
+        <div class="shot-wrap">
+          <div class="shot-pair">
+            <div class="device">
+              <img src="images/recognition-correction.png" alt="練習画面。書いた数字と、読み取り候補の数字ボタンが表示されている。">
+            </div>
+            <div class="device">
+              <img src="images/practice-complete.png" alt="練習画面。商とあまりまで入力され、次の問題へボタンが押せる状態。">
+            </div>
+          </div>
+        </div>
+        <div class="copy">
+          <div class="label"><span>4</span>次の問題へ</div>
+          <h2>商とあまりをたしかめて進む</h2>
+          <p class="summary">最後まで書けたら、答えがそろっているか見てから進みます。</p>
+          <ol class="points">
+            <li>商のマスと、最後のあまりのマスまで書きます。</li>
+            <li>読み取り候補が出ていたら、正しい数字を選びます。</li>
+            <li>「次の問題へ」が緑になったら押して進みます。</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="step" id="result">
+        <div class="shot-wrap">
+          <div class="device">
+            <img src="images/result.png" alt="結果画面。正解数、解答数、正答率、復習が必要な問題が表示されている。">
+          </div>
+        </div>
+        <div class="copy">
+          <div class="label"><span>5</span>結果画面</div>
+          <h2>結果を見る</h2>
+          <p class="summary">時間が終わると、今日の練習結果が出ます。</p>
+          <ol class="points">
+            <li>正解数、解答数、正答率を見ます。</li>
+            <li>「再出題が残った問題」は、あとで復習したい問題です。</li>
+            <li>もう一度練習するときは「もう一度」、終わるときは「ホームへ」を押します。</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <section class="finish" aria-label="もう一度練習する">
+      <h2>もう一度練習するとき</h2>
+      <p>同じレベルで続けても、別のレベルに変えても大丈夫です。まちがえた問題は、落ち着いてもう一度筆算を書いてみましょう。</p>
+    </section>
+
+    <footer>
+      掛け算の筆算マスター3・4年生 使い方 / AkkyApps
+    </footer>
+  </div>
+</body>
+</html>
