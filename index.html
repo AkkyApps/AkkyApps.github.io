@@ -353,6 +353,51 @@
       flex-wrap: wrap;
     }
 
+    /* ── NEWS ── */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+    }
+    .news-item {
+      display: flex;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--sep);
+    }
+    .news-item:first-child {
+      border-top: 1px solid var(--sep);
+    }
+    .news-date {
+      font-size: 13px;
+      color: var(--text-3);
+      flex-shrink: 0;
+      width: 96px;
+      padding-top: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+    .news-content { flex: 1; min-width: 0; }
+    .news-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .news-title a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .news-title a:hover { color: var(--blue); }
+    .news-text {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.7;
+      margin-top: 4px;
+      white-space: pre-line;
+    }
+    @media (max-width: 480px) {
+      .news-item { flex-direction: column; gap: 4px; }
+      .news-date { width: auto; }
+    }
+
     /* ── ABOUT ── */
     .about-section {
       background: var(--bg-2);
@@ -475,10 +520,12 @@
         </div>
       </div>
       <p class="app-desc">原稿を管理し、読んだ位置を見失わずに話せるテレプロンプター。既読検知、目標時間、自動速度計算に対応。</p>
-      <a class="app-store-btn" href="https://apple.co/4wOKri7" target="_blank" rel="noopener" aria-label="Download Prompter on the App Store">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
-        App Store
-      </a>
+      <div class="app-footer">
+        <a class="app-store-btn" href="https://apple.co/4wOKri7" target="_blank" rel="noopener" aria-label="Download Prompter on the App Store">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
+          App Store
+        </a>
+      </div>
     </div>
 
     <!-- PTimer -->
@@ -698,9 +745,11 @@
         <li>ドラッグ&amp;ドロップ対応</li>
         <li>画像はローカル処理で外に送られません</li>
       </ul>
-      <a class="open-tool-btn" href="https://akkyapps.github.io/app-store-screenshot-resizer/" target="_blank" rel="noopener" aria-label="Open Screenshot Resizer">
-        Open Tool →
-      </a>
+      <div class="app-footer">
+        <a class="open-tool-btn" href="https://akkyapps.github.io/app-store-screenshot-resizer/" target="_blank" rel="noopener" aria-label="Open Screenshot Resizer">
+          Open Tool →
+        </a>
+      </div>
     </div>
 
   </div>
