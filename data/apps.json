@@ -48,7 +48,7 @@
       "section": "apps",
       "category": "Food & Drink · Expiry Tracker",
       "desc": "冷蔵庫の食品を声で登録、期限とカテゴリは自動で整理。うっかり期限切れを防いで、フードロスを減らします。",
-      "icon": { "type": "single", "src": "icons/pantry.png" },
+      "icon": { "type": "pair", "light": "icons/pantry-light.png", "dark": "icons/pantry-dark.png" },
       "status": "released",
       "version": "1.0.0",
       "appStoreUrl": "https://apple.co/4y0pEsF"
