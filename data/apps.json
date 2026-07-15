@@ -14,7 +14,7 @@
       "desc": "原稿を管理し、読んだ位置を見失わずに話せるテレプロンプター。既読検知、目標時間、自動速度計算に対応。",
       "icon": { "type": "pair", "light": "icons/prompter-light.png", "dark": "icons/prompter-dark.png" },
       "status": "released",
-      "version": "1.7.0",
+      "version": "1.8.0",
       "appStoreUrl": "https://apple.co/4wOKri7"
     },
     {
@@ -171,6 +171,14 @@
     }
   ],
   "news": [
+    {
+      "date": "2026-07-15",
+      "appId": "prompter",
+      "version": "1.8.0",
+      "title": "Prompter 1.8.0 を公開しました",
+      "body": "・ホーム画面ウィジェットから、使いたい原稿をすぐ開けるようになりました\n・iPhone / iPad の大サイズと、iPad の特大サイズに対応しました",
+      "url": "https://apple.co/4wOKri7"
+    },
     {
       "date": "2026-07-09",
       "appId": "prompter",
