@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prompter — Never lose your place while reading a script</title>
+  <meta name="description" content="A focused teleprompter for iPhone and iPad with read tracking, target-time pacing, mirror mode, iCloud sync, and widgets. Pay once. No subscription.">
+  <meta name="theme-color" content="#f7fbf8">
+  <meta property="og:title" content="Prompter — Never lose your place">
+  <meta property="og:description" content="Look at your audience or camera. Come back to the exact line you were reading.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akkyapps.github.io/prompter/">
+  <meta property="og:image" content="https://akkyapps.github.io/prompter/assets/hero.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/icon.png">
+  <style>
+    :root {
+      --green: #20d982;
+      --green-dark: #067447;
+      --green-soft: #e6f9ef;
+      --ink: #101713;
+      --muted: #57645d;
+      --paper: #f7fbf8;
+      --card: rgba(255, 255, 255, .84);
+      --line: rgba(20, 91, 57, .13);
+      --shadow: 0 24px 70px rgba(16, 75, 46, .11);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .page-grid {
+      background:
+        linear-gradient(rgba(26, 118, 76, .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26, 118, 76, .07) 1px, transparent 1px);
+      background-size: 44px 44px;
+    }
+
+    .wrap {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 30;
+      top: 0;
+      border-bottom: 1px solid rgba(16, 23, 19, .08);
+      background: rgba(247, 251, 248, .84);
+      backdrop-filter: blur(18px) saturate(1.3);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 72px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 780;
+      letter-spacing: -.025em;
+    }
+
+    .logo img {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      box-shadow: 0 8px 22px rgba(7, 83, 46, .14);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-link {
+      color: #3f4c45;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 660;
+    }
+
+    .store-link,
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 18px;
+      border-radius: 12px;
+      background: var(--ink);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 720;
+      box-shadow: 0 10px 26px rgba(9, 26, 17, .13);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    .store-link:hover,
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(9, 26, 17, .18);
+    }
+
+    .apple {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 95px 0 88px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -270px;
+      right: -180px;
+      width: 720px;
+      height: 720px;
+      border-radius: 50%;
+      background: rgba(32, 217, 130, .17);
+      filter: blur(6px);
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      max-width: 880px;
+      margin: 0 auto 58px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin: 0 0 22px;
+      color: var(--green-dark);
+      font-size: 14px;
+      font-weight: 780;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(56px, 8vw, 98px);
+      line-height: .96;
+      letter-spacing: -.06em;
+      font-weight: 820;
+    }
+
+    h1 .accent { color: var(--green-dark); }
+
+    .hero-lede {
+      max-width: 740px;
+      margin: 29px auto 0;
+      color: var(--muted);
+      font-size: clamp(20px, 2.2vw, 27px);
+      line-height: 1.45;
+      letter-spacing: -.02em;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 14px 22px;
+      margin-top: 31px;
+    }
+
+    .button {
+      min-height: 55px;
+      padding: 0 24px;
+      border-radius: 15px;
+      font-size: 16px;
+    }
+
+    .price-note {
+      color: #344139;
+      font-size: 15px;
+      font-weight: 690;
+    }
+
+    .hero-visual {
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      border: 1px solid rgba(6, 116, 71, .12);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .trust-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 255, 255, .67);
+    }
+
+    .trust-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .trust-item {
+      padding: 28px 18px;
+      text-align: center;
+      color: #3b4a42;
+      font-size: 15px;
+      font-weight: 710;
+    }
+
+    .trust-item + .trust-item { border-left: 1px solid var(--line); }
+
+    .section {
+      padding: 118px 0;
+    }
+
+    .section-head {
+      max-width: 780px;
+      margin: 0 auto 58px;
+      text-align: center;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-size: clamp(40px, 5.3vw, 70px);
+      line-height: 1;
+      letter-spacing: -.052em;
+    }
+
+    .section-copy {
+      max-width: 700px;
+      margin: 23px auto 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 82px;
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) minmax(300px, .88fr);
+      align-items: center;
+      gap: 64px;
+    }
+
+    .feature:nth-child(even) .feature-image { order: 2; }
+    .feature:nth-child(even) .feature-copy { order: 1; }
+
+    .feature-image {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-copy .number {
+      color: var(--green-dark);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .feature-copy h3 {
+      margin: 14px 0 18px;
+      font-size: clamp(35px, 4.2vw, 55px);
+      line-height: 1.02;
+      letter-spacing: -.048em;
+    }
+
+    .feature-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.62;
+    }
+
+    .feature-copy ul {
+      display: grid;
+      gap: 10px;
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-copy li {
+      position: relative;
+      padding-left: 28px;
+      color: #344239;
+      font-size: 16px;
+      font-weight: 650;
+    }
+
+    .feature-copy li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: -1px;
+      display: grid;
+      width: 20px;
+      height: 20px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: #102019;
+      font-size: 12px;
+      font-weight: 850;
+    }
+
+    .everywhere {
+      background: #111a16;
+      color: white;
+    }
+
+    .everywhere .eyebrow { color: var(--green); }
+    .everywhere .section-copy { color: #c6d4cc; }
+    .everywhere-visual {
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: 28px;
+      box-shadow: 0 32px 90px rgba(0, 0, 0, .36);
+    }
+
+    .final-cta {
+      padding: 118px 0;
+    }
+
+    .cta-card {
+      position: relative;
+      overflow: hidden;
+      padding: 78px 60px;
+      border: 1px solid var(--line);
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 95% 0%, rgba(32, 217, 130, .25), transparent 37%),
+        rgba(255, 255, 255, .82);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .cta-icon {
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 25px;
+      border-radius: 20px;
+      box-shadow: 0 18px 40px rgba(4, 72, 41, .18);
+    }
+
+    .cta-card h2 {
+      font-size: clamp(42px, 6vw, 74px);
+    }
+
+    .cta-card p {
+      max-width: 660px;
+      margin: 22px auto 30px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .faq {
+      padding: 0 0 118px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 48px;
+    }
+
+    .faq-item {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 19px;
+      background: var(--card);
+    }
+
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-size: 19px;
+      letter-spacing: -.02em;
+    }
+
+    .faq-item p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    footer {
+      padding: 34px 0 42px;
+      border-top: 1px solid var(--line);
+      color: #607067;
+      font-size: 13px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    @media (max-width: 850px) {
+      .nav-link { display: none; }
+      .hero { padding-top: 70px; }
+      .trust-inner { grid-template-columns: repeat(2, 1fr); }
+      .trust-item:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
+      .trust-item:nth-child(4) { border-top: 1px solid var(--line); }
+      .feature { grid-template-columns: 1fr; gap: 30px; }
+      .feature:nth-child(even) .feature-image,
+      .feature:nth-child(even) .feature-copy { order: initial; }
+      .feature-copy { padding: 0 8px; }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 560px) {
+      .wrap { width: min(100% - 24px, 1180px); }
+      .site-header .store-link { padding: 0 13px; }
+      .hero { padding: 58px 0 58px; }
+      .hero-lede { font-size: 19px; }
+      .hero-visual,
+      .feature-image,
+      .everywhere-visual { border-radius: 17px; }
+      .trust-item { padding: 22px 8px; font-size: 13px; }
+      .section { padding: 82px 0; }
+      .feature-list { gap: 62px; }
+      .cta-card { padding: 58px 22px; border-radius: 24px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="./" aria-label="Prompter home">
+        <img src="assets/icon.png" alt="">
+        <span>Prompter</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="store-link" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">
+          <span class="apple" aria-hidden="true"></span>
+          App Store
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero page-grid">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="eyebrow">A focused teleprompter for Apple devices</p>
+          <h1>Never lose your <span class="accent">place.</span></h1>
+          <p class="hero-lede">Look at your audience or camera. Come back to the exact line you were reading—and keep speaking naturally.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">
+              <span class="apple" aria-hidden="true"></span>
+              Get Prompter
+            </a>
+            <span class="price-note">Pay once. No subscription.</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/hero.png" alt="Prompter showing read tracking on iPhone">
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Highlights">
+      <div class="wrap trust-inner">
+        <div class="trust-item">Read tracking</div>
+        <div class="trust-item">Target-time pacing</div>
+        <div class="trust-item">Mirror mode</div>
+        <div class="trust-item">iCloud + widgets</div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Stay connected to your words</p>
+          <h2>Look up with confidence.</h2>
+          <p class="section-copy">Prompter keeps the current part of your script easy to find, so you can focus on the people in front of you—not on recovering your place.</p>
+        </div>
+
+        <div class="feature-list">
+          <article class="feature">
+            <div class="feature-image">
+              <img src="assets/read-tracking.png" alt="Read tracking in Prompter">
+            </div>
+            <div class="feature-copy">
+              <span class="number">01 · Read tracking</span>
+              <h3>Always know where to return.</h3>
+              <p>Finished lines fade while the current section stays clear. Glance at the audience, a camera, or your notes—then come back without searching.</p>
+              <ul>
+                <li>Visible reading progress</li>
+                <li>Adjustable font size and spacing</li>
+                <li>Clean, distraction-free presentation view</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-image">
+              <img src="assets/target-time.png" alt="Target-time pacing settings in Prompter">
+            </div>
+            <div class="feature-copy">
+              <span class="number">02 · Target-time pacing</span>
+              <h3>Finish on time without rushing.</h3>
+              <p>Enter a target duration and Prompter calculates a reading pace for your script. Rehearse with the timing, then adjust it to match your delivery.</p>
+              <ul>
+                <li>Automatic pace calculation</li>
+                <li>Live elapsed and target time</li>
+                <li>Manual speed controls when you want them</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature-image">
+              <img src="assets/mirror-mode.png" alt="Prompter mirror mode for teleprompter hardware">
+            </div>
+            <div class="feature-copy">
+              <span class="number">03 · Mirror mode</span>
+              <h3>Use the rig you already have.</h3>
+              <p>Mirror the complete presentation view for beam-splitter glass. The script, timer, and controls stay together, ready for a conventional teleprompter setup.</p>
+              <ul>
+                <li>Full-view mirroring</li>
+                <li>No device rotation required</li>
+                <li>One switch in display settings</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section everywhere">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Scripts everywhere</p>
+          <h2>Ready when you are.</h2>
+          <p class="section-copy">Organize multiple scripts, keep them in sync with iCloud, and open the right one straight from a Home Screen widget.</p>
+        </div>
+        <div class="everywhere-visual">
+          <img src="assets/icloud-widgets.png" alt="Prompter script library and Home Screen widget">
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta page-grid">
+      <div class="wrap">
+        <div class="cta-card">
+          <img class="cta-icon" src="assets/icon.png" alt="">
+          <p class="eyebrow">Simple by design</p>
+          <h2>Your script. Your voice.<br>No subscription.</h2>
+          <p>Prompter is a one-time purchase for iPhone and iPad, with no account to create and no recurring plan to manage.</p>
+          <a class="button" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">
+            <span class="apple" aria-hidden="true"></span>
+            View on the App Store
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Questions</p>
+          <h2>Before you start.</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="faq-item">
+            <h3>Which devices are supported?</h3>
+            <p>Prompter is made for iPhone and iPad. It is also available on compatible Apple silicon Macs as an app designed for iPad.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Is there a subscription?</h3>
+            <p>No. Prompter is a paid app with a one-time purchase and no subscription.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can I use teleprompter glass?</h3>
+            <p>Yes. Mirror mode flips the full presentation view for common beam-splitter teleprompter hardware.</p>
+          </article>
+          <article class="faq-item">
+            <h3>Can scripts sync between devices?</h3>
+            <p>Yes. You can enable iCloud sync to keep your script library available across your Apple devices.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© 2026 AkkyApps. Prompter 1.9.0.</span>
+      <div class="footer-links">
+        <a href="../">AkkyApps</a>
+        <a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">App Store</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

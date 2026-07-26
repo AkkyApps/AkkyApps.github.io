@@ -11,11 +11,14 @@
       "name": "Prompter",
       "section": "apps",
       "category": "Productivity · Teleprompter",
-      "desc": "原稿を管理し、読んだ位置を見失わずに話せるテレプロンプター。既読検知、目標時間、自動速度計算に対応。",
+      "desc": "原稿を管理し、読んだ位置を見失わずに話せるテレプロンプター。既読検知、目標時間、自動速度計算、ミラーモードに対応。",
       "icon": { "type": "pair", "light": "icons/prompter-light.png", "dark": "icons/prompter-dark.png" },
       "status": "released",
-      "version": "1.8.0",
-      "appStoreUrl": "https://apple.co/4wOKri7"
+      "version": "1.9.0",
+      "appStoreUrl": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685",
+      "links": [
+        { "type": "manual", "href": "prompter/", "label": "詳しく見る", "aria": "Open the Prompter product page" }
+      ]
     },
     {
       "id": "ptimer",
@@ -171,6 +174,14 @@
     }
   ],
   "news": [
+    {
+      "date": "2026-07-24",
+      "appId": "prompter",
+      "version": "1.9.0",
+      "title": "Prompter 1.9.0 を公開しました",
+      "body": "・中サイズのホーム画面ウィジェットに対応しました\n・3件の原稿を表示し、4件以上は前後のページへ切り替えられます",
+      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+    },
     {
       "date": "2026-07-15",
       "appId": "prompter",
