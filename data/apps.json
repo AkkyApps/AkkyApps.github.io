@@ -1,9 +1,608 @@
 {
   "sections": [
-    { "id": "apps", "label": "Apps", "comment": "APPS" },
-    { "id": "kids", "label": "For Kids", "comment": "FOR KIDS" },
-    { "id": "tools", "label": "Tools", "comment": "TOOLS" }
+    {
+      "id": "apps",
+      "label": "Apps",
+      "comment": "APPS"
+    },
+    {
+      "id": "kids",
+      "label": "For Kids",
+      "comment": "FOR KIDS"
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "comment": "TOOLS"
+    }
   ],
+  "remoteCatalog": {
+    "schemaVersion": 1,
+    "generatedAt": "2026-08-13T00:00:00Z",
+    "apps": [
+      {
+        "id": "prompter",
+        "order": 10,
+        "appStoreURL": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685",
+        "localizations": {
+          "ja": {
+            "name": "Prompter",
+            "description": "原稿、スピーチ、動画向けのプロンプター"
+          },
+          "en-US": {
+            "name": "Prompter",
+            "description": "Teleprompter for scripts, speeches, and videos"
+          },
+          "zh-Hans": {
+            "name": "Prompter",
+            "description": "用于讲稿、演讲和视频的提词器"
+          },
+          "zh-Hant": {
+            "name": "Prompter",
+            "description": "適用於講稿、演講和影片的提詞器"
+          },
+          "ko": {
+            "name": "Prompter",
+            "description": "원고, 연설, 동영상을 위한 텔레프롬프터"
+          },
+          "es-ES": {
+            "name": "Prompter",
+            "description": "Teleprónter para guiones, discursos y vídeos"
+          },
+          "fr-FR": {
+            "name": "Prompter",
+            "description": "Téléprompteur pour scripts, discours et vidéos"
+          },
+          "de-DE": {
+            "name": "Prompter",
+            "description": "Teleprompter für Skripte, Reden und Videos"
+          },
+          "it": {
+            "name": "Prompter",
+            "description": "Gobbo elettronico per copioni, discorsi e video"
+          },
+          "pt-BR": {
+            "name": "Prompter",
+            "description": "Teleprompter para roteiros, discursos e vídeos"
+          },
+          "ru": {
+            "name": "Prompter",
+            "description": "Телесуфлёр для сценариев, выступлений и видео"
+          },
+          "nl-NL": {
+            "name": "Prompter",
+            "description": "Teleprompter voor scripts, toespraken en video’s"
+          },
+          "pl": {
+            "name": "Prompter",
+            "description": "Teleprompter do scenariuszy, przemówień i filmów"
+          },
+          "sv": {
+            "name": "Prompter",
+            "description": "Teleprompter för manus, tal och videor"
+          },
+          "tr": {
+            "name": "Prompter",
+            "description": "Metinler, konuşmalar ve videolar için teleprompter"
+          },
+          "th": {
+            "name": "Prompter",
+            "description": "เทเลพรอมพ์เตอร์สำหรับสคริปต์ สุนทรพจน์ และวิดีโอ"
+          },
+          "vi": {
+            "name": "Prompter",
+            "description": "Máy nhắc chữ cho kịch bản, bài phát biểu và video"
+          },
+          "id": {
+            "name": "Prompter",
+            "description": "Teleprompter untuk naskah, pidato, dan video"
+          },
+          "hi": {
+            "name": "Prompter",
+            "description": "स्क्रिप्ट, भाषण और वीडियो के लिए टेलीप्रॉम्प्टर"
+          }
+        }
+      },
+      {
+        "id": "ptimer",
+        "order": 20,
+        "appStoreURL": "https://apple.co/49oRu7f",
+        "localizations": {
+          "ja": {
+            "name": "PTimer",
+            "description": "集中と休憩のためのポモドーロタイマー"
+          },
+          "en-US": {
+            "name": "PTimer",
+            "description": "Pomodoro timer for focus and rest"
+          },
+          "zh-Hans": {
+            "name": "PTimer",
+            "description": "兼顾专注与休息的番茄钟"
+          },
+          "zh-Hant": {
+            "name": "PTimer",
+            "description": "兼顧專注與休息的番茄鐘"
+          },
+          "ko": {
+            "name": "PTimer",
+            "description": "집중과 휴식을 위한 뽀모도로 타이머"
+          },
+          "es-ES": {
+            "name": "PTimer",
+            "description": "Temporizador Pomodoro para concentrarte y descansar"
+          },
+          "fr-FR": {
+            "name": "PTimer",
+            "description": "Minuteur Pomodoro pour alterner concentration et repos"
+          },
+          "de-DE": {
+            "name": "PTimer",
+            "description": "Pomodoro-Timer für Fokus und Pausen"
+          },
+          "it": {
+            "name": "PTimer",
+            "description": "Timer Pomodoro per concentrazione e riposo"
+          },
+          "pt-BR": {
+            "name": "PTimer",
+            "description": "Timer Pomodoro para foco e descanso"
+          },
+          "ru": {
+            "name": "PTimer",
+            "description": "Таймер Pomodoro для работы и отдыха"
+          },
+          "nl-NL": {
+            "name": "PTimer",
+            "description": "Pomodoro-timer voor focus en rust"
+          },
+          "pl": {
+            "name": "PTimer",
+            "description": "Minutnik Pomodoro do skupienia i odpoczynku"
+          },
+          "sv": {
+            "name": "PTimer",
+            "description": "Pomodoro-timer för fokus och vila"
+          },
+          "tr": {
+            "name": "PTimer",
+            "description": "Odaklanma ve dinlenme için Pomodoro zamanlayıcısı"
+          },
+          "th": {
+            "name": "PTimer",
+            "description": "ตัวจับเวลาโพโมโดโรสำหรับช่วงโฟกัสและพัก"
+          },
+          "vi": {
+            "name": "PTimer",
+            "description": "Đồng hồ Pomodoro cho tập trung và nghỉ ngơi"
+          },
+          "id": {
+            "name": "PTimer",
+            "description": "Timer Pomodoro untuk fokus dan istirahat"
+          },
+          "hi": {
+            "name": "PTimer",
+            "description": "ध्यान और आराम के लिए पोमोडोरो टाइमर"
+          }
+        }
+      },
+      {
+        "id": "phonoria",
+        "order": 30,
+        "appStoreURL": "https://apple.co/4uDgsbM",
+        "localizations": {
+          "ja": {
+            "name": "Phonoria",
+            "description": "ローカル音楽とA-Bループに対応した音楽プレイヤー"
+          },
+          "en-US": {
+            "name": "Phonoria",
+            "description": "Music player with local files and A-B loop"
+          },
+          "zh-Hans": {
+            "name": "Phonoria",
+            "description": "支持本地音乐和 A-B 循环的播放器"
+          },
+          "zh-Hant": {
+            "name": "Phonoria",
+            "description": "支援本機音樂和 A-B 循環的播放器"
+          },
+          "ko": {
+            "name": "Phonoria",
+            "description": "로컬 음악과 A-B 반복을 지원하는 플레이어"
+          },
+          "es-ES": {
+            "name": "Phonoria",
+            "description": "Reproductor de música local con repetición A-B"
+          },
+          "fr-FR": {
+            "name": "Phonoria",
+            "description": "Lecteur de musique locale avec boucle A-B"
+          },
+          "de-DE": {
+            "name": "Phonoria",
+            "description": "Musikplayer für lokale Dateien mit A-B-Wiederholung"
+          },
+          "it": {
+            "name": "Phonoria",
+            "description": "Lettore musicale locale con ripetizione A-B"
+          },
+          "pt-BR": {
+            "name": "Phonoria",
+            "description": "Player de músicas locais com repetição A-B"
+          },
+          "ru": {
+            "name": "Phonoria",
+            "description": "Плеер локальной музыки с повтором A–B"
+          },
+          "nl-NL": {
+            "name": "Phonoria",
+            "description": "Muziekspeler voor lokale bestanden met A-B-herhaling"
+          },
+          "pl": {
+            "name": "Phonoria",
+            "description": "Odtwarzacz lokalnej muzyki z pętlą A–B"
+          },
+          "sv": {
+            "name": "Phonoria",
+            "description": "Musikspelare för lokala filer med A–B-repetition"
+          },
+          "tr": {
+            "name": "Phonoria",
+            "description": "Yerel müzik ve A-B tekrarı destekli oynatıcı"
+          },
+          "th": {
+            "name": "Phonoria",
+            "description": "เครื่องเล่นเพลงในเครื่องพร้อมเล่นซ้ำช่วง A-B"
+          },
+          "vi": {
+            "name": "Phonoria",
+            "description": "Trình phát nhạc cục bộ có lặp đoạn A-B"
+          },
+          "id": {
+            "name": "Phonoria",
+            "description": "Pemutar musik lokal dengan pengulangan A-B"
+          },
+          "hi": {
+            "name": "Phonoria",
+            "description": "लोकल संगीत और A-B लूप वाला म्यूज़िक प्लेयर"
+          }
+        }
+      },
+      {
+        "id": "pantry",
+        "order": 40,
+        "appStoreURL": "https://apple.co/4y0pEsF",
+        "localizations": {
+          "ja": {
+            "name": "Pantry",
+            "description": "声で記録する食品期限トラッカー"
+          },
+          "en-US": {
+            "name": "Pantry",
+            "description": "Voice-first food expiry tracker"
+          },
+          "zh-Hans": {
+            "name": "Pantry",
+            "description": "以语音为先的食品保质期管理"
+          },
+          "zh-Hant": {
+            "name": "Pantry",
+            "description": "以語音為先的食品效期管理"
+          },
+          "ko": {
+            "name": "Pantry",
+            "description": "음성으로 빠르게 기록하는 식품 소비기한 관리"
+          },
+          "es-ES": {
+            "name": "Pantry",
+            "description": "Control por voz de las fechas de caducidad de alimentos"
+          },
+          "fr-FR": {
+            "name": "Pantry",
+            "description": "Suivi vocal des dates de péremption des aliments"
+          },
+          "de-DE": {
+            "name": "Pantry",
+            "description": "Lebensmittel-Haltbarkeit schnell per Sprache erfassen"
+          },
+          "it": {
+            "name": "Pantry",
+            "description": "Scadenze alimentari registrate prima di tutto con la voce"
+          },
+          "pt-BR": {
+            "name": "Pantry",
+            "description": "Controle por voz da validade dos alimentos"
+          },
+          "ru": {
+            "name": "Pantry",
+            "description": "Голосовой учёт сроков годности продуктов"
+          },
+          "nl-NL": {
+            "name": "Pantry",
+            "description": "Houdbaarheidsdatums van eten bijhouden met je stem"
+          },
+          "pl": {
+            "name": "Pantry",
+            "description": "Głosowe śledzenie terminów ważności żywności"
+          },
+          "sv": {
+            "name": "Pantry",
+            "description": "Röststyrd koll på matens hållbarhetsdatum"
+          },
+          "tr": {
+            "name": "Pantry",
+            "description": "Gıdaların son kullanma tarihini sesle takip edin"
+          },
+          "th": {
+            "name": "Pantry",
+            "description": "ติดตามวันหมดอายุอาหารด้วยเสียงเป็นหลัก"
+          },
+          "vi": {
+            "name": "Pantry",
+            "description": "Theo dõi hạn dùng thực phẩm ưu tiên nhập bằng giọng nói"
+          },
+          "id": {
+            "name": "Pantry",
+            "description": "Pelacak kedaluwarsa makanan yang mengutamakan suara"
+          },
+          "hi": {
+            "name": "Pantry",
+            "description": "आवाज़ से खाद्य पदार्थों की समाप्ति तिथि ट्रैक करें"
+          }
+        }
+      },
+      {
+        "id": "divisionMaster4",
+        "order": 50,
+        "appStoreURL": "https://apple.co/4fHlqiT",
+        "localizations": {
+          "ja": {
+            "name": "割り算の筆算マスター4年生",
+            "description": "小学4年生向けのiPad筆算練習"
+          },
+          "en-US": {
+            "name": "Long Division Master Grade 4",
+            "description": "iPad long-division practice for grade 4"
+          },
+          "zh-Hans": {
+            "name": "四年级长除法大师",
+            "description": "面向四年级学生的 iPad 长除法练习"
+          },
+          "zh-Hant": {
+            "name": "四年級長除法大師",
+            "description": "適合四年級學生的 iPad 長除法練習"
+          },
+          "ko": {
+            "name": "4학년 세로셈 나눗셈 마스터",
+            "description": "4학년을 위한 iPad 세로셈 나눗셈 연습"
+          },
+          "es-ES": {
+            "name": "Maestro de división larga 4.º",
+            "description": "Práctica de división larga en iPad para 4.º curso"
+          },
+          "fr-FR": {
+            "name": "Maître de la division posée CM1",
+            "description": "Exercices de division posée sur iPad pour le CM1"
+          },
+          "de-DE": {
+            "name": "Meister der schriftlichen Division 4. Klasse",
+            "description": "Schriftliche Division auf dem iPad für die 4. Klasse"
+          },
+          "it": {
+            "name": "Maestro della divisione in colonna 4ª",
+            "description": "Esercizi di divisione in colonna su iPad per la 4ª classe"
+          },
+          "pt-BR": {
+            "name": "Mestre da divisão 4º ano",
+            "description": "Prática de divisão armada no iPad para o 4º ano"
+          },
+          "ru": {
+            "name": "Мастер деления столбиком: 4 класс",
+            "description": "Деление столбиком на iPad для 4 класса"
+          },
+          "nl-NL": {
+            "name": "Meester cijferend delen klas 4",
+            "description": "Cijferend delen op de iPad voor klas 4"
+          },
+          "pl": {
+            "name": "Mistrz dzielenia pisemnego klasa 4",
+            "description": "Dzielenie pisemne na iPadzie dla klasy 4"
+          },
+          "sv": {
+            "name": "Mästare på skriftlig division årskurs 4",
+            "description": "Öva skriftlig division på iPad i årskurs 4"
+          },
+          "tr": {
+            "name": "4. Sınıf Uzun Bölme Ustası",
+            "description": "4. sınıf için iPad’de uzun bölme alıştırması"
+          },
+          "th": {
+            "name": "ปรมาจารย์การหารยาว ป.4",
+            "description": "ฝึกหารยาวบน iPad สำหรับนักเรียนชั้น ป.4"
+          },
+          "vi": {
+            "name": "Bậc thầy chia dài lớp 4",
+            "description": "Luyện chia dài trên iPad dành cho lớp 4"
+          },
+          "id": {
+            "name": "Master Pembagian Bersusun Kelas 4",
+            "description": "Latihan pembagian bersusun di iPad untuk kelas 4"
+          },
+          "hi": {
+            "name": "कक्षा 4 दीर्घ भाग मास्टर",
+            "description": "कक्षा 4 के लिए iPad पर दीर्घ भाग का अभ्यास"
+          }
+        }
+      },
+      {
+        "id": "multiplicationMaster3",
+        "order": 60,
+        "appStoreURL": "https://apple.co/4dG6cIf",
+        "localizations": {
+          "ja": {
+            "name": "掛け算の筆算マスター3・4年生",
+            "description": "iPadで練習する掛け算の筆算"
+          },
+          "en-US": {
+            "name": "Multiplication Master 3-4",
+            "description": "iPad written-multiplication practice"
+          },
+          "zh-Hans": {
+            "name": "三、四年级竖式乘法大师",
+            "description": "在 iPad 上练习竖式乘法"
+          },
+          "zh-Hant": {
+            "name": "三、四年級直式乘法大師",
+            "description": "在 iPad 上練習直式乘法"
+          },
+          "ko": {
+            "name": "3·4학년 세로셈 곱셈 마스터",
+            "description": "iPad에서 세로셈 곱셈 연습"
+          },
+          "es-ES": {
+            "name": "Maestro de multiplicación escrita 3.º–4.º",
+            "description": "Práctica de multiplicación escrita en iPad"
+          },
+          "fr-FR": {
+            "name": "Maître de la multiplication posée CE2–CM1",
+            "description": "Exercices de multiplication posée sur iPad"
+          },
+          "de-DE": {
+            "name": "Meister der schriftlichen Multiplikation 3.–4. Klasse",
+            "description": "Schriftliche Multiplikation auf dem iPad üben"
+          },
+          "it": {
+            "name": "Maestro della moltiplicazione in colonna 3ª–4ª",
+            "description": "Esercizi di moltiplicazione in colonna su iPad"
+          },
+          "pt-BR": {
+            "name": "Mestre da multiplicação 3º–4º ano",
+            "description": "Prática de multiplicação armada no iPad"
+          },
+          "ru": {
+            "name": "Мастер умножения столбиком: 3–4 класс",
+            "description": "Умножение столбиком на iPad"
+          },
+          "nl-NL": {
+            "name": "Meester cijferend vermenigvuldigen klas 3–4",
+            "description": "Cijferend vermenigvuldigen op de iPad"
+          },
+          "pl": {
+            "name": "Mistrz mnożenia pisemnego klasa 3–4",
+            "description": "Mnożenie pisemne na iPadzie"
+          },
+          "sv": {
+            "name": "Mästare på skriftlig multiplikation årskurs 3–4",
+            "description": "Öva skriftlig multiplikation på iPad"
+          },
+          "tr": {
+            "name": "3–4. Sınıf Uzun Çarpma Ustası",
+            "description": "iPad’de uzun çarpma alıştırması"
+          },
+          "th": {
+            "name": "ปรมาจารย์การคูณตั้งยาว ป.3–4",
+            "description": "ฝึกคูณตั้งยาวบน iPad"
+          },
+          "vi": {
+            "name": "Bậc thầy nhân dọc lớp 3–4",
+            "description": "Luyện nhân dọc trên iPad"
+          },
+          "id": {
+            "name": "Master Perkalian Bersusun Kelas 3–4",
+            "description": "Latihan perkalian bersusun di iPad"
+          },
+          "hi": {
+            "name": "कक्षा 3–4 दीर्घ गुणा मास्टर",
+            "description": "iPad पर दीर्घ गुणा का अभ्यास"
+          }
+        }
+      },
+      {
+        "id": "additionSubtractionMaster",
+        "order": 70,
+        "appStoreURL": "https://apple.co/4uL1MqU",
+        "localizations": {
+          "ja": {
+            "name": "たし算ひき算の筆算マスター",
+            "description": "iPadで練習するたし算・ひき算の筆算"
+          },
+          "en-US": {
+            "name": "Add Subtract Drill Master",
+            "description": "iPad written addition and subtraction practice"
+          },
+          "zh-Hans": {
+            "name": "竖式加减法大师",
+            "description": "在 iPad 上练习竖式加法和减法"
+          },
+          "zh-Hant": {
+            "name": "直式加減法大師",
+            "description": "在 iPad 上練習直式加法和減法"
+          },
+          "ko": {
+            "name": "세로셈 덧셈·뺄셈 마스터",
+            "description": "iPad에서 세로셈 덧셈과 뺄셈 연습"
+          },
+          "es-ES": {
+            "name": "Maestro de sumas y restas escritas",
+            "description": "Práctica de sumas y restas escritas en iPad"
+          },
+          "fr-FR": {
+            "name": "Maître de l’addition et de la soustraction posées",
+            "description": "Exercices d’addition et de soustraction posées sur iPad"
+          },
+          "de-DE": {
+            "name": "Meister der schriftlichen Addition und Subtraktion",
+            "description": "Schriftliche Addition und Subtraktion auf dem iPad üben"
+          },
+          "it": {
+            "name": "Maestro di addizioni e sottrazioni in colonna",
+            "description": "Esercizi di addizione e sottrazione in colonna su iPad"
+          },
+          "pt-BR": {
+            "name": "Mestre da adição e subtração",
+            "description": "Prática de adição e subtração armadas no iPad"
+          },
+          "ru": {
+            "name": "Мастер сложения и вычитания столбиком",
+            "description": "Сложение и вычитание столбиком на iPad"
+          },
+          "nl-NL": {
+            "name": "Meester cijferend optellen en aftrekken",
+            "description": "Cijferend optellen en aftrekken op de iPad"
+          },
+          "pl": {
+            "name": "Mistrz dodawania i odejmowania pisemnego",
+            "description": "Dodawanie i odejmowanie pisemne na iPadzie"
+          },
+          "sv": {
+            "name": "Mästare på skriftlig addition och subtraktion",
+            "description": "Öva skriftlig addition och subtraktion på iPad"
+          },
+          "tr": {
+            "name": "Uzun Toplama ve Çıkarma Ustası",
+            "description": "iPad’de uzun toplama ve çıkarma alıştırması"
+          },
+          "th": {
+            "name": "ปรมาจารย์การบวกและลบตั้ง",
+            "description": "ฝึกบวกและลบตั้งบน iPad"
+          },
+          "vi": {
+            "name": "Bậc thầy cộng trừ theo cột",
+            "description": "Luyện cộng và trừ theo cột trên iPad"
+          },
+          "id": {
+            "name": "Master Penjumlahan dan Pengurangan Bersusun",
+            "description": "Latihan penjumlahan dan pengurangan bersusun di iPad"
+          },
+          "hi": {
+            "name": "स्तंभ जोड़ और घटाव मास्टर",
+            "description": "iPad पर स्तंभ जोड़ और घटाव का अभ्यास"
+          }
+        }
+      }
+    ]
+  },
   "apps": [
     {
       "id": "prompter",
@@ -12,12 +611,21 @@
       "section": "apps",
       "category": "Productivity · Teleprompter",
       "desc": "原稿を管理し、読んだ位置を見失わずに話せるテレプロンプター。既読検知、目標時間、自動速度計算、ミラーモードに対応。",
-      "icon": { "type": "pair", "light": "icons/prompter-light.png", "dark": "icons/prompter-dark.png" },
+      "icon": {
+        "type": "pair",
+        "light": "icons/prompter-light.png",
+        "dark": "icons/prompter-dark.png"
+      },
       "status": "released",
       "version": "1.9.0",
       "appStoreUrl": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685",
       "links": [
-        { "type": "manual", "href": "prompter/", "label": "詳しく見る", "aria": "Open the Prompter product page" }
+        {
+          "type": "manual",
+          "href": "prompter/",
+          "label": "詳しく見る",
+          "aria": "Open the Prompter product page"
+        }
       ]
     },
     {
@@ -27,7 +635,11 @@
       "section": "apps",
       "category": "Productivity · Pomodoro Timer",
       "desc": "好きな音とフォントで集中と休憩を切り替えるポモドーロタイマー。静かな休憩はマインドフル時間として記録できます。",
-      "icon": { "type": "pair", "light": "icons/ptimer-light.png", "dark": "icons/ptimer-dark.png" },
+      "icon": {
+        "type": "pair",
+        "light": "icons/ptimer-light.png",
+        "dark": "icons/ptimer-dark.png"
+      },
       "status": "released",
       "version": "1.3.2",
       "appStoreUrl": "https://apple.co/49oRu7f"
@@ -39,7 +651,11 @@
       "section": "apps",
       "category": "Music · Local Player",
       "desc": "クラウドやローカルフォルダの音源をライブラリ化できる音楽プレーヤー。A-Bループで好きな区間を繰り返し再生。",
-      "icon": { "type": "pair", "light": "icons/phonoria-light.png", "dark": "icons/phonoria-dark.png" },
+      "icon": {
+        "type": "pair",
+        "light": "icons/phonoria-light.png",
+        "dark": "icons/phonoria-dark.png"
+      },
       "status": "released",
       "version": "2.0.1",
       "appStoreUrl": "https://apple.co/4uDgsbM"
@@ -51,7 +667,11 @@
       "section": "apps",
       "category": "Food & Drink · Expiry Tracker",
       "desc": "冷蔵庫の食品を声で登録、期限とカテゴリは自動で整理。うっかり期限切れを防いで、フードロスを減らします。",
-      "icon": { "type": "pair", "light": "icons/pantry-light.png", "dark": "icons/pantry-dark.png" },
+      "icon": {
+        "type": "pair",
+        "light": "icons/pantry-light.png",
+        "dark": "icons/pantry-dark.png"
+      },
       "status": "released",
       "version": "1.2.0",
       "appStoreUrl": "https://apple.co/4y0pEsF"
@@ -100,12 +720,20 @@
       "section": "kids",
       "category": "For Kids · Math Practice",
       "desc": "商、引き算、桁下ろし、あまりまで。iPadで筆算の途中式を書く練習ができる4年生向けアプリ。",
-      "icon": { "type": "single", "src": "icons/divisionmaster4.png" },
+      "icon": {
+        "type": "single",
+        "src": "icons/divisionmaster4.png"
+      },
       "status": "released",
       "version": "1.0.2",
       "appStoreUrl": "https://apple.co/4fHlqiT",
       "links": [
-        { "type": "manual", "href": "divisionmaster4/manual/", "label": "説明書", "aria": "Open DivisionMaster4 manual" }
+        {
+          "type": "manual",
+          "href": "divisionmaster4/manual/",
+          "label": "説明書",
+          "aria": "Open DivisionMaster4 manual"
+        }
       ]
     },
     {
@@ -115,12 +743,20 @@
       "section": "kids",
       "category": "For Kids · Math Practice",
       "desc": "位をそろえて答えを書く。iPadで掛け算の筆算を手書き練習できる3・4年生向けアプリ。",
-      "icon": { "type": "single", "src": "icons/multiplicationmaster3.png" },
+      "icon": {
+        "type": "single",
+        "src": "icons/multiplicationmaster3.png"
+      },
       "status": "released",
       "version": "1.0.1",
       "appStoreUrl": "https://apple.co/4dG6cIf",
       "links": [
-        { "type": "manual", "href": "multiplicationmaster3/manual/", "label": "説明書", "aria": "Open MultiplicationMaster3 manual" }
+        {
+          "type": "manual",
+          "href": "multiplicationmaster3/manual/",
+          "label": "説明書",
+          "aria": "Open MultiplicationMaster3 manual"
+        }
       ]
     },
     {
@@ -130,7 +766,10 @@
       "section": "kids",
       "category": "For Kids · Math Practice",
       "desc": "たし算・ひき算の筆算を手書きで反復練習。位をそろえて書き、答えを見直す習慣づけをサポートします。",
-      "icon": { "type": "single", "src": "icons/additionsubtractionmaster.png" },
+      "icon": {
+        "type": "single",
+        "src": "icons/additionsubtractionmaster.png"
+      },
       "status": "released",
       "version": "1.0.1",
       "appStoreUrl": "https://apple.co/4uL1MqU"
@@ -142,7 +781,10 @@
       "section": "tools",
       "category": "Mac Tool · Free",
       "desc": "不要になった Mac アプリの関連ファイル候補を確認し、選んだものだけをゴミ箱へ移動する軽量クリーナー。",
-      "icon": { "type": "single", "src": "icons/purge-dark.png" },
+      "icon": {
+        "type": "single",
+        "src": "icons/purge-dark.png"
+      },
       "status": "tool",
       "version": "0.1.0",
       "features": [
@@ -151,7 +793,12 @@
         "永久削除ではなくゴミ箱へ移動"
       ],
       "links": [
-        { "type": "download", "href": "downloads/Purge-v0.1.0.zip", "label": "Download", "aria": "Download Purge for Mac" }
+        {
+          "type": "download",
+          "href": "downloads/Purge-v0.1.0.zip",
+          "label": "Download",
+          "aria": "Download Purge for Mac"
+        }
       ]
     },
     {
@@ -161,7 +808,10 @@
       "section": "tools",
       "category": "Web Tool · Free",
       "desc": "App Store Connect にスクショのサイズ違いで弾かれるのがつらかったので作りました。ブラウザ上でそのままトリミングして PNG 書き出しできます。",
-      "icon": { "type": "emoji", "emoji": "✂️" },
+      "icon": {
+        "type": "emoji",
+        "emoji": "✂️"
+      },
       "status": "tool",
       "features": [
         "iPhone / iPad / Apple Watch のプリセット入り",
@@ -169,7 +819,12 @@
         "画像はローカル処理で外に送られません"
       ],
       "links": [
-        { "type": "external", "href": "https://akkyapps.github.io/app-store-screenshot-resizer/", "label": "Open Tool →", "aria": "Open Screenshot Resizer" }
+        {
+          "type": "external",
+          "href": "https://akkyapps.github.io/app-store-screenshot-resizer/",
+          "label": "Open Tool →",
+          "aria": "Open Screenshot Resizer"
+        }
       ]
     }
   ],
