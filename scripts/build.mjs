@@ -6,13 +6,53 @@
 //
 // index.html は生成物。直接編集せず data/apps.json またはテンプレートを編集すること。
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const data = JSON.parse(readFileSync(join(root, "data", "apps.json"), "utf8"));
 const template = readFileSync(join(root, "templates", "index.template.html"), "utf8");
+
+const SUPPORTED_LOCALES = new Set([
+  "ja", "en-US", "zh-Hans", "zh-Hant", "ko", "es-ES", "fr-FR", "de-DE", "it",
+  "pt-BR", "ru", "nl-NL", "pl", "sv", "tr", "th", "vi", "id", "hi",
+]);
+const ALLOWED_APP_STORE_HOSTS = new Set(["apps.apple.com", "apple.co"]);
+
+function validateRemoteCatalog(catalog) {
+  if (catalog?.schemaVersion !== 1 || !Array.isArray(catalog.apps) || catalog.apps.length === 0) {
+    throw new Error("remoteCatalog must use schemaVersion 1 and contain apps");
+  }
+  const ids = new Set();
+  const orders = new Set();
+  for (const app of catalog.apps) {
+    if (!/^[A-Za-z0-9.-]+$/.test(app.id) || ids.has(app.id)) throw new Error(`Duplicate or invalid catalog ID: ${app.id}`);
+    if (!Number.isInteger(app.order) || orders.has(app.order)) throw new Error(`Duplicate or invalid catalog order: ${app.order}`);
+    ids.add(app.id);
+    orders.add(app.order);
+
+    const source = data.apps.find((candidate) => candidate.id === app.id.toLowerCase());
+    if (!source || source.status !== "released" || source.appStoreUrl !== app.appStoreURL) {
+      throw new Error(`Catalog app must match a released LP app: ${app.id}`);
+    }
+    const url = new URL(app.appStoreURL);
+    if (url.protocol !== "https:" || !ALLOWED_APP_STORE_HOSTS.has(url.hostname.toLowerCase())) {
+      throw new Error(`Invalid App Store URL: ${app.appStoreURL}`);
+    }
+    const localeKeys = Object.keys(app.localizations ?? {});
+    if (localeKeys.length !== SUPPORTED_LOCALES.size || localeKeys.some((locale) => !SUPPORTED_LOCALES.has(locale))) {
+      throw new Error(`Catalog app ${app.id} must contain exactly 19 supported locales`);
+    }
+    for (const [locale, localization] of Object.entries(app.localizations)) {
+      if (!localization?.name?.trim() || !localization?.description?.trim()) {
+        throw new Error(`Catalog app ${app.id} has an empty ${locale} localization`);
+      }
+    }
+  }
+}
+
+validateRemoteCatalog(data.remoteCatalog);
 
 const esc = (s) =>
   String(s).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
@@ -196,16 +236,20 @@ const html = template
   .replace("{{NEWS_SECTION}}", renderNewsSection(data.news));
 
 const outPath = join(root, "index.html");
+const apiPath = join(root, "api", "v1", "apps.json");
+const apiJSON = `${JSON.stringify(data.remoteCatalog, null, 2)}\n`;
 
 if (process.argv.includes("--check")) {
   const current = readFileSync(outPath, "utf8");
-  if (current === html) {
-    console.log("OK: index.html is up to date.");
-  } else {
-    console.error("MISMATCH: index.html is stale. Run: node scripts/build.mjs");
+  const currentAPI = existsSync(apiPath) ? readFileSync(apiPath, "utf8") : "";
+  if (current !== html || currentAPI !== apiJSON) {
+    console.error("MISMATCH: generated files are stale. Run: node scripts/build.mjs");
     process.exit(1);
   }
+  console.log("OK: index.html and api/v1/apps.json are up to date.");
 } else {
   writeFileSync(outPath, html);
-  console.log(`Wrote index.html (${html.length} bytes, apps: ${data.apps.length}, news: ${data.news?.length ?? 0})`);
+  mkdirSync(dirname(apiPath), { recursive: true });
+  writeFileSync(apiPath, apiJSON);
+  console.log(`Wrote index.html and api/v1/apps.json (apps: ${data.remoteCatalog.apps.length})`);
 }
