@@ -14,7 +14,7 @@
       "desc": "原稿を管理し、読んだ位置を見失わずに話せるテレプロンプター。既読検知、目標時間、自動速度計算、ミラーモードに対応。",
       "icon": { "type": "pair", "light": "icons/prompter-light.png", "dark": "icons/prompter-dark.png" },
       "status": "released",
-      "version": "1.9.0",
+      "version": "2.0.0",
       "appStoreUrl": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685",
       "links": [
         { "type": "manual", "href": "prompter/", "label": "詳しく見る", "aria": "Open the Prompter product page" }
@@ -174,6 +174,14 @@
     }
   ],
   "news": [
+    {
+      "date": "2026-08-16",
+      "appId": "prompter",
+      "version": "2.0.0",
+      "title": "Prompter 2.0.0 を公開しました",
+      "body": "・タイトルと本文から原稿を検索し、同期状況を確認できるようになりました\n・iCloudの更新を待たずに端末内の原稿を表示し、必要なときに手動同期できます\n・新規原稿は保存時だけ一覧へ追加し、アカウント不要の問い合わせ導線も改善しました",
+      "url": "https://apple.co/4wOKri7"
+    },
     {
       "date": "2026-07-24",
       "appId": "prompter",
