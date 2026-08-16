@@ -66,20 +66,6 @@
       "appStoreUrl": "https://apple.co/4y0pEsF"
     },
     {
-      "id": "purge",
-      "comment": "Purge",
-      "name": "Purge",
-      "section": "apps",
-      "category": "Mac App · Free",
-      "desc": "不要になったMacアプリの関連ファイル候補を確認し、選んだものだけをゴミ箱へ移動する軽量クリーナー。",
-      "icon": { "type": "single", "src": "icons/purge-dark.png" },
-      "status": "released",
-      "version": "0.1.0",
-      "links": [
-        { "type": "download", "href": "downloads/Purge-v0.1.0.zip", "label": "Download", "aria": "Download Purge for Mac" }
-      ]
-    },
-    {
       "id": "divisionmaster4",
       "comment": "DivisionMaster4",
       "name": "わり算の筆算マスター",
