@@ -13,10 +13,37 @@ import { dirname, join } from "node:path";
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const data = JSON.parse(readFileSync(join(root, "data", "apps.json"), "utf8"));
 const template = readFileSync(join(root, "templates", "index.template.html"), "utf8");
+const NEWS_VISIBLE_LIMIT = 12;
 
 const esc = (s) =>
   String(s).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 const escAttr = (s) => esc(s).replaceAll('"', "&quot;");
+
+function validateData() {
+  const appIds = new Set();
+  for (const app of data.apps) {
+    if (appIds.has(app.id)) throw new Error(`Duplicate app id: ${app.id}`);
+    appIds.add(app.id);
+  }
+
+  const newsKeys = new Set();
+  for (const item of data.news ?? []) {
+    if (!appIds.has(item.appId)) throw new Error(`Unknown News app id: ${item.appId}`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(item.date)) throw new Error(`Invalid News date: ${item.date}`);
+    const key = `${item.appId}@${item.version}`;
+    if (newsKeys.has(key)) throw new Error(`Duplicate News version: ${key}`);
+    newsKeys.add(key);
+  }
+
+  for (const app of data.apps.filter((item) => item.status === "released")) {
+    if (!app.appStoreId) throw new Error(`Released app is missing appStoreId: ${app.id}`);
+    if (!newsKeys.has(`${app.id}@${app.version}`)) {
+      throw new Error(`Current released version is missing from News: ${app.id}@${app.version}`);
+    }
+  }
+}
+
+validateData();
 
 const APPLE_SVG =
   '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>';
@@ -163,21 +190,34 @@ function renderNewsItem(item) {
 
 function renderNewsSection(news) {
   if (!news?.length) return "";
-  const items = [...news]
-    .sort((a, b) => String(b.date).localeCompare(String(a.date)))
-    .map(renderNewsItem)
-    .join("\n");
+  const sorted = news
+    .map((item, index) => ({ item, index }))
+    .sort((a, b) => String(b.item.date).localeCompare(String(a.item.date)) || a.index - b.index)
+    .map(({ item }) => item);
+  const latestItems = sorted.slice(0, NEWS_VISIBLE_LIMIT).map(renderNewsItem).join("\n");
+  const archive = sorted.slice(NEWS_VISIBLE_LIMIT);
+  const archiveHtml = archive.length
+    ? [
+        '  <details class="news-history">',
+        `    <summary>過去の更新履歴を表示（${archive.length}件）</summary>`,
+        '    <div class="news-list news-list--archive">',
+        archive.map(renderNewsItem).join("\n"),
+        "    </div>",
+        "  </details>",
+      ].join("\n")
+    : "";
   return [
     "",
     "<!-- NEWS -->",
     '<section class="apps-section" id="news">',
     '  <div class="section-label">News</div>',
     '  <div class="news-list">',
-    items,
+    latestItems,
     "  </div>",
+    archiveHtml,
     "</section>",
     "",
-  ].join("\n");
+  ].filter(Boolean).join("\n");
 }
 
 // ── 組み立て ──

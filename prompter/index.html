@@ -11,8 +11,22 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://akkyapps.github.io/prompter/">
   <meta property="og:image" content="https://akkyapps.github.io/prompter/assets/hero.png">
+  <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://akkyapps.github.io/prompter/">
+  <link rel="alternate" hreflang="en" href="https://akkyapps.github.io/prompter/?lang=en">
+  <link rel="alternate" hreflang="ja" href="https://akkyapps.github.io/prompter/?lang=ja">
+  <link rel="alternate" hreflang="x-default" href="https://akkyapps.github.io/prompter/">
   <link rel="icon" href="assets/icon.png">
+  <script>
+    (() => {
+      const requested = new URLSearchParams(window.location.search).get("lang");
+      const explicitLocale = requested === "ja" || requested === "en" ? requested : null;
+      const browserLanguages = navigator.languages?.length ? navigator.languages : [navigator.language || "en"];
+      const locale = explicitLocale || (browserLanguages.some((language) => language.toLowerCase().startsWith("ja")) ? "ja" : "en");
+      document.documentElement.lang = locale;
+    })();
+  </script>
   <style>
     :root {
       --green: #20d982;
@@ -97,6 +111,13 @@
       font-weight: 660;
     }
 
+    .language-link {
+      color: var(--green-dark);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 760;
+    }
+
     .store-link,
     .button {
       display: inline-flex;
@@ -169,7 +190,11 @@
       font-weight: 820;
     }
 
-    h1 .accent { color: var(--green-dark); }
+    h1 .accent {
+      display: inline-block;
+      color: var(--green-dark);
+      white-space: nowrap;
+    }
 
     .hero-lede {
       max-width: 740px;
@@ -281,7 +306,7 @@
 
     .feature-copy .number {
       color: var(--green-dark);
-      font-size: 13px;
+      font-size: 14px;
       font-weight: 800;
       letter-spacing: .14em;
       text-transform: uppercase;
@@ -418,7 +443,7 @@
       padding: 34px 0 42px;
       border-top: 1px solid var(--line);
       color: #607067;
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .footer-inner {
@@ -431,6 +456,97 @@
     .footer-links {
       display: flex;
       gap: 20px;
+    }
+
+    /* Japanese scale follows the Digital Agency Design System typography guidance. */
+    html[lang="ja"] body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+      font-weight: 400;
+      line-break: strict;
+    }
+
+    html[lang="ja"] h1,
+    html[lang="ja"] .section h2,
+    html[lang="ja"] .feature-copy h3,
+    html[lang="ja"] .faq-item h3 {
+      font-weight: 700;
+      letter-spacing: 0;
+      word-break: auto-phrase;
+      text-wrap: balance;
+    }
+
+    html[lang="ja"] h1 {
+      font-size: clamp(48px, 6vw, 64px);
+      line-height: 1.4;
+    }
+
+    html[lang="ja"] .section h2 {
+      font-size: clamp(36px, 4.4vw, 57px);
+      line-height: 1.4;
+    }
+
+    html[lang="ja"] .feature-copy h3 {
+      font-size: clamp(32px, 3.5vw, 42px);
+      line-height: 1.4;
+    }
+
+    html[lang="ja"] .cta-card h2 {
+      font-size: clamp(36px, 4.4vw, 57px);
+    }
+
+    html[lang="ja"] .ja-phrase {
+      display: inline-block;
+    }
+
+    html[lang="ja"] .eyebrow {
+      letter-spacing: .08em;
+      font-weight: 700;
+      text-transform: none;
+    }
+
+    html[lang="ja"] .nav-link,
+    html[lang="ja"] .language-link,
+    html[lang="ja"] .store-link,
+    html[lang="ja"] .button,
+    html[lang="ja"] .price-note,
+    html[lang="ja"] .trust-item,
+    html[lang="ja"] .feature-copy .number,
+    html[lang="ja"] .feature-copy li {
+      font-weight: 700;
+    }
+
+    html[lang="ja"] .hero-lede,
+    html[lang="ja"] .section-copy,
+    html[lang="ja"] .feature-copy p,
+    html[lang="ja"] .cta-card p,
+    html[lang="ja"] .faq-item p {
+      letter-spacing: .02em;
+      text-wrap: pretty;
+    }
+
+    html[lang="ja"] .hero-lede,
+    html[lang="ja"] .section-copy,
+    html[lang="ja"] .feature-copy p,
+    html[lang="ja"] .faq-item p {
+      line-height: 1.7;
+    }
+
+    html[lang="ja"] .hero-visual {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #f7fbf8;
+    }
+
+    html[lang="ja"] .feature-image {
+      width: min(100%, 570px);
+      justify-self: center;
+      background: #f7fbf8;
+    }
+
+    html[lang="ja"] .everywhere-visual {
+      max-width: 440px;
+      margin: 0 auto;
+      background: #f7fbf8;
     }
 
     @media (max-width: 850px) {
@@ -448,16 +564,19 @@
 
     @media (max-width: 560px) {
       .wrap { width: min(100% - 24px, 1180px); }
+      .nav { gap: 12px; }
       .site-header .store-link { padding: 0 13px; }
       .hero { padding: 58px 0 58px; }
       .hero-lede { font-size: 19px; }
       .hero-visual,
       .feature-image,
       .everywhere-visual { border-radius: 17px; }
-      .trust-item { padding: 22px 8px; font-size: 13px; }
+      .trust-item { padding: 22px 8px; font-size: 14px; }
       .section { padding: 82px 0; }
       .feature-list { gap: 62px; }
       .cta-card { padding: 58px 22px; border-radius: 24px; }
+      html[lang="ja"] .cta-card h2 { font-size: 32px; }
+      html[lang="ja"] .ja-phrase--long { font-size: .78em; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
     }
   </style>
@@ -465,14 +584,15 @@
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="logo" href="./" aria-label="Prompter home">
+      <a class="logo" href="./" aria-label="Prompter home" data-ja-aria-label="Prompter ホーム">
         <img src="assets/icon.png" alt="">
         <span>Prompter</span>
       </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="nav-link" href="#features">Features</a>
-        <a class="nav-link" href="#faq">FAQ</a>
-        <a class="store-link" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">
+      <nav class="nav" aria-label="Primary navigation" data-ja-aria-label="メインナビゲーション">
+        <a class="nav-link" href="#features" data-ja="機能">Features</a>
+        <a class="nav-link" href="#faq" data-ja="よくある質問">FAQ</a>
+        <a class="language-link" href="?lang=ja" aria-label="Show this page in Japanese">日本語</a>
+        <a class="store-link" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" data-ja-href="https://apps.apple.com/jp/app/prompter/id6762259685" target="_blank" rel="noopener">
           <span class="apple" aria-hidden="true"></span>
           App Store
         </a>
@@ -484,85 +604,85 @@
     <section class="hero page-grid">
       <div class="wrap">
         <div class="hero-copy">
-          <p class="eyebrow">A focused teleprompter for Apple devices</p>
-          <h1>Never lose your <span class="accent">place.</span></h1>
-          <p class="hero-lede">Look at your audience or camera. Come back to the exact line you were reading—and keep speaking naturally.</p>
+          <p class="eyebrow" data-ja="Appleデバイスのためのテレプロンプター">A focused teleprompter for Apple devices</p>
+          <h1 data-ja-html="<span class=&quot;ja-phrase&quot;>原稿の位置を、</span><span class=&quot;accent ja-phrase&quot;>見失わない。</span>">Never lose your <span class="accent">place.</span></h1>
+          <p class="hero-lede" data-ja-html="<span class=&quot;ja-phrase&quot;>聴衆やカメラへ目を向けても、</span><span class=&quot;ja-phrase&quot;>読んでいた行へすぐ戻れる。</span><span class=&quot;ja-phrase&quot;>自然に話し続けるための</span><span class=&quot;ja-phrase&quot;>テレプロンプターです。</span>">Look at your audience or camera. Come back to the exact line you were reading—and keep speaking naturally.</p>
           <div class="hero-actions">
-            <a class="button" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">
+            <a class="button" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" data-ja-href="https://apps.apple.com/jp/app/prompter/id6762259685" target="_blank" rel="noopener">
               <span class="apple" aria-hidden="true"></span>
-              Get Prompter
+              <span data-ja="App Storeで見る">Get Prompter</span>
             </a>
-            <span class="price-note">Pay once. No subscription.</span>
+            <span class="price-note" data-ja="買い切り・サブスクリプションなし">Pay once. No subscription.</span>
           </div>
         </div>
         <div class="hero-visual">
-          <img src="assets/hero.png" alt="Prompter showing read tracking on iPhone">
+          <img src="assets/hero.png" data-ja-src="assets/ja/hero.png" alt="Prompter showing read tracking on iPhone" data-ja-alt="Prompterで原稿をすばやく検索する画面">
         </div>
       </div>
     </section>
 
-    <section class="trust-strip" aria-label="Highlights">
+    <section class="trust-strip" aria-label="Highlights" data-ja-aria-label="主な機能">
       <div class="wrap trust-inner">
-        <div class="trust-item">Read tracking</div>
-        <div class="trust-item">Target-time pacing</div>
-        <div class="trust-item">Mirror mode</div>
-        <div class="trust-item">iCloud + widgets</div>
+        <div class="trust-item" data-ja="既読検知">Read tracking</div>
+        <div class="trust-item" data-ja="目標時間ペース">Target-time pacing</div>
+        <div class="trust-item" data-ja="ミラーモード">Mirror mode</div>
+        <div class="trust-item" data-ja="iCloud・ウィジェット">iCloud + widgets</div>
       </div>
     </section>
 
     <section class="section" id="features">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Stay connected to your words</p>
-          <h2>Look up with confidence.</h2>
-          <p class="section-copy">Prompter keeps the current part of your script easy to find, so you can focus on the people in front of you—not on recovering your place.</p>
+          <p class="eyebrow" data-ja="原稿から目を離しても">Stay connected to your words</p>
+          <h2 data-ja-html="<span class=&quot;ja-phrase&quot;>自信をもって、</span><span class=&quot;ja-phrase&quot;>顔を上げられる。</span>">Look up with confidence.</h2>
+          <p class="section-copy" data-ja-html="<span class=&quot;ja-phrase&quot;>Prompterは読んでいる箇所を</span><span class=&quot;ja-phrase&quot;>見つけやすく保ちます。</span><span class=&quot;ja-phrase&quot;>原稿の位置を探し直すことではなく、</span><span class=&quot;ja-phrase&quot;>目の前の人へ伝えることに</span><span class=&quot;ja-phrase&quot;>集中できます。</span>">Prompter keeps the current part of your script easy to find, so you can focus on the people in front of you—not on recovering your place.</p>
         </div>
 
         <div class="feature-list">
           <article class="feature">
             <div class="feature-image">
-              <img src="assets/read-tracking.png" alt="Read tracking in Prompter">
+              <img src="assets/read-tracking.png" data-ja-src="assets/ja/read-tracking.png" alt="Read tracking in Prompter" data-ja-alt="Prompterの既読検知画面">
             </div>
             <div class="feature-copy">
-              <span class="number">01 · Read tracking</span>
-              <h3>Always know where to return.</h3>
-              <p>Finished lines fade while the current section stays clear. Glance at the audience, a camera, or your notes—then come back without searching.</p>
+              <span class="number" data-ja="01・既読検知">01 · Read tracking</span>
+              <h3 data-ja-html="<span class=&quot;ja-phrase&quot;>戻る場所が、</span><span class=&quot;ja-phrase&quot;>ひと目でわかる。</span>">Always know where to return.</h3>
+              <p data-ja-html="<span class=&quot;ja-phrase&quot;>読み終えた行は薄くなり、</span><span class=&quot;ja-phrase&quot;>現在の箇所ははっきり残ります。</span><span class=&quot;ja-phrase&quot;>聴衆やカメラへ目を向けたあとも、</span><span class=&quot;ja-phrase&quot;>探し直さずに読み続けられます。</span>">Finished lines fade while the current section stays clear. Glance at the audience, a camera, or your notes—then come back without searching.</p>
               <ul>
-                <li>Visible reading progress</li>
-                <li>Adjustable font size and spacing</li>
-                <li>Clean, distraction-free presentation view</li>
+                <li data-ja="読み進みを見える化">Visible reading progress</li>
+                <li data-ja="文字サイズ・行間を調整">Adjustable font size and spacing</li>
+                <li data-ja="話すことに集中できる発表画面">Clean, distraction-free presentation view</li>
               </ul>
             </div>
           </article>
 
           <article class="feature">
             <div class="feature-image">
-              <img src="assets/target-time.png" alt="Target-time pacing settings in Prompter">
+              <img src="assets/target-time.png" data-ja-src="assets/ja/target-time.png" alt="Target-time pacing settings in Prompter" data-ja-alt="Prompterの目標時間と速度設定画面">
             </div>
             <div class="feature-copy">
-              <span class="number">02 · Target-time pacing</span>
-              <h3>Finish on time without rushing.</h3>
-              <p>Enter a target duration and Prompter calculates a reading pace for your script. Rehearse with the timing, then adjust it to match your delivery.</p>
+              <span class="number" data-ja="02・目標時間ペース">02 · Target-time pacing</span>
+              <h3 data-ja-html="<span class=&quot;ja-phrase&quot;>急がず、</span><span class=&quot;ja-phrase&quot;>時間どおりに。</span>">Finish on time without rushing.</h3>
+              <p data-ja-html="<span class=&quot;ja-phrase&quot;>目標時間を入力すると、</span><span class=&quot;ja-phrase&quot;>原稿に合わせて読み上げ速度を</span><span class=&quot;ja-phrase&quot;>自動計算します。</span><span class=&quot;ja-phrase&quot;>リハーサルしながら、</span><span class=&quot;ja-phrase&quot;>自分の話し方に合わせて調整できます。</span>">Enter a target duration and Prompter calculates a reading pace for your script. Rehearse with the timing, then adjust it to match your delivery.</p>
               <ul>
-                <li>Automatic pace calculation</li>
-                <li>Live elapsed and target time</li>
-                <li>Manual speed controls when you want them</li>
+                <li data-ja="速度を自動計算">Automatic pace calculation</li>
+                <li data-ja="経過時間と目標時間を表示">Live elapsed and target time</li>
+                <li data-ja="必要に応じて手動調整">Manual speed controls when you want them</li>
               </ul>
             </div>
           </article>
 
           <article class="feature">
             <div class="feature-image">
-              <img src="assets/mirror-mode.png" alt="Prompter mirror mode for teleprompter hardware">
+              <img src="assets/mirror-mode.png" data-ja-src="assets/ja/mirror-mode.png" alt="Prompter mirror mode for teleprompter hardware" data-ja-alt="テレプロンプター機材で使えるPrompterのミラーモード">
             </div>
             <div class="feature-copy">
-              <span class="number">03 · Mirror mode</span>
-              <h3>Use the rig you already have.</h3>
-              <p>Mirror the complete presentation view for beam-splitter glass. The script, timer, and controls stay together, ready for a conventional teleprompter setup.</p>
+              <span class="number" data-ja="03・ミラーモード">03 · Mirror mode</span>
+              <h3 data-ja-html="<span class=&quot;ja-phrase&quot;>いつものプロンプター</span><span class=&quot;ja-phrase&quot;>機材で使える。</span>">Use the rig you already have.</h3>
+              <p data-ja-html="<span class=&quot;ja-phrase&quot;>ハーフミラー用に</span><span class=&quot;ja-phrase&quot;>発表画面全体を鏡像表示します。</span><span class=&quot;ja-phrase&quot;>原稿・タイマー・操作ボタンをまとめて、</span><span class=&quot;ja-phrase&quot;>一般的なテレプロンプター機材で使えます。</span>">Mirror the complete presentation view for beam-splitter glass. The script, timer, and controls stay together, ready for a conventional teleprompter setup.</p>
               <ul>
-                <li>Full-view mirroring</li>
-                <li>No device rotation required</li>
-                <li>One switch in display settings</li>
+                <li data-ja="画面全体を鏡像表示">Full-view mirroring</li>
+                <li data-ja="端末の回転は不要">No device rotation required</li>
+                <li data-ja="表示設定から切り替え">One switch in display settings</li>
               </ul>
             </div>
           </article>
@@ -573,12 +693,12 @@
     <section class="section everywhere">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Scripts everywhere</p>
-          <h2>Ready when you are.</h2>
-          <p class="section-copy">Organize multiple scripts, keep them in sync with iCloud, and open the right one straight from a Home Screen widget.</p>
+          <p class="eyebrow" data-ja="原稿を、どこでも">Scripts everywhere</p>
+          <h2 data-ja-html="<span class=&quot;ja-phrase&quot;>話したいとき、</span><span class=&quot;ja-phrase&quot;>すぐ開ける。</span>">Ready when you are.</h2>
+          <p class="section-copy" data-ja-html="<span class=&quot;ja-phrase&quot;>複数の原稿を整理し、</span><span class=&quot;ja-phrase&quot;>タイトルや本文からすばやく検索。</span><span class=&quot;ja-phrase&quot;>iCloudで同期して、</span><span class=&quot;ja-phrase&quot;>ホーム画面のウィジェットから</span><span class=&quot;ja-phrase&quot;>必要な原稿を開けます。</span>">Organize multiple scripts, keep them in sync with iCloud, and open the right one straight from a Home Screen widget.</p>
         </div>
         <div class="everywhere-visual">
-          <img src="assets/icloud-widgets.png" alt="Prompter script library and Home Screen widget">
+          <img src="assets/icloud-widgets.png" data-ja-src="assets/ja/script-search.png" alt="Prompter script library and Home Screen widget" data-ja-alt="Prompterの日本語原稿検索画面">
         </div>
       </div>
     </section>
@@ -587,12 +707,12 @@
       <div class="wrap">
         <div class="cta-card">
           <img class="cta-icon" src="assets/icon.png" alt="">
-          <p class="eyebrow">Simple by design</p>
-          <h2>Your script. Your voice.<br>No subscription.</h2>
-          <p>Prompter is a one-time purchase for iPhone and iPad, with no account to create and no recurring plan to manage.</p>
-          <a class="button" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">
+          <p class="eyebrow" data-ja="シンプルだから、話すことに集中できる">Simple by design</p>
+          <h2 data-ja-html="<span class=&quot;ja-phrase&quot;>あなたの原稿。</span><span class=&quot;ja-phrase&quot;>あなたの言葉。</span><span class=&quot;ja-phrase ja-phrase--long&quot;>サブスクリプションなし。</span>">Your script. Your voice.<br>No subscription.</h2>
+          <p data-ja-html="<span class=&quot;ja-phrase&quot;>PrompterはiPhone・iPad向けの</span><span class=&quot;ja-phrase&quot;>買い切りアプリです。</span><span class=&quot;ja-phrase&quot;>アカウント作成も</span><span class=&quot;ja-phrase&quot;>継続プランの管理も必要ありません。</span>">Prompter is a one-time purchase for iPhone and iPad, with no account to create and no recurring plan to manage.</p>
+          <a class="button" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" data-ja-href="https://apps.apple.com/jp/app/prompter/id6762259685" target="_blank" rel="noopener">
             <span class="apple" aria-hidden="true"></span>
-            View on the App Store
+            <span data-ja="App Storeで見る">View on the App Store</span>
           </a>
         </div>
       </div>
@@ -601,25 +721,25 @@
     <section class="faq" id="faq">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow">Questions</p>
-          <h2>Before you start.</h2>
+          <p class="eyebrow" data-ja="よくある質問">Questions</p>
+          <h2 data-ja="使い始める前に。">Before you start.</h2>
         </div>
         <div class="faq-grid">
           <article class="faq-item">
-            <h3>Which devices are supported?</h3>
-            <p>Prompter is made for iPhone and iPad. It is also available on compatible Apple silicon Macs as an app designed for iPad.</p>
+            <h3 data-ja="どのデバイスに対応していますか？">Which devices are supported?</h3>
+            <p data-ja="iPhoneとiPadに対応しています。互換性のあるAppleシリコン搭載Macでも、iPad用アプリとして利用できます。">Prompter is made for iPhone and iPad. It is also available on compatible Apple silicon Macs as an app designed for iPad.</p>
           </article>
           <article class="faq-item">
-            <h3>Is there a subscription?</h3>
-            <p>No. Prompter is a paid app with a one-time purchase and no subscription.</p>
+            <h3 data-ja="サブスクリプションはありますか？">Is there a subscription?</h3>
+            <p data-ja="ありません。Prompterは買い切りの有料アプリです。継続課金はありません。">No. Prompter is a paid app with a one-time purchase and no subscription.</p>
           </article>
           <article class="faq-item">
-            <h3>Can I use teleprompter glass?</h3>
-            <p>Yes. Mirror mode flips the full presentation view for common beam-splitter teleprompter hardware.</p>
+            <h3 data-ja="テレプロンプター用のハーフミラーで使えますか？">Can I use teleprompter glass?</h3>
+            <p data-ja="はい。ミラーモードで発表画面全体を反転し、一般的なハーフミラー式テレプロンプター機材で使えます。">Yes. Mirror mode flips the full presentation view for common beam-splitter teleprompter hardware.</p>
           </article>
           <article class="faq-item">
-            <h3>Can scripts sync between devices?</h3>
-            <p>Yes. You can enable iCloud sync to keep your script library available across your Apple devices.</p>
+            <h3 data-ja="デバイス間で原稿を同期できますか？">Can scripts sync between devices?</h3>
+            <p data-ja="はい。iCloud同期を有効にすると、Appleデバイス間で原稿ライブラリを利用できます。">Yes. You can enable iCloud sync to keep your script library available across your Apple devices.</p>
           </article>
         </div>
       </div>
@@ -628,12 +748,48 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <span>© 2026 AkkyApps. Prompter 1.9.0.</span>
+      <span>© 2026 AkkyApps. Prompter 2.0.0.</span>
       <div class="footer-links">
         <a href="../">AkkyApps</a>
-        <a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">App Store</a>
+        <a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" data-ja-href="https://apps.apple.com/jp/app/prompter/id6762259685" target="_blank" rel="noopener">App Store</a>
       </div>
     </div>
   </footer>
+  <script>
+    (() => {
+      if (document.documentElement.lang !== "ja") return;
+
+      document.title = "Prompter — 原稿の位置を見失わないテレプロンプター";
+      document.querySelector('meta[name="description"]').content = "読んだ位置を見失わず、目標時間に合わせて話せるiPhone・iPad向けテレプロンプター。既読検知、ミラーモード、iCloud同期、ウィジェットに対応。買い切り・サブスクリプションなし。";
+      document.querySelector('meta[property="og:title"]').content = "Prompter — 原稿の位置を見失わない";
+      document.querySelector('meta[property="og:description"]').content = "聴衆やカメラへ目を向けても、読んでいた行へすぐ戻れるテレプロンプター。";
+      document.querySelector('meta[property="og:image"]').content = "https://akkyapps.github.io/prompter/assets/ja/hero.png";
+      document.querySelector('meta[property="og:locale"]').content = "ja_JP";
+
+      document.querySelectorAll("[data-ja]").forEach((element) => {
+        element.textContent = element.dataset.ja;
+      });
+      document.querySelectorAll("[data-ja-html]").forEach((element) => {
+        element.innerHTML = element.dataset.jaHtml;
+      });
+      document.querySelectorAll("[data-ja-src]").forEach((element) => {
+        element.src = element.dataset.jaSrc;
+      });
+      document.querySelectorAll("[data-ja-href]").forEach((element) => {
+        element.href = element.dataset.jaHref;
+      });
+      document.querySelectorAll("[data-ja-alt]").forEach((element) => {
+        element.alt = element.dataset.jaAlt;
+      });
+      document.querySelectorAll("[data-ja-aria-label]").forEach((element) => {
+        element.setAttribute("aria-label", element.dataset.jaAriaLabel);
+      });
+
+      const languageLink = document.querySelector(".language-link");
+      languageLink.textContent = "English";
+      languageLink.href = "?lang=en";
+      languageLink.setAttribute("aria-label", "Show this page in English");
+    })();
+  </script>
 </body>
 </html>

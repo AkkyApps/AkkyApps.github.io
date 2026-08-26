@@ -20,7 +20,9 @@ icons/                       # アプリアイコン PNG
 
 1. `data/apps.json` を編集
    - アプリ追加/更新: `apps[]`(`section`: apps / kids / tools、`icon.type`: pair / single / silhouette / emoji)
-   - リリース告知: `news[]` の先頭に `{date, appId, version, title, body, url}` を追加(日付降順で表示、`news` が空なら News セクション自体が非表示)
+   - リリース告知: 日本向けApp Storeの「バージョン履歴」と同じ内容を `news[]` に `{date, appId, version, title, body, url}` で保持
+   - App Store側に説明がない初回版だけ、本文を `初回リリース` とする
+   - Newsは日付降順で最新12件を表示し、それ以前は「過去の更新履歴」内へ折りたたむ（`news` が空ならセクション自体を非表示）
 2. ビルド: `node scripts/build.mjs`
 3. ローカル確認: `python3 -m http.server 8000` → http://localhost:8000
 4. `git diff index.html` をレビューしてコミット → **ユーザー確認の上で** push

@@ -393,6 +393,21 @@
       margin-top: 4px;
       white-space: pre-line;
     }
+    .news-history {
+      margin-top: 16px;
+    }
+    .news-history summary {
+      width: fit-content;
+      padding: 8px 0;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .news-history summary:hover { text-decoration: underline; }
+    .news-list--archive {
+      margin-top: 8px;
+    }
     @media (max-width: 480px) {
       .news-item { flex-direction: column; gap: 4px; }
       .news-date { width: auto; }
@@ -559,8 +574,8 @@
     <div class="app-card app-card--coming">
       <div class="app-header">
         <div class="app-icon-pair" aria-label="PAlarm app icon, light and dark modes">
-          <img class="mode-icon mode-icon--light" src="icons/palarm-light.png" alt="">
-          <img class="mode-icon mode-icon--dark" src="icons/palarm-dark.png" alt="">
+          <img class="mode-icon mode-icon--light" src="icons/palarm-light.png?v=20260827" alt="">
+          <img class="mode-icon mode-icon--dark" src="icons/palarm-dark.png?v=20260827" alt="">
         </div>
         <div class="app-meta">
           <div class="app-name">PAlarm</div>
@@ -585,7 +600,7 @@
           <div class="app-category">Music · Local Player</div>
         </div>
       </div>
-      <p class="app-desc">クラウドやローカルフォルダの音源をライブラリ化できる音楽プレーヤー。A-Bループで好きな区間を繰り返し再生。</p>
+      <p class="app-desc">ローカル／クラウドの音源、Apple Musicライブラリ、購入・取り込み曲をひとつにまとめる音楽プレーヤー。大規模ライブラリの検索とA-Bループに対応。</p>
       <div class="app-footer">
         <a class="app-store-btn" href="https://apple.co/4uDgsbM" target="_blank" rel="noopener" aria-label="Download Phonoria on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
@@ -606,7 +621,7 @@
           <div class="app-category">Food &amp; Drink · Expiry Tracker</div>
         </div>
       </div>
-      <p class="app-desc">冷蔵庫の食品を声で登録、期限とカテゴリは自動で整理。うっかり期限切れを防いで、フードロスを減らします。</p>
+      <p class="app-desc">食品を声で登録し、期限とカテゴリを自動整理。シェアPantryで招待した人と在庫・期限を共有し、期限切れとフードロスを減らします。</p>
       <div class="app-footer">
         <a class="app-store-btn" href="https://apple.co/4y0pEsF" target="_blank" rel="noopener" aria-label="Download Pantry on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
@@ -634,7 +649,7 @@
           <div class="app-category">For Kids · Math Practice</div>
         </div>
       </div>
-      <p class="app-desc">商、引き算、桁下ろし、あまりまで。iPadで筆算の途中式を書く練習ができる4年生向けアプリ。</p>
+      <p class="app-desc">iPhoneでは選んだ1マスを大きく表示して指で入力。iPadではApple Pencilで、割り算の途中式を手書き練習できます。</p>
       <div class="app-footer">
         <a class="app-store-btn" href="https://apple.co/4fHlqiT" target="_blank" rel="noopener" aria-label="Download わり算の筆算マスター on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
@@ -660,7 +675,7 @@
           <div class="app-category">For Kids · Math Practice</div>
         </div>
       </div>
-      <p class="app-desc">位をそろえて答えを書く。iPadで掛け算の筆算を手書き練習できる3・4年生向けアプリ。</p>
+      <p class="app-desc">iPhoneでは選んだ1マスを大きく表示して指で入力。iPadではApple Pencilで、掛け算の筆算を手書き練習できます。</p>
       <div class="app-footer">
         <a class="app-store-btn" href="https://apple.co/4dG6cIf" target="_blank" rel="noopener" aria-label="Download かけ算の筆算マスター on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
@@ -686,7 +701,7 @@
           <div class="app-category">For Kids · Math Practice</div>
         </div>
       </div>
-      <p class="app-desc">たし算・ひき算の筆算を手書きで反復練習。位をそろえて書き、答えを見直す習慣づけをサポートします。</p>
+      <p class="app-desc">iPhoneでは選んだ1マスを大きく表示して指で入力。iPadではApple Pencilで、たし算・ひき算の筆算を手書き練習できます。</p>
       <div class="app-footer">
         <a class="app-store-btn" href="https://apple.co/4uL1MqU" target="_blank" rel="noopener" aria-label="Download たし算ひき算の筆算マスター on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
@@ -698,9 +713,8 @@
     <!-- KanjiTeineiMaster -->
     <div class="app-card">
       <div class="app-header">
-        <div class="app-icon-pair" aria-label="漢字ていねいマスター app icon, light and dark modes">
-          <img class="mode-icon mode-icon--light" src="icons/kanjiteineimaster-light.png" alt="">
-          <img class="mode-icon mode-icon--dark" src="icons/kanjiteineimaster-dark.png" alt="">
+        <div class="app-icon">
+          <img src="icons/kanjiteineimaster-light.png" alt="漢字ていねいマスター app icon">
         </div>
         <div class="app-meta">
           <div class="app-name">漢字ていねいマスター</div>
@@ -718,101 +732,527 @@
 
   </div>
 </section>
-
 <!-- NEWS -->
 <section class="apps-section" id="news">
   <div class="section-label">News</div>
   <div class="news-list">
     <div class="news-item">
-      <div class="news-date">2026-08-16</div>
+      <div class="news-date">2026-08-25</div>
       <div class="news-content">
-        <div class="news-title"><a href="https://apple.co/4wOKri7" target="_blank" rel="noopener">Prompter 2.0.0 を公開しました</a></div>
-        <p class="news-text">・タイトルと本文から原稿を検索し、同期状況を確認できるようになりました
-・iCloudの更新を待たずに端末内の原稿を表示し、必要なときに手動同期できます
-・新規原稿は保存時だけ一覧へ追加し、アカウント不要の問い合わせ導線も改善しました</p>
+        <div class="news-title"><a href="https://apple.co/4y0pEsF" target="_blank" rel="noopener">Pantry 1.3.0 を公開しました</a></div>
+        <p class="news-text">・シェアPantryを追加: Pantry+メンバーが共有在庫を作成し、招待した人と食品・期限を共有できます。招待された人は無料で参加できます
+・追加、編集、使用済み、復元、削除、一括操作、ウィジェットからの操作がiCloud経由で同期されます
+・設定またはホーム画面のクイックアクションから、任意の返信先メール付きでフィードバックを送れるようになりました
+・アプリアイコンを調整しました</p>
       </div>
     </div>
     <div class="news-item">
-      <div class="news-date">2026-07-24</div>
+      <div class="news-date">2026-08-24</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4fHlqiT" target="_blank" rel="noopener">わり算の筆算マスター 2.1.1 を公開しました</a></div>
+        <p class="news-text">ダークモードでも、アプリアイコンがライトモードと同じ見た目になるよう調整しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-24</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4dG6cIf" target="_blank" rel="noopener">かけ算の筆算マスター 2.1.1 を公開しました</a></div>
+        <p class="news-text">ダークモードでも、アプリアイコンがライトモードと同じ見た目になるよう調整しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-24</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4uL1MqU" target="_blank" rel="noopener">たし算ひき算の筆算マスター 2.1.1 を公開しました</a></div>
+        <p class="news-text">ダークモードでも、アプリアイコンがライトモードと同じ見た目になるよう調整しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-23</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4uDgsbM" target="_blank" rel="noopener">Phonoria 2.1.0 を公開しました</a></div>
+        <p class="news-text">大きな音楽ライブラリを、より快適に。
+
+・大規模ライブラリの表示、検索、スクロールを改善
+・新しいデフォルトアプリアイコンを追加
+・アイコン／アクセントと Light/Dark の外観を独立して選択可能に
+・設定画面を開いたままでも外観がすぐ反映されるよう改善</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-23</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/jp/app/id6792653923" target="_blank" rel="noopener">漢字ていねいマスター 1.2.0 を公開しました</a></div>
+        <p class="news-text">ダークモードでも、アプリアイコンがライトモードと同じ見た目になるよう調整しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-18</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4uL1MqU" target="_blank" rel="noopener">たし算ひき算の筆算マスター 2.1.0 を公開しました</a></div>
+        <p class="news-text">このアップデートでiPhoneに対応しました。
+
+・筆算全体を見ながら、選んだ1マスを大きく表示して指で入力
+・答えを一の位から順に「次のマス」へ移動
+・認識した数字をテンキーですぐ確認・修正
+・iPadのApple Pencil直接入力はこれまでどおり利用可能
+
+手書きデータは外部に送信されません。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-17</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4fHlqiT" target="_blank" rel="noopener">わり算の筆算マスター 2.1.0 を公開しました</a></div>
+        <p class="news-text">このアップデートでiPhoneに対応しました。
+
+・筆算全体を見ながら、選んだ1マスを大きく表示して指で入力
+・割り算の手順に沿って「次のマス」へ移動
+・縦長の途中式は、選択中のマスが見える位置へ自動スクロール
+・認識した数字をテンキーですぐ確認・修正
+・iPadのApple Pencil直接入力はこれまでどおり利用可能
+
+手書きデータは外部に送信されません。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-17</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4dG6cIf" target="_blank" rel="noopener">かけ算の筆算マスター 2.1.0 を公開しました</a></div>
+        <p class="news-text">このアップデートでiPhoneに対応しました。
+
+・筆算全体を見ながら、選んだ1マスを大きく表示して指で入力
+・掛け算の手順に沿って「次のマス」へ移動
+・認識した数字をテンキーですぐ確認・修正
+・iPadのApple Pencil直接入力はこれまでどおり利用可能
+
+手書きデータは外部に送信されません。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-14</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 2.0.0 を公開しました</a></div>
+        <p class="news-text">原稿一覧を、より速く使いやすくしました。
+
+・iCloudの更新を待たずに、端末内の原稿をすぐ表示
+・タイトルと本文から原稿を検索
+・同期状況の表示と「今すぐ同期」を追加
+・新規原稿は保存した時だけ一覧へ追加
+・アカウントなしで、設定またはホーム画面のクイックアクションからご意見・ご要望を送信。返信用メールアドレスは任意で、キャンセル時や送信失敗時は入力内容を保持し、送信成功時にのみ消去します。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-08-02</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/jp/app/id6792653923" target="_blank" rel="noopener">漢字ていねいマスター 1.1.0 を公開しました</a></div>
+        <p class="news-text">漢字のお手本が、学校で習う字形に近くなりました。練習マス・お題・書き順・結果・採点の基準まで、同じ字形にそろえています。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-07-23</div>
       <div class="news-content">
         <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.9.0 を公開しました</a></div>
-        <p class="news-text">・中サイズのホーム画面ウィジェットに対応しました
-・3件の原稿を表示し、4件以上は前後のページへ切り替えられます</p>
+        <p class="news-text">原稿リストウィジェットに中サイズを追加しました。
+
+中サイズでは1ページに3件の原稿を表示し、前後のページへ切り替えられます。大サイズ・特大サイズと同じく、原稿をタップするとPrompterですぐ開けます。</p>
+      </div>
+    </div>
+  </div>
+  <details class="news-history">
+    <summary>過去の更新履歴を表示（41件）</summary>
+    <div class="news-list news-list--archive">
+    <div class="news-item">
+      <div class="news-date">2026-07-23</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/jp/app/id6792653923" target="_blank" rel="noopener">漢字ていねいマスター 1.0.0 を公開しました</a></div>
+        <p class="news-text">初回リリース</p>
       </div>
     </div>
     <div class="news-item">
-      <div class="news-date">2026-07-15</div>
+      <div class="news-date">2026-07-22</div>
       <div class="news-content">
-        <div class="news-title"><a href="https://apple.co/4wOKri7" target="_blank" rel="noopener">Prompter 1.8.0 を公開しました</a></div>
-        <p class="news-text">・ホーム画面ウィジェットから、使いたい原稿をすぐ開けるようになりました
-・iPhone / iPad の大サイズと、iPad の特大サイズに対応しました</p>
+        <div class="news-title"><a href="https://apple.co/4fHlqiT" target="_blank" rel="noopener">わり算の筆算マスター 2.0.0 を公開しました</a></div>
+        <p class="news-text">手書き認識が、このiPadに合わせて学習できるようになりました。
+
+・見直しで認識結果を直した数字だけを端末内で学習
+・設定から学習の停止、保存件数の確認、初期化が可能
+・ほかの筆算マスター2本へのリンクをホームに追加
+・アプリアイコンを刷新
+
+手書きデータは外部に送信されません。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-07-22</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4dG6cIf" target="_blank" rel="noopener">かけ算の筆算マスター 2.0.0 を公開しました</a></div>
+        <p class="news-text">手書き認識が、このiPadに合わせて学習できるようになりました。
+
+・見直しで認識結果を直した数字だけを端末内で学習
+・設定から学習の停止、保存件数の確認、初期化が可能
+・ほかの筆算マスター2本へのリンクをホームに追加
+・アプリアイコンを刷新
+
+手書きデータは外部に送信されません。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-07-22</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4uL1MqU" target="_blank" rel="noopener">たし算ひき算の筆算マスター 2.0.0 を公開しました</a></div>
+        <p class="news-text">手書き認識が、このiPadに合わせて学習できるようになりました。
+
+・見直しで認識結果を直した数字だけを端末内で学習
+・設定から学習の停止、保存件数の確認、初期化が可能
+・ほかの筆算マスター2本へのリンクをホームに追加
+・アプリアイコンを刷新
+
+手書きデータは外部に送信されません。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-07-14</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.8.0 を公開しました</a></div>
+        <p class="news-text">ホーム画面ウィジェットに対応しました。
+
+原稿リストをホーム画面に置き、タップするとその原稿をすぐ開けます。原稿の追加や変更はウィジェットに自動で反映されます。
+
+iPhone / iPad の大サイズと、iPad の特大サイズに対応しています。</p>
       </div>
     </div>
     <div class="news-item">
       <div class="news-date">2026-07-09</div>
       <div class="news-content">
-        <div class="news-title"><a href="https://apple.co/4wOKri7" target="_blank" rel="noopener">Prompter 1.7.0 を公開しました</a></div>
-        <p class="news-text">・表示設定(フォントサイズ・行間・スクロール速度)をプリセット登録できるようになりました
-・原稿の新規作成メニューとテーマ選択の導線を改善しました</p>
-      </div>
-    </div>
-    <div class="news-item">
-      <div class="news-date">2026-07-09</div>
-      <div class="news-content">
-        <div class="news-title"><a href="https://apple.co/4y0pEsF" target="_blank" rel="noopener">Pantry 1.2.0 を公開しました</a></div>
-        <p class="news-text">・期限通知の長押しから、Pantry を開く / 食品でレシピ検索を選べるようになりました
-・中サイズ / 大サイズの「食品アクション」ウィジェットを追加しました</p>
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.7.0 を公開しました</a></div>
+        <p class="news-text">表示設定をプリセット登録できるようにしました。
+
+フォントサイズ、行間、スクロール速度の組み合わせを保存し、原稿や場面に合わせて使えます。
+
+右上メニューから原稿を新規作成できるようにし、テーマ選択も表示設定の中で扱いやすくしました。
+
+そのほか、他の端末から更新がない場合でも同期通知が表示されることがある問題を修正しました。</p>
       </div>
     </div>
     <div class="news-item">
       <div class="news-date">2026-07-09</div>
       <div class="news-content">
         <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.3.2 を公開しました</a></div>
-        <p class="news-text">・設定・サポートまわりを整理し、他のアプリや公式リンクを見つけやすくしました
-・任意のチップ機能の安定性とメッセージを改善しました</p>
+        <p class="news-text">設定画面とサポートまわりを整えました。
+・任意のチップ機能をより安定して使えるようにしました
+・AkkyApps のほかのアプリや公式リンクを設定画面から見つけやすくしました
+・チップ購入後のメッセージを改善
+・細かな安定性を改善</p>
       </div>
     </div>
     <div class="news-item">
-      <div class="news-date">2026-07-09</div>
+      <div class="news-date">2026-07-08</div>
       <div class="news-content">
         <div class="news-title"><a href="https://apple.co/4uDgsbM" target="_blank" rel="noopener">Phonoria 2.0.1 を公開しました</a></div>
-        <p class="news-text">・設定・サポートまわりを整理し、他のアプリや公式リンクを見つけやすくしました
-・任意のチップ機能の安定性と感謝メッセージを改善しました</p>
+        <p class="news-text">設定画面とサポートまわりを整えました。
+
+・任意のチップ機能をより安定して使えるようにしました
+・AkkyApps のほかのアプリや公式リンクを設定画面から見つけやすくしました
+・チップ購入後の感謝メッセージを改善
+・細かな安定性を改善</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-07-08</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4y0pEsF" target="_blank" rel="noopener">Pantry 1.2.0 を公開しました</a></div>
+        <p class="news-text">・通知アクションを追加: 期限通知を長押しして、Pantryを開く／通知内の食品でレシピ検索を選べるようになりました
+・Siri、ショートカット、新しい「食品アクション」ウィジェットからレシピ検索を起動できるようになりました
+・中サイズ／大サイズの「食品アクション」ウィジェットを追加し、登録とレシピ検索をすばやく使えるようにしました
+・設定に、AkkyAppsの他のアプリへのリンクを追加しました</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-07-04</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4y0pEsF" target="_blank" rel="noopener">Pantry 1.1.0 を公開しました</a></div>
+        <p class="news-text">・期限通知を追加: 期限当日の朝と前日の夜に、対象の食品をまとめてお知らせします（設定で時刻の変更・オフが可能）
+・手動追加に対応: 左下の＋ボタンから、声を出せない場所でもキーボードで登録できるようになりました
+・ホーム画面の中サイズウィジェットで最大5件まで表示できるようになりました
+・「牛乳が15日まで」のような言い回しで「まで」が品名に混ざることがある問題を修正
+・「使用済み」操作時のリストの動きを滑らかにしました</p>
       </div>
     </div>
     <div class="news-item">
       <div class="news-date">2026-07-01</div>
       <div class="news-content">
         <div class="news-title"><a href="https://apple.co/4y0pEsF" target="_blank" rel="noopener">Pantry 1.0.0 を公開しました</a></div>
-        <p class="news-text">・冷蔵庫の食品を声で登録、期限とカテゴリを自動付与
-・ウィジェット / Siri ショートカット / Apple Watch(Pantry+)に対応</p>
+        <p class="news-text">初回リリース</p>
       </div>
     </div>
     <div class="news-item">
-      <div class="news-date">2026-06-26</div>
+      <div class="news-date">2026-06-24</div>
       <div class="news-content">
-        <div class="news-title"><a href="https://apple.co/4wOKri7" target="_blank" rel="noopener">Prompter 1.6.0 を公開しました</a></div>
-        <p class="news-text">・ミラーモードに対応(ハーフミラー式プロンプター向け)
-・以前の原稿でも表示設定を安定して読み込めるように改善</p>
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.6.0 を公開しました</a></div>
+        <p class="news-text">ミラーモードを追加しました。
+
+ハーフミラー式のプロンプターで読みやすいよう、設定から発表画面を鏡越しの表示に切り替えられます。端末は通常向きのまま置けます。
+
+そのほか、以前の原稿でも表示設定を安定して読み込めるようにしました。</p>
       </div>
     </div>
     <div class="news-item">
-      <div class="news-date">2026-06-26</div>
-      <div class="news-content">
-        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.3.1 を公開しました</a></div>
-        <p class="news-text">・Apple Watch のフェーズ表示とサウンド「なし」設定の不具合を修正</p>
-      </div>
-    </div>
-    <div class="news-item">
-      <div class="news-date">2026-06-18</div>
+      <div class="news-date">2026-06-17</div>
       <div class="news-content">
         <div class="news-title"><a href="https://apple.co/4uDgsbM" target="_blank" rel="noopener">Phonoria 2.0.0 を公開しました</a></div>
-        <p class="news-text">・Apple Music ライブラリや購入・取り込み曲を、ローカル音源と 1 つのプレーヤーで再生できるようになりました</p>
+        <p class="news-text">3つの音源を、ひとつのプレーヤーに。
+
+・ローカルの曲に加え、Apple Music ライブラリの曲を一覧に混ぜて表示・再生（再生には Apple Music の契約が必要）
+・iPhone の購入・取り込み曲（DRM フリー）も表示・再生（契約は不要）
+・アルバム / アーティスト / プレイリスト / 検索もすべてのソースに対応
+・細かな安定性の改善</p>
       </div>
     </div>
-  </div>
-</section>
+    <div class="news-item">
+      <div class="news-date">2026-06-15</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4uL1MqU" target="_blank" rel="noopener">たし算ひき算の筆算マスター 1.0.1 を公開しました</a></div>
+        <p class="news-text">軽微な修正を行いました。操作に慣れるまで「みなおしをしよう」の吹き出しを表示するようにしました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-06-12</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.3.1 を公開しました</a></div>
+        <p class="news-text">不具合を修正しました。
+・Apple Watch でフェーズ名（WORKING など）が一部の言語で正しく表示されない問題を修正
+・サウンドで「なし」を選んでもデフォルトの音が鳴ってしまう問題を修正</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-06-12</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4uDgsbM" target="_blank" rel="noopener">Phonoria 1.1.0 を公開しました</a></div>
+        <p class="news-text">再生と操作まわりを磨きました。
 
+・A-B ループの範囲を 0.1 秒単位で精密に指定できるようになりました
+・ナビゲーションバーを iOS 標準のデザインに刷新し、設定や追加などの操作ボタンを見やすく整えました
+・細かな安定性の改善</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-06-11</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.5.1 を公開しました</a></div>
+        <p class="news-text">発表原稿の編集画面を改善しました。
+
+スワイプや画面外のタップで誤って編集画面が閉じないようにしました。閉じる操作は左上の×（未保存の変更がある場合は確認します）と右上のチェックに統一しています。
+
+iPad と Mac では編集画面を全画面で表示し、より広い領域で原稿を編集できるようになりました。
+
+その他、細かな不具合を修正しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-06-08</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.5.0 を公開しました</a></div>
+        <p class="news-text">発表中の画面と速度調整を改善しました。
+
+目標時間を設定している場合、ヘッダーに経過時間と目標時間を並べて表示します。速度の自動計算は開始インターバルも含めて調整し、目標時間により近いペースでスクロールします。
+
+iPhone の下部コントローラーは一段で見やすく整理しました。速度倍率ボタンは新規ユーザーでは初期非表示になり、必要な場合だけ設定から表示できます。
+
+設定画面も整理し、音声認識による「既読検知」と表示設定を見つけやすくしました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-06-06</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4dG6cIf" target="_blank" rel="noopener">かけ算の筆算マスター 1.0.1 を公開しました</a></div>
+        <p class="news-text">軽微な修正を行いました。操作に慣れるまで「みなおしをしよう」の吹き出しを表示するようにしました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-06-05</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4fHlqiT" target="_blank" rel="noopener">わり算の筆算マスター 1.0.2 を公開しました</a></div>
+        <p class="news-text">軽微な修正を行いました。操作に慣れるまで「みなおしをしよう」の吹き出しを表示するようにしました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-06-04</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.3.0 を公開しました</a></div>
+        <p class="news-text">休憩をマインドフル時間として Apple ヘルスケアに記録できるようになりました（設定でオン/オフ）。
+PTimer を開いたまま、休憩中に画面を触ったり端末を持ち上げたりしなかった場合のみ記録されます。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-06-03</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4uL1MqU" target="_blank" rel="noopener">たし算ひき算の筆算マスター 1.0 を公開しました</a></div>
+        <p class="news-text">初回リリース</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-31</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.4.0 を公開しました</a></div>
+        <p class="news-text">原稿をiCloudで同期できるようになりました。
+
+原稿一覧から「iCloudで同期」をオンにすると、複数の端末間で原稿を共有・編集できます。同じiCloudアカウントなら、新しい端末でも原稿を引き継げます。
+
+フォントサイズや読み上げ速度などの表示設定は、端末ごとに最適化できるよう、端末側にのみ保存されます。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-29</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.2.0 を公開しました</a></div>
+        <p class="news-text">「画面をスリープさせない」設定が省エネ表示中も正しく働くよう修正しました。
+省エネ表示では画面を実際に暗くして電池の消費を抑え、端末を持ち上げると元の明るさに戻ります。
+フェーズ切り替え時の表示もより自然になりました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-27</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.1.3 を公開しました</a></div>
+        <p class="news-text">8言語に対応しました（日本語・英語・ドイツ語・スペイン語・フランス語・韓国語・ポルトガル語・簡体字中国語）。
+細かな表示の調整もあわせて行いました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-23</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.3.0 を公開しました</a></div>
+        <p class="news-text">複数の原稿を保存して切り替えられるようになりました。
+
+プレゼン、スピーチ、動画撮影など、用途ごとに原稿を分けて管理できます。各原稿のタイトル、本文、表示設定、スクロール速度、目標時間、読み上げガイド設定も保存されます。
+
+音声認識で読んだ位置を検知し、読み終えた部分を自動でフェードする読み上げガイドも引き続き利用できます。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-22</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.1.2 を公開しました</a></div>
+        <p class="news-text">軽微な修正と表示の調整を行いました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-22</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4uDgsbM" target="_blank" rel="noopener">Phonoria 1.0 を公開しました</a></div>
+        <p class="news-text">初回リリース</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-20</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4dG6cIf" target="_blank" rel="noopener">かけ算の筆算マスター 1.0 を公開しました</a></div>
+        <p class="news-text">初回リリース</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-19</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.1.1 を公開しました</a></div>
+        <p class="news-text">コントロールセンター・ロック画面・アクションボタンに追加できる「コントロール」に対応しました（iOS 18 以降）。タップひとつで PTimer をすぐに開けます。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-19</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4fHlqiT" target="_blank" rel="noopener">わり算の筆算マスター 1.0.1 を公開しました</a></div>
+        <p class="news-text">iPadのウィンドウモードで幅を狭くしたときも、筆算レイアウトが崩れにくくなるよう調整しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-17</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.1.0 を公開しました</a></div>
+        <p class="news-text">カスタム音源をタイマー用に切り出し、名前変更・視聴停止・削除の取り消しができるようになりました。
+ライブアクティビティとウィジェットの表示を見直し、完了時の「次へ」「終了」操作を分かりやすくしました。
+iOS のタイマー画面、テーマ選択、操作ボタンの見た目と使い心地を整えました。
+Apple Watch の設定同期と単独タイマーの流れを改善しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-12</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/4fHlqiT" target="_blank" rel="noopener">わり算の筆算マスター 1.0.0 を公開しました</a></div>
+        <p class="news-text">初回リリース</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-05</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.2.2 を公開しました</a></div>
+        <p class="news-text">複数の原稿を保存して切り替えられるようになりました。
+
+プレゼン、スピーチ、動画撮影など、用途ごとに原稿を分けて管理できます。各原稿のタイトル、本文、表示設定、スクロール速度、目標時間、読み上げガイド設定も保存されます。
+
+音声認識で読んだ位置を検知し、読み終えた部分を自動でフェードする読み上げガイドも引き続き利用できます。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-05-05</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.0.2 を公開しました</a></div>
+        <p class="news-text">設定画面でのサウンドファイル選択を修正しました。
+サウンドの視聴ボタンも、実際のタイマー音と同じくマナーモード中に鳴るようにしました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-04-30</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.2.1 を公開しました</a></div>
+        <p class="news-text">読み上げガイドを追加しました。対応デバイスでは、マイクで原稿の読み上げ位置を検知し、原稿の読み終えた部分が自然に薄く表示されます。
+新しいアプリアイコンを追加し、設定から選べるようにしました。
+iPhone / iPad / Mac で使えるアプリとして、App Store テキストも整理しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-04-30</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.0.1 を公開しました</a></div>
+        <p class="news-text">Apple Watch 版をより確実に入手できるよう、配信まわりを調整しました。
+開発を応援する任意のチップにも対応しました。
+新しいアプリアイコンを追加し、設定から選べるようにしました。
+テーマカラーの初期設定を Green にしました。
+表示モードをシステム / ライト / ダークから選べるようにしました。
+ライブアクティビティの完了時表示と操作を改善しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-04-27</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apple.co/49oRu7f" target="_blank" rel="noopener">PTimer 1.0 を公開しました</a></div>
+        <p class="news-text">初回リリース</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-04-25</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.1.1 を公開しました</a></div>
+        <p class="news-text">英語環境での表示を修正しました。テーマ名・スクロールステータス・カウントダウンが正しく英語で表示されます。日本語環境での VoiceOver 読み上げも改善しました。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-04-24</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.1 を公開しました</a></div>
+        <p class="news-text">Mac（Designed for iPad）でのマウスホイール・トラックパッドスクロールに対応しました。iPad + Magic Keyboard のトラックパッドにも対応。自動スクロール中の手動操作もより自然に動作します。</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-04-20</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener">Prompter 1.0 を公開しました</a></div>
+        <p class="news-text">初回リリース</p>
+      </div>
+    </div>
+    </div>
+  </details>
+</section>
 <!-- ABOUT -->
 <section class="about-section">
   <div class="about-inner">
