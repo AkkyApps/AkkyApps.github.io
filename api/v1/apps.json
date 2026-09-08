@@ -1,0 +1,836 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-08T14:10:00Z",
+  "apps": [
+    {
+      "id": "pictorb",
+      "order": 0,
+      "appStoreURL": "https://apps.apple.com/app/id6807662203",
+      "localizations": {
+        "ja": {
+          "name": "PictOrb",
+          "description": "動かせるオーブで写真と動画にエフェクトを加えるカメラ"
+        },
+        "en-US": {
+          "name": "PictOrb",
+          "description": "Camera with movable orb effects for photos and videos"
+        },
+        "zh-Hans": {
+          "name": "PictOrb",
+          "description": "用可移动球体为照片和视频添加效果的相机"
+        },
+        "zh-Hant": {
+          "name": "PictOrb",
+          "description": "用可移動球體為照片和影片加入效果的相機"
+        },
+        "ko": {
+          "name": "PictOrb",
+          "description": "움직이는 오브로 사진과 동영상에 효과를 더하는 카메라"
+        },
+        "es-ES": {
+          "name": "PictOrb",
+          "description": "Cámara con efectos de orbes móviles para fotos y vídeos"
+        },
+        "fr-FR": {
+          "name": "PictOrb",
+          "description": "Appareil photo avec effets de sphères mobiles pour les photos et vidéos"
+        },
+        "de-DE": {
+          "name": "PictOrb",
+          "description": "Kamera mit beweglichen Kugeleffekten für Fotos und Videos"
+        },
+        "it": {
+          "name": "PictOrb",
+          "description": "Fotocamera con effetti a sfera mobili per foto e video"
+        },
+        "pt-BR": {
+          "name": "PictOrb",
+          "description": "Câmera com efeitos de esferas móveis para fotos e vídeos"
+        },
+        "ru": {
+          "name": "PictOrb",
+          "description": "Камера с эффектами подвижных сфер для фото и видео"
+        },
+        "nl-NL": {
+          "name": "PictOrb",
+          "description": "Camera met verplaatsbare boleffecten voor foto’s en video’s"
+        },
+        "pl": {
+          "name": "PictOrb",
+          "description": "Aparat z efektami ruchomych kul do zdjęć i filmów"
+        },
+        "sv": {
+          "name": "PictOrb",
+          "description": "Kamera med flyttbara kloteffekter för foton och videor"
+        },
+        "tr": {
+          "name": "PictOrb",
+          "description": "Fotoğraf ve videolar için hareketli küre efektleri sunan kamera"
+        },
+        "th": {
+          "name": "PictOrb",
+          "description": "กล้องพร้อมเอฟเฟกต์ลูกแก้วที่เลื่อนได้สำหรับภาพถ่ายและวิดีโอ"
+        },
+        "vi": {
+          "name": "PictOrb",
+          "description": "Máy ảnh với hiệu ứng quả cầu di chuyển được cho ảnh và video"
+        },
+        "id": {
+          "name": "PictOrb",
+          "description": "Kamera dengan efek bola yang dapat dipindahkan untuk foto dan video"
+        },
+        "hi": {
+          "name": "PictOrb",
+          "description": "फ़ोटो और वीडियो के लिए खिसकाए जा सकने वाले गोलाकार इफ़ेक्ट वाला कैमरा"
+        }
+      }
+    },
+    {
+      "id": "palarm",
+      "order": 1,
+      "appStoreURL": "https://apps.apple.com/app/id6800244742",
+      "localizations": {
+        "ja": {
+          "name": "PAlarm",
+          "description": "鳴る前に予定を確認してスキップできるアラーム"
+        },
+        "en-US": {
+          "name": "PAlarm",
+          "description": "Alarms you can review and skip before they ring"
+        },
+        "zh-Hans": {
+          "name": "PAlarm",
+          "description": "可在响铃前查看并跳过的闹钟"
+        },
+        "zh-Hant": {
+          "name": "PAlarm",
+          "description": "可在響鈴前查看並略過的鬧鐘"
+        },
+        "ko": {
+          "name": "PAlarm",
+          "description": "울리기 전에 확인하고 건너뛸 수 있는 알람"
+        },
+        "es-ES": {
+          "name": "PAlarm",
+          "description": "Alarmas que puedes revisar y omitir antes de que suenen"
+        },
+        "fr-FR": {
+          "name": "PAlarm",
+          "description": "Des alarmes à vérifier et à ignorer avant qu’elles sonnent"
+        },
+        "de-DE": {
+          "name": "PAlarm",
+          "description": "Wecker, die Sie vor dem Klingeln prüfen und überspringen können"
+        },
+        "it": {
+          "name": "PAlarm",
+          "description": "Sveglie da controllare e saltare prima che suonino"
+        },
+        "pt-BR": {
+          "name": "PAlarm",
+          "description": "Alarmes que você pode conferir e pular antes de tocarem"
+        },
+        "ru": {
+          "name": "PAlarm",
+          "description": "Будильники, которые можно проверить и пропустить до звонка"
+        },
+        "nl-NL": {
+          "name": "PAlarm",
+          "description": "Wekkers die je vóór het afgaan kunt bekijken en overslaan"
+        },
+        "pl": {
+          "name": "PAlarm",
+          "description": "Alarmy, które można sprawdzić i pominąć, zanim zadzwonią"
+        },
+        "sv": {
+          "name": "PAlarm",
+          "description": "Alarm som du kan granska och hoppa över innan de ringer"
+        },
+        "tr": {
+          "name": "PAlarm",
+          "description": "Çalmadan önce kontrol edip atlayabileceğiniz alarmlar"
+        },
+        "th": {
+          "name": "PAlarm",
+          "description": "นาฬิกาปลุกที่ตรวจสอบและข้ามได้ก่อนดัง"
+        },
+        "vi": {
+          "name": "PAlarm",
+          "description": "Báo thức có thể xem lại và bỏ qua trước khi đổ chuông"
+        },
+        "id": {
+          "name": "PAlarm",
+          "description": "Alarm yang dapat diperiksa dan dilewati sebelum berbunyi"
+        },
+        "hi": {
+          "name": "PAlarm",
+          "description": "बजने से पहले जाँचकर छोड़े जा सकने वाले अलार्म"
+        }
+      }
+    },
+    {
+      "id": "prompter",
+      "order": 2,
+      "appStoreURL": "https://apps.apple.com/us/app/prompter-never-lose-your-place/id6762259685",
+      "localizations": {
+        "ja": {
+          "name": "Prompter",
+          "description": "原稿、スピーチ、動画向けのプロンプター"
+        },
+        "en-US": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "zh-Hans": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "zh-Hant": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "ko": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "es-ES": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "fr-FR": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "de-DE": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "it": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "pt-BR": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "ru": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "nl-NL": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "pl": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "sv": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "tr": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "th": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "vi": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "id": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        },
+        "hi": {
+          "name": "Prompter",
+          "description": "Teleprompter for scripts, speeches, and videos"
+        }
+      }
+    },
+    {
+      "id": "ptimer",
+      "order": 3,
+      "appStoreURL": "https://apps.apple.com/us/app/ptimer-pomodoro-focus-timer/id6762259538",
+      "localizations": {
+        "ja": {
+          "name": "PTimer",
+          "description": "集中と休憩のためのポモドーロタイマー"
+        },
+        "en-US": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "zh-Hans": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "zh-Hant": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "ko": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "es-ES": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "fr-FR": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "de-DE": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "it": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "pt-BR": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "ru": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "nl-NL": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "pl": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "sv": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "tr": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "th": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "vi": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "id": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        },
+        "hi": {
+          "name": "PTimer",
+          "description": "Pomodoro timer for focus and rest"
+        }
+      }
+    },
+    {
+      "id": "phonoria",
+      "order": 4,
+      "appStoreURL": "https://apps.apple.com/us/app/phonoria/id6771007670",
+      "localizations": {
+        "ja": {
+          "name": "Phonoria",
+          "description": "ローカル音楽とA-Bループに対応した音楽プレイヤー"
+        },
+        "en-US": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "zh-Hans": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "zh-Hant": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "ko": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "es-ES": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "fr-FR": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "de-DE": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "it": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "pt-BR": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "ru": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "nl-NL": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "pl": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "sv": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "tr": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "th": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "vi": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "id": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        },
+        "hi": {
+          "name": "Phonoria",
+          "description": "Music player with local files and A-B loop"
+        }
+      }
+    },
+    {
+      "id": "pantry",
+      "order": 5,
+      "appStoreURL": "https://apps.apple.com/us/app/pantry-food-expiry-tracker/id6781726758",
+      "localizations": {
+        "ja": {
+          "name": "Pantry",
+          "description": "声で記録する食品期限トラッカー"
+        },
+        "en-US": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "zh-Hans": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "zh-Hant": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "ko": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "es-ES": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "fr-FR": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "de-DE": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "it": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "pt-BR": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "ru": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "nl-NL": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "pl": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "sv": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "tr": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "th": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "vi": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "id": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        },
+        "hi": {
+          "name": "Pantry",
+          "description": "Voice-first food expiry tracker"
+        }
+      }
+    },
+    {
+      "id": "divisionMaster4",
+      "order": 6,
+      "appStoreURL": "https://apps.apple.com/us/app/long-division-master-grade-4/id6767220587",
+      "localizations": {
+        "ja": {
+          "name": "わり算の筆算マスター",
+          "description": "小学4年生向けのiPad筆算練習"
+        },
+        "en-US": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "zh-Hans": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "zh-Hant": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "ko": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "es-ES": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "fr-FR": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "de-DE": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "it": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "pt-BR": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "ru": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "nl-NL": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "pl": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "sv": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "tr": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "th": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "vi": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "id": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        },
+        "hi": {
+          "name": "わり算の筆算マスター",
+          "description": "iPad long-division practice for grade 4"
+        }
+      }
+    },
+    {
+      "id": "multiplicationMaster3",
+      "order": 7,
+      "appStoreURL": "https://apps.apple.com/us/app/multiplication-master-3-4/id6771003502",
+      "localizations": {
+        "ja": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPadで練習する掛け算の筆算"
+        },
+        "en-US": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "zh-Hans": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "zh-Hant": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "ko": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "es-ES": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "fr-FR": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "de-DE": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "it": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "pt-BR": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "ru": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "nl-NL": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "pl": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "sv": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "tr": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "th": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "vi": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "id": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        },
+        "hi": {
+          "name": "かけ算の筆算マスター",
+          "description": "iPad written-multiplication practice"
+        }
+      }
+    },
+    {
+      "id": "additionSubtractionMaster",
+      "order": 8,
+      "appStoreURL": "https://apps.apple.com/us/app/add-subtract-drill-master/id6775512584",
+      "localizations": {
+        "ja": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPadで練習するたし算・ひき算の筆算"
+        },
+        "en-US": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "zh-Hans": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "zh-Hant": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "ko": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "es-ES": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "fr-FR": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "de-DE": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "it": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "pt-BR": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "ru": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "nl-NL": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "pl": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "sv": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "tr": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "th": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "vi": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "id": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        },
+        "hi": {
+          "name": "たし算ひき算の筆算マスター",
+          "description": "iPad written addition and subtraction practice"
+        }
+      }
+    },
+    {
+      "id": "kanjiTeineiMaster",
+      "order": 9,
+      "appStoreURL": "https://apps.apple.com/app/id6792653923",
+      "localizations": {
+        "ja": {
+          "name": "漢字ていねいマスター",
+          "description": "iPadで漢字をていねいに練習"
+        },
+        "en-US": {
+          "name": "漢字ていねいマスター",
+          "description": "iPad neat kanji handwriting practice"
+        },
+        "zh-Hans": {
+          "name": "漢字ていねいマスター",
+          "description": "在 iPad 上练习规范书写汉字"
+        },
+        "zh-Hant": {
+          "name": "漢字ていねいマスター",
+          "description": "在 iPad 上練習工整書寫漢字"
+        },
+        "ko": {
+          "name": "漢字ていねいマスター",
+          "description": "iPad에서 한자를 바르게 쓰는 연습"
+        },
+        "es-ES": {
+          "name": "漢字ていねいマスター",
+          "description": "Práctica de escritura cuidada de kanji en iPad"
+        },
+        "fr-FR": {
+          "name": "漢字ていねいマスター",
+          "description": "Exercices d’écriture soignée de kanji sur iPad"
+        },
+        "de-DE": {
+          "name": "漢字ていねいマスター",
+          "description": "Übung für sauberes Kanji-Schreiben auf dem iPad"
+        },
+        "it": {
+          "name": "漢字ていねいマスター",
+          "description": "Esercizi di scrittura accurata dei kanji su iPad"
+        },
+        "pt-BR": {
+          "name": "漢字ていねいマスター",
+          "description": "Prática de escrita caprichada de kanji no iPad"
+        },
+        "ru": {
+          "name": "漢字ていねいマスター",
+          "description": "Тренировка аккуратного написания кандзи на iPad"
+        },
+        "nl-NL": {
+          "name": "漢字ていねいマスター",
+          "description": "Oefen netjes kanji schrijven op iPad"
+        },
+        "pl": {
+          "name": "漢字ていねいマスター",
+          "description": "Ćwiczenie starannego pisania kanji na iPadzie"
+        },
+        "sv": {
+          "name": "漢字ていねいマスター",
+          "description": "Öva på att skriva kanji prydligt på iPad"
+        },
+        "tr": {
+          "name": "漢字ていねいマスター",
+          "description": "iPad’de özenli kanji yazma alıştırması"
+        },
+        "th": {
+          "name": "漢字ていねいマスター",
+          "description": "ฝึกเขียนคันจิอย่างประณีตบน iPad"
+        },
+        "vi": {
+          "name": "漢字ていねいマスター",
+          "description": "Luyện viết chữ kanji nắn nót trên iPad"
+        },
+        "id": {
+          "name": "漢字ていねいマスター",
+          "description": "Latihan menulis kanji dengan rapi di iPad"
+        },
+        "hi": {
+          "name": "漢字ていねいマスター",
+          "description": "iPad पर साफ़-सुथरे ढंग से कांजी लिखने का अभ्यास"
+        }
+      }
+    }
+  ]
+}

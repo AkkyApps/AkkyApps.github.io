@@ -28,3 +28,13 @@ icons/                       # アプリアイコン PNG
 4. `git diff index.html` をレビューしてコミット → **ユーザー確認の上で** push
 
 `node scripts/build.mjs --check` で index.html が最新か検証できる(コミット前チェック用)。
+
+## アプリ内リンクの配信
+
+`api/v1/apps.json` がAkkyAppsKit向け公開カタログの正本。LP用の `data/apps.json` とはschemaが異なるため、そのまま流用しない。
+
+- 公開済みアプリを追加するときは、安定ID・App Store URL・重複しないorder・19localeのname/descriptionを登録し、generatedAtを更新する。
+- `node scripts/check-app-catalog.mjs` と `node scripts/build.mjs --check` を実行する。公開済みLPアプリの掲載漏れも検出する。
+- 公開後は `https://akkyapps.github.io/api/v1/apps.json` のHTTP 200・配信本文一致を確認する。
+- 対応済みKitのリンク欄は起動ごと初回表示時に1回取得する。取得失敗時は検証済みキャッシュ／同梱一覧を維持する。即時push通知ではない。
+- 初回一覧は既存Kitの8アプリ翻訳を再利用し、公開確認済みPictOrb/PAlarmを追加した。新規説明文の母語レビューは未実施。

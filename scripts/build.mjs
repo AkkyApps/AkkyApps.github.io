@@ -6,6 +6,10 @@
 //
 // index.html は生成物。直接編集せず data/apps.json またはテンプレートを編集すること。
 
+import { checkAppCatalog } from "./check-app-catalog.mjs";
+
+checkAppCatalog();
+
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
