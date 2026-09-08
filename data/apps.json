@@ -18,6 +18,19 @@
   },
   "apps": [
     {
+      "id": "pictorb",
+      "comment": "PictOrb",
+      "name": "PictOrb",
+      "section": "apps",
+      "category": "Photo & Video · Orb Camera",
+      "desc": "景色の一部だけ、別世界へ。動かせるオーブで反転やピクセル化などの効果をその場で確かめ、写真や1080p動画に残せるiPhoneカメラです。",
+      "icon": {"type": "single", "src": "icons/pictorb.png"},
+      "status": "released",
+      "version": "1.0.0",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6807662203",
+      "appStoreId": "6807662203"
+    },
+    {
       "id": "prompter",
       "comment": "Prompter",
       "name": "Prompter",
@@ -189,6 +202,14 @@
     }
   ],
   "news": [
+    {
+      "date": "2026-09-08",
+      "appId": "pictorb",
+      "version": "1.0.0",
+      "title": "PictOrb 1.0.0 を公開しました",
+      "body": "初回リリース",
+      "url": "https://apps.apple.com/jp/app/id6807662203"
+    },
     {
       "date": "2026-08-25",
       "appId": "pantry",
