@@ -1,13 +1,30 @@
 {
+  "featured": [
+    {
+      "appId": "prompter",
+      "headline": "原稿を見失わない。",
+      "description": "発表や撮影で原稿を読むために。iPhone・iPad・Mac対応。買い切り・サブスクなし。"
+    },
+    {
+      "appId": "pictorb",
+      "headline": "いつもの景色で遊ぶ。",
+      "description": "動かせるオーブで、景色の一部を反転したり、ピクセルにしたり。写真や動画に残せるカメラです。"
+    },
+    {
+      "appId": "pantry",
+      "headline": "食品を忘れないために。",
+      "description": "声で登録して、期限を確認。買い物のあとから、使い切るまでを支える食品管理アプリ。"
+    }
+  ],
   "sections": [
     {
       "id": "apps",
-      "label": "Apps",
+      "label": "ほかのアプリ",
       "comment": "APPS"
     },
     {
       "id": "kids",
-      "label": "For Kids",
+      "label": "子どもの学び",
       "comment": "FOR KIDS"
     }
   ],
@@ -84,7 +101,10 @@
         "light": "icons/palarm-light.png?v=20260827",
         "dark": "icons/palarm-dark.png?v=20260827"
       },
-      "status": "coming"
+      "status": "released",
+      "version": "1.0.2",
+      "appStoreId": "6800244742",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6800244742"
     },
     {
       "id": "phonoria",
@@ -202,6 +222,14 @@
     }
   ],
   "news": [
+    {
+      "date": "2026-09-02",
+      "appId": "palarm",
+      "version": "1.0.2",
+      "title": "PAlarm 1.0.2 を公開しました",
+      "body": "バグ修正：Live Activityを利用したアラームが設定時刻より遅れて鳴る問題を修正し、祝日スキップ時の曜日表示を分かりやすく改善しました。",
+      "url": "https://apps.apple.com/jp/app/id6800244742"
+    },
     {
       "date": "2026-09-08",
       "appId": "pictorb",

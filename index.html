@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AkkyApps</title>
-  <meta name="description" content="AkkyApps — iOS app developer. Simple, useful apps for everyday life.">
+  <meta name="description" content="話す。遊ぶ。暮らす。原稿を見失わないPrompter、写真と動画で遊ぶPictOrb、食品管理のPantry。AkkyAppsのiOSアプリをご紹介します。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -27,12 +28,14 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+      font-family: 'Inter', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
       background: var(--bg);
       color: var(--text);
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
-      line-height: 1.5;
+      font-size: 16px;
+      line-height: 1.75;
+      letter-spacing: 0;
     }
 
     /* ── NAV ── */
@@ -68,9 +71,9 @@
       align-items: center;
     }
     .nav-link {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 400;
-      color: var(--blue);
+      color: var(--blue-dark);
       text-decoration: none;
     }
     .nav-link:hover { opacity: 0.7; }
@@ -86,19 +89,19 @@
       display: inline-block;
       background: var(--blue-light);
       color: var(--blue);
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 600;
-      letter-spacing: 0.4px;
+      letter-spacing: 0;
       padding: 5px 14px;
       border-radius: 100px;
       margin-bottom: 24px;
       text-transform: uppercase;
     }
     .hero h1 {
-      font-size: clamp(36px, 6vw, 60px);
+      font-size: clamp(32px, 5.4vw, 56px);
       font-weight: 700;
-      letter-spacing: -1.5px;
-      line-height: 1.1;
+      letter-spacing: 0;
+      line-height: 1.4;
       color: var(--text);
       margin-bottom: 20px;
     }
@@ -122,9 +125,9 @@
       padding: 16px 24px 80px;
     }
     .section-label {
-      font-size: 13px;
+      font-size: 16px;
       font-weight: 600;
-      letter-spacing: 0.8px;
+      letter-spacing: 0;
       text-transform: uppercase;
       color: var(--text-3);
       margin-bottom: 24px;
@@ -240,9 +243,9 @@
     }
 
     .app-desc {
-      font-size: 15px;
+      font-size: 16px;
       color: var(--text-2);
-      line-height: 1.6;
+      line-height: 1.75;
       flex: 1;
     }
     .app-card--coming .app-desc {
@@ -495,6 +498,54 @@
       footer { flex-direction: column; align-items: flex-start; }
     }
   </style>
+  <style>
+    /* Japanese hierarchy and featured product layout. */
+    :root { --blue-dark: #116e3e; }
+    .hero-badge { color: var(--blue-dark); background: #eef6ef; }
+    .hero { padding-top: 64px; padding-bottom: 52px; }
+    .hero h1 { color: #183e2e; }
+    .hero p { max-width: 600px; line-height: 1.75; }
+    .hero-en { display: block; margin-top: 14px; font-size: 16px; color: var(--text-3); }
+    .featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
+    .featured-card { padding: 36px; gap: 24px; border: 1px solid #e1e9e1; }
+    .featured-card--prompter { background: #f1f7f0; }
+    .featured-card--pictorb { background: #f0f3fa; border-color: #e0e5f0; }
+    .featured-card--pantry { grid-column: 1/-1; display: grid; grid-template-columns: 132px minmax(0,1fr) auto; align-items: center; background: #faf7ef; }
+    .featured-card .app-icon { width: 80px; height: 80px; border-radius: 18px; margin-bottom: 10px; }
+    .featured-card .app-icon-pair { height: 90px; }
+    .featured-card .mode-icon { width: 72px; height: 72px; border-radius: 16px; }
+    .featured-name { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #42554c; }
+    .featured-copy h3 { font-size: clamp(24px,3vw,32px); font-weight: 700; line-height: 1.4; letter-spacing: 0; margin-bottom: 16px; }
+    .featured-copy .app-desc { max-width: 36em; }
+    .featured-links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: auto; }
+    .featured-card--pantry .featured-links { margin-top: 0; }
+    .app-category, .footer-copy, .footer-links a { font-size: 14px; }
+    .app-store-btn, .open-tool-btn, .news-text, .news-title, .news-history summary { font-size: 16px; }
+    .open-tool-btn, .footer-links a, .news-history summary { color: var(--blue-dark); }
+    .app-name, .about-inner h2, .app-store-btn, .open-tool-btn { letter-spacing: 0; }
+    p { line-break: strict; overflow-wrap: anywhere; }
+    section[id] { scroll-margin-top: 80px; }
+    a:focus-visible, summary:focus-visible { outline: 3px solid #2465b3; outline-offset: 4px; }
+    @media (max-width: 700px) {
+      .featured-grid { grid-template-columns: 1fr; }
+      .featured-card { padding: 28px; }
+      .featured-card--pantry { display: flex; }
+      .featured-card--pantry .featured-links { margin-top: auto; }
+      .nav-inner { padding-inline: 16px; }
+      .nav-links { gap: 14px; }
+      .hero { padding: 48px 20px 40px; }
+    }
+    @media (max-width: 380px) {
+      .nav-links { gap: 10px; }
+      .nav-link { font-size: 14px; }
+      .featured-card { padding: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .app-card:hover { transform: none; }
+      .app-card:hover .mode-icon, .app-card:focus-within .mode-icon { transform: none; }
+    }
+  </style>
 </head>
 <body>
 
@@ -503,8 +554,9 @@
   <div class="nav-inner">
     <a class="nav-logo" href="#"><span>Akky</span>Apps</a>
     <div class="nav-links">
-      <a class="nav-link" href="#apps">Apps</a>
-      <a class="nav-link" href="#kids">For Kids</a>
+      <a class="nav-link" href="#featured">おすすめ</a>
+      <a class="nav-link" href="#apps">アプリ</a>
+      <a class="nav-link" href="#kids">学び</a>
       <a class="nav-link" href="#news">News</a>
     </div>
   </div>
@@ -512,50 +564,22 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">iOS Developer</div>
-  <h1>Simple apps,<br><em>crafted with care.</em></h1>
-  <p>日常をちょっとだけ便利にする iOS アプリを開発しています。</p>
+  <div class="hero-badge">AkkyApps · iOS Apps</div>
+  <h1>話す。遊ぶ。暮らす。</h1>
+  <p>毎日のひと場面に、ちょうどいいアプリを。<br>シンプルで、使っていて気持ちいい。</p>
+  <span class="hero-en" lang="en">Simple apps, crafted with care.</span>
 </section>
 
-<!-- APPS -->
-<section class="apps-section" id="apps">
-  <div class="section-label">Apps</div>
-  <div class="apps-grid">
-
-    <!-- PictOrb -->
-    <div class="app-card">
-      <div class="app-header">
-        <div class="app-icon">
-          <img src="icons/pictorb.png" alt="PictOrb app icon">
-        </div>
-        <div class="app-meta">
-          <div class="app-name">PictOrb</div>
-          <div class="app-category">Photo &amp; Video · Orb Camera</div>
-        </div>
-      </div>
-      <p class="app-desc">景色の一部だけ、別世界へ。動かせるオーブで反転やピクセル化などの効果をその場で確かめ、写真や1080p動画に残せるiPhoneカメラです。</p>
-      <div class="app-footer">
-        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6807662203" target="_blank" rel="noopener" aria-label="Download PictOrb on the App Store">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
-          App Store
-        </a>
-      </div>
-    </div>
-
-    <!-- Prompter -->
-    <div class="app-card">
-      <div class="app-header">
-        <div class="app-icon-pair" aria-label="Prompter app icon, light and dark modes">
+<section class="apps-section featured-section" id="featured" aria-labelledby="featured-title">
+  <h2 class="section-label" id="featured-title">毎日のひと場面に</h2>
+  <div class="featured-grid"><article class="app-card featured-card featured-card--prompter">
+              <div class="app-icon-pair" aria-label="Prompter app icon, light and dark modes">
           <img class="mode-icon mode-icon--light" src="icons/prompter-light.png" alt="">
           <img class="mode-icon mode-icon--dark" src="icons/prompter-dark.png" alt="">
         </div>
-        <div class="app-meta">
-          <div class="app-name">Prompter</div>
-          <div class="app-category">Productivity · Teleprompter</div>
-        </div>
-      </div>
-      <p class="app-desc">原稿を管理し、読んだ位置を見失わずに話せるテレプロンプター。既読検知、目標時間、自動速度計算、ミラーモードに対応。</p>
-      <div class="app-footer">
+      <div class="featured-copy"><p class="featured-name">Prompter</p>
+      <h3>原稿を見失わない。</h3><p class="app-desc">発表や撮影で原稿を読むために。iPhone・iPad・Mac対応。買い切り・サブスクなし。</p></div>
+      <div class="featured-links">      <div class="app-footer">
         <a class="app-store-btn" href="https://apps.apple.com/us/app/prompter-script-reader/id6762259685" target="_blank" rel="noopener" aria-label="Download Prompter on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
           App Store
@@ -566,8 +590,40 @@
             <path d="M4.5 2.5H10.5V8.5M10.5 2.5L2.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-      </div>
-    </div>
+      </div></div>
+    </article>
+<article class="app-card featured-card featured-card--pictorb">
+              <div class="app-icon">
+          <img src="icons/pictorb.png" alt="PictOrb app icon">
+        </div>
+      <div class="featured-copy"><p class="featured-name">PictOrb</p>
+      <h3>いつもの景色で遊ぶ。</h3><p class="app-desc">動かせるオーブで、景色の一部を反転したり、ピクセルにしたり。写真や動画に残せるカメラです。</p></div>
+      <div class="featured-links">      <div class="app-footer">
+        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6807662203" target="_blank" rel="noopener" aria-label="Download PictOrb on the App Store">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
+          App Store
+        </a>
+      </div></div>
+    </article>
+<article class="app-card featured-card featured-card--pantry">
+              <div class="app-icon-pair" aria-label="Pantry app icon, light and dark modes">
+          <img class="mode-icon mode-icon--light" src="icons/pantry-light.png" alt="">
+          <img class="mode-icon mode-icon--dark" src="icons/pantry-dark.png" alt="">
+        </div>
+      <div class="featured-copy"><p class="featured-name">Pantry</p>
+      <h3>食品を忘れないために。</h3><p class="app-desc">声で登録して、期限を確認。買い物のあとから、使い切るまでを支える食品管理アプリ。</p></div>
+      <div class="featured-links">      <div class="app-footer">
+        <a class="app-store-btn" href="https://apple.co/4y0pEsF" target="_blank" rel="noopener" aria-label="Download Pantry on the App Store">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
+          App Store
+        </a>
+      </div></div>
+    </article></div>
+</section>
+<!-- APPS -->
+<section class="apps-section" id="apps">
+  <h2 class="section-label">ほかのアプリ</h2>
+  <div class="apps-grid">
 
     <!-- PTimer -->
     <div class="app-card">
@@ -591,7 +647,7 @@
     </div>
 
     <!-- PAlarm -->
-    <div class="app-card app-card--coming">
+    <div class="app-card">
       <div class="app-header">
         <div class="app-icon-pair" aria-label="PAlarm app icon, light and dark modes">
           <img class="mode-icon mode-icon--light" src="icons/palarm-light.png?v=20260827" alt="">
@@ -604,7 +660,10 @@
       </div>
       <p class="app-desc">次の予定をひと目で確認し、曜日指定・一度きり・次回だけの変更やスキップをまとめて扱えるアラームアプリ。</p>
       <div class="app-footer">
-        <span class="coming-soon-badge">Coming Soon</span>
+        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6800244742" target="_blank" rel="noopener" aria-label="Download PAlarm on the App Store">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
+          App Store
+        </a>
       </div>
     </div>
 
@@ -629,33 +688,12 @@
       </div>
     </div>
 
-    <!-- Pantry -->
-    <div class="app-card">
-      <div class="app-header">
-        <div class="app-icon-pair" aria-label="Pantry app icon, light and dark modes">
-          <img class="mode-icon mode-icon--light" src="icons/pantry-light.png" alt="">
-          <img class="mode-icon mode-icon--dark" src="icons/pantry-dark.png" alt="">
-        </div>
-        <div class="app-meta">
-          <div class="app-name">Pantry</div>
-          <div class="app-category">Food &amp; Drink · Expiry Tracker</div>
-        </div>
-      </div>
-      <p class="app-desc">食品を声で登録し、期限とカテゴリを自動整理。シェアPantryで招待した人と在庫・期限を共有し、期限切れとフードロスを減らします。</p>
-      <div class="app-footer">
-        <a class="app-store-btn" href="https://apple.co/4y0pEsF" target="_blank" rel="noopener" aria-label="Download Pantry on the App Store">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
-          App Store
-        </a>
-      </div>
-    </div>
-
   </div>
 </section>
 
 <!-- FOR KIDS -->
 <section class="apps-section" id="kids">
-  <div class="section-label">For Kids</div>
+  <h2 class="section-label">子どもの学び</h2>
   <div class="apps-grid">
 
     <!-- DivisionMaster4 -->
@@ -754,13 +792,20 @@
 </section>
 <!-- NEWS -->
 <section class="apps-section" id="news">
-  <div class="section-label">News</div>
+  <h2 class="section-label">News</h2>
   <div class="news-list">
     <div class="news-item">
       <div class="news-date">2026-09-08</div>
       <div class="news-content">
         <div class="news-title"><a href="https://apps.apple.com/jp/app/id6807662203" target="_blank" rel="noopener">PictOrb 1.0.0 を公開しました</a></div>
         <p class="news-text">初回リリース</p>
+      </div>
+    </div>
+    <div class="news-item">
+      <div class="news-date">2026-09-02</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/jp/app/id6800244742" target="_blank" rel="noopener">PAlarm 1.0.2 を公開しました</a></div>
+        <p class="news-text">バグ修正：Live Activityを利用したアラームが設定時刻より遅れて鳴る問題を修正し、祝日スキップ時の曜日表示を分かりやすく改善しました。</p>
       </div>
     </div>
     <div class="news-item">
@@ -869,6 +914,10 @@
 ・アカウントなしで、設定またはホーム画面のクイックアクションからご意見・ご要望を送信。返信用メールアドレスは任意で、キャンセル時や送信失敗時は入力内容を保持し、送信成功時にのみ消去します。</p>
       </div>
     </div>
+  </div>
+  <details class="news-history">
+    <summary>過去の更新履歴を表示（43件）</summary>
+    <div class="news-list news-list--archive">
     <div class="news-item">
       <div class="news-date">2026-08-02</div>
       <div class="news-content">
@@ -876,10 +925,6 @@
         <p class="news-text">漢字のお手本が、学校で習う字形に近くなりました。練習マス・お題・書き順・結果・採点の基準まで、同じ字形にそろえています。</p>
       </div>
     </div>
-  </div>
-  <details class="news-history">
-    <summary>過去の更新履歴を表示（42件）</summary>
-    <div class="news-list news-list--archive">
     <div class="news-item">
       <div class="news-date">2026-07-23</div>
       <div class="news-content">

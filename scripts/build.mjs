@@ -49,6 +49,15 @@ function validateData() {
 
 validateData();
 
+const featured = data.featured ?? [];
+const featuredIds = new Set(featured.map((item) => item.appId));
+if (featuredIds.size !== featured.length) throw new Error('Duplicate featured app');
+for (const item of featured) {
+  if (!data.apps.some((app) => app.id === item.appId && app.status === 'released')) {
+    throw new Error(`Featured app must be released: ${item.appId}`);
+  }
+}
+
 const APPLE_SVG =
   '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>';
 
@@ -162,7 +171,7 @@ function renderSection(section, apps) {
   return [
     `<!-- ${section.comment} -->`,
     `<section class="apps-section" id="${section.id}">`,
-    `  <div class="section-label">${esc(section.label)}</div>`,
+    `  <h2 class="section-label">${esc(section.label)}</h2>`,
     '  <div class="apps-grid">',
     "",
     cards,
@@ -214,7 +223,7 @@ function renderNewsSection(news) {
     "",
     "<!-- NEWS -->",
     '<section class="apps-section" id="news">',
-    '  <div class="section-label">News</div>',
+    '  <h2 class="section-label">News</h2>',
     '  <div class="news-list">',
     latestItems,
     "  </div>",
@@ -225,17 +234,31 @@ function renderNewsSection(news) {
 }
 
 // ── 組み立て ──
+const featuredHtml = featured.length ? `<section class="apps-section featured-section" id="featured" aria-labelledby="featured-title">
+  <h2 class="section-label" id="featured-title">毎日のひと場面に</h2>
+  <div class="featured-grid">${featured.map((item) => {
+    const app = data.apps.find((app) => app.id === item.appId);
+    return `<article class="app-card featured-card featured-card--${escAttr(app.id)}">
+      ${renderIcon(app)}
+      <div class="featured-copy"><p class="featured-name">${esc(app.name)}</p>
+      <h3>${esc(item.headline)}</h3><p class="app-desc">${esc(item.description)}</p></div>
+      <div class="featured-links">${renderFooter(app)}</div>
+    </article>`;
+  }).join('\n')}</div>
+</section>` : '';
 const sections = data.sections
-  .map((s) => renderSection(s, data.apps.filter((a) => a.section === s.id)))
+  .map((s) => renderSection(s, data.apps.filter((a) => a.section === s.id && !featuredIds.has(a.id))))
   .join("\n\n");
 
 const navLinks = [
-  ...data.sections.map((s) => `      <a class="nav-link" href="#${s.id}">${esc(s.label)}</a>`),
+  ...(featured.length ? ['      <a class="nav-link" href="#featured">おすすめ</a>'] : []),
+  ...data.sections.map((s) => `      <a class="nav-link" href="#${s.id}">${esc(s.id === 'apps' ? 'アプリ' : s.id === 'kids' ? '学び' : s.label)}</a>`),
   ...(data.news?.length ? ['      <a class="nav-link" href="#news">News</a>'] : []),
 ].join("\n");
 
 const html = template
   .replace("{{NAV_LINKS}}", navLinks)
+  .replace("{{FEATURED_SECTION}}", featuredHtml)
   .replace("{{APP_SECTIONS}}", sections)
   .replace("{{NEWS_SECTION}}", renderNewsSection(data.news));
 
