@@ -45,3 +45,5 @@ icons/                       # アプリアイコン PNG
 - トップを日本語の用途紹介へ変更し、Prompter/PictOrbを主役、Pantryをその直下に配置。既存のライト/ダークアイコンと角丸を維持。日本語はNoto Sans JP＋日本語システム書体、本文16px・行高1.75を基準とする。
 - PAlarmはApple公開Lookup（`https://itunes.apple.com/lookup?id=6800244742&country=jp`）でtrackId一致、1.0.2、無料、公開日時 `2026-09-01T18:56:30Z` を確認。Coming Soonを解消し、公式releaseNotesをNewsへ反映。無料終了日や将来価格はこの応答から確定できないため掲載しない。
 - ローカル検証：生成整合、10アプリ・19ロケールのカタログ整合、375px/1280pxのブラウザ表示、画像読み込み、10カード掲載を確認。Prompter英語製品ページ・各アプリ内向けAPIは変更しない。
+
+- PTimerのLPアイコンは2026-09-10に `PTimer/PTimer.icon` からactoolで正式レンダリングし、light/darkを目視選択して512pxへ縮小。元.iconは変更せず、LP画像の参照にキャッシュ更新用クエリを追加。

@@ -81,8 +81,8 @@
       "desc": "好きな音とフォントで集中と休憩を切り替えるポモドーロタイマー。静かな休憩はマインドフル時間として記録できます。",
       "icon": {
         "type": "pair",
-        "light": "icons/ptimer-light.png",
-        "dark": "icons/ptimer-dark.png"
+        "light": "icons/ptimer-light.png?v=20260910",
+        "dark": "icons/ptimer-dark.png?v=20260910"
       },
       "status": "released",
       "version": "1.3.2",
