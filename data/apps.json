@@ -3,17 +3,17 @@
     {
       "appId": "prompter",
       "headline": "原稿を見失わない。",
-      "description": "発表や撮影で原稿を読むために。iPhone・iPad・Mac対応。買い切り・サブスクなし。"
+      "description": "原稿管理と自動スクロールに加え、演出モードで区間ごとの速度・自動停止・メモを設定。iPhone・iPad・Mac対応。買い切り・サブスクなし。"
     },
     {
       "appId": "pictorb",
       "headline": "いつもの景色で遊ぶ。",
-      "description": "動かせるオーブで、景色の一部を反転したり、ピクセルにしたり。写真や動画に残せるカメラです。"
+      "description": "カメラや保存済みの写真・動画に、動かせるOrb・Cubeのレンズで効果を追加。原本を残して新しく保存。一部の効果は買い切りのPictOrb Proで利用できます。"
     },
     {
       "appId": "pantry",
       "headline": "食品を忘れないために。",
-      "description": "声で登録して、期限を確認。買い物のあとから、使い切るまでを支える食品管理アプリ。"
+      "description": "食品・調味料・買うものを声や手入力で管理。iPadの複数ウィンドウにも対応。AIレシピはiOS 27以降とAppleの対応環境が必要です。Pantry+は月額・年額・買い切りから選べます。"
     }
   ],
   "sections": [
@@ -31,7 +31,7 @@
   "newsSource": {
     "name": "App Store バージョン履歴",
     "territory": "jp",
-    "verifiedAt": "2026-08-27"
+    "verifiedAt": "2026-10-29"
   },
   "apps": [
     {
@@ -40,10 +40,13 @@
       "name": "PictOrb",
       "section": "apps",
       "category": "Photo & Video · Orb Camera",
-      "desc": "景色の一部だけ、別世界へ。動かせるオーブで反転やピクセル化などの効果をその場で確かめ、写真や1080p動画に残せるiPhoneカメラです。",
-      "icon": {"type": "single", "src": "icons/pictorb.png"},
+      "desc": "カメラや保存済みの写真・動画に、動かせるOrb・Cubeのレンズでエフェクトを追加。原本を残して新しく保存できます。一部の効果は買い切りのPictOrb Proで利用できます。",
+      "icon": {
+        "type": "single",
+        "src": "icons/pictorb.png"
+      },
       "status": "released",
-      "version": "1.0.0",
+      "version": "1.5.0",
       "appStoreUrl": "https://apps.apple.com/jp/app/id6807662203",
       "appStoreId": "6807662203"
     },
@@ -53,15 +56,15 @@
       "name": "Prompter",
       "section": "apps",
       "category": "Productivity · Teleprompter",
-      "desc": "原稿を管理し、読んだ位置を見失わずに話せるテレプロンプター。既読検知、目標時間、自動速度計算、ミラーモードに対応。",
+      "desc": "原稿管理、自動スクロール、目標時間に合わせたペース計算に対応。演出モードで区間ごとの速度・自動停止・メモも設定できます。既読検知は対応端末・対応言語で利用できます。",
       "icon": {
         "type": "pair",
         "light": "icons/prompter-light.png",
         "dark": "icons/prompter-dark.png"
       },
       "status": "released",
-      "version": "2.0.0",
-      "appStoreUrl": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685",
+      "version": "2.1.1",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6762259685",
       "links": [
         {
           "type": "manual",
@@ -85,8 +88,8 @@
         "dark": "icons/ptimer-dark.png?v=20260910"
       },
       "status": "released",
-      "version": "1.3.2",
-      "appStoreUrl": "https://apple.co/49oRu7f",
+      "version": "1.4.1",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6762259538",
       "appStoreId": "6762259538"
     },
     {
@@ -95,14 +98,14 @@
       "name": "PAlarm",
       "section": "apps",
       "category": "Utilities · Alarm",
-      "desc": "次の予定をひと目で確認し、曜日指定・一度きり・次回だけの変更やスキップをまとめて扱えるアラームアプリ。",
+      "desc": "次の1回だけ時刻変更やスキップができるアラーム。曜日指定、日本の祝日、雨・雪の予報によるスキップに対応。予報を取得できない回は通常どおり鳴らします。",
       "icon": {
         "type": "pair",
         "light": "icons/palarm-light.png?v=20260827",
         "dark": "icons/palarm-dark.png?v=20260827"
       },
       "status": "released",
-      "version": "1.0.2",
+      "version": "1.1.0",
       "appStoreId": "6800244742",
       "appStoreUrl": "https://apps.apple.com/jp/app/id6800244742"
     },
@@ -119,8 +122,8 @@
         "dark": "icons/phonoria-dark.png"
       },
       "status": "released",
-      "version": "2.1.0",
-      "appStoreUrl": "https://apple.co/4uDgsbM",
+      "version": "2.1.1",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6771007670",
       "appStoreId": "6771007670"
     },
     {
@@ -129,15 +132,15 @@
       "name": "Pantry",
       "section": "apps",
       "category": "Food & Drink · Expiry Tracker",
-      "desc": "食品を声で登録し、期限とカテゴリを自動整理。シェアPantryで招待した人と在庫・期限を共有し、期限切れとフードロスを減らします。",
+      "desc": "声や手入力で食品・調味料・買うものを管理し、期限通知やiCloud共有に対応。iPadでは複数ウィンドウも利用できます。AIレシピはiOS 27以降とAppleの対応環境が必要。Pantry+は月額・年額・買い切りから選べます。",
       "icon": {
         "type": "pair",
         "light": "icons/pantry-light.png",
         "dark": "icons/pantry-dark.png"
       },
       "status": "released",
-      "version": "1.3.0",
-      "appStoreUrl": "https://apple.co/4y0pEsF",
+      "version": "2.2.0",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6781726758",
       "appStoreId": "6781726758"
     },
     {
@@ -152,8 +155,8 @@
         "src": "icons/divisionmaster4.png"
       },
       "status": "released",
-      "version": "2.1.1",
-      "appStoreUrl": "https://apple.co/4fHlqiT",
+      "version": "2.1.3",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6767220587",
       "links": [
         {
           "type": "manual",
@@ -176,8 +179,8 @@
         "src": "icons/multiplicationmaster3.png"
       },
       "status": "released",
-      "version": "2.1.1",
-      "appStoreUrl": "https://apple.co/4dG6cIf",
+      "version": "2.1.3",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6771003502",
       "links": [
         {
           "type": "manual",
@@ -200,8 +203,8 @@
         "src": "icons/additionsubtractionmaster.png"
       },
       "status": "released",
-      "version": "2.1.1",
-      "appStoreUrl": "https://apple.co/4uL1MqU",
+      "version": "2.1.3",
+      "appStoreUrl": "https://apps.apple.com/jp/app/id6775512584",
       "appStoreId": "6775512584"
     },
     {
@@ -216,19 +219,91 @@
         "src": "icons/kanjiteineimaster-light.png"
       },
       "status": "released",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "appStoreUrl": "https://apps.apple.com/jp/app/id6792653923",
       "appStoreId": "6792653923"
     }
   ],
   "news": [
     {
-      "date": "2026-09-02",
+      "date": "2026-10-22",
+      "appId": "pantry",
+      "version": "2.2.0",
+      "title": "Pantry 2.2.0 を公開しました",
+      "body": "・iPadに対応しました。\n・対応するiPadとiPhone Duoで複数のウィンドウを開き、在庫・買うもの・レシピを別々に表示できます。\n・ウィンドウごとにタブやレシピの入力内容を保持します。\n・iPadのタブ配置とピン留めレシピボタンの移動、手入力ボタンの反応とキーボード入力時の表示を改善しました。",
+      "url": "https://apps.apple.com/jp/app/id6781726758"
+    },
+    {
+      "date": "2026-10-19",
+      "appId": "prompter",
+      "version": "2.1.1",
+      "title": "Prompter 2.1.1 を公開しました",
+      "body": "・スクロール速度を、原稿の言語に応じた読むペースの割合で表示するようにしました。日本語の100%は約290字／分です。\n・新規原稿の初期速度を100%に統一し、目標時間からの速度計算と、文字サイズ・画面回転後の再計算を改善しました。\n・演出モードの速度変更・自動停止の開始位置を調整し、取説のサンプル原稿を見直しました。\n・iPadやDuoの広い画面では、再生コントローラーを長押しして左右へ移動できます。",
+      "url": "https://apps.apple.com/jp/app/id6762259685"
+    },
+    {
+      "date": "2026-09-28",
       "appId": "palarm",
-      "version": "1.0.2",
-      "title": "PAlarm 1.0.2 を公開しました",
-      "body": "バグ修正：Live Activityを利用したアラームが設定時刻より遅れて鳴る問題を修正し、祝日スキップ時の曜日表示を分かりやすく改善しました。",
+      "version": "1.1.0",
+      "title": "PAlarm 1.1.0 を公開しました",
+      "body": "雨・雪の予報でアラームをスキップする機能を追加しました。\n・アラームごとに雨・雪の条件と予報地点を設定できます。\n・前日の指定時刻に、スキップ予定の通知を受け取れます。\n・Homeの各アラームに天気によるスキップの状態を表示します。\n・説明や操作案内の日本語を見直しました。",
       "url": "https://apps.apple.com/jp/app/id6800244742"
+    },
+    {
+      "date": "2026-09-27",
+      "appId": "kanjiteineimaster",
+      "version": "1.3.0",
+      "title": "漢字ていねいマスター 1.3.0 を公開しました",
+      "body": "「1画もどす」で最後に書いた1画だけを消せるようになりました。長押しすると全部消せます。読み方と操作案内の位置も調整しました。",
+      "url": "https://apps.apple.com/jp/app/id6792653923"
+    },
+    {
+      "date": "2026-09-25",
+      "appId": "pictorb",
+      "version": "1.5.0",
+      "title": "PictOrb 1.5.0 を公開しました",
+      "body": "4つの新しいエフェクトを追加しました。\n・Sepia／Mono：レンズの内側だけを色調変換。写真・動画で無料で使えます\n・Snow：雪が降り続け、底に積もり、端末の傾きやレンズの移動に反応します\n・Rain：降る雨と小さな水滴をレンズの内側に重ねます\n・Snow／Rainは既存のPictOrb Proで利用できます\n・横向き写真のエフェクト方向と、ロック画面カメラへの設定引き継ぎを改善しました",
+      "url": "https://apps.apple.com/jp/app/id6807662203"
+    },
+    {
+      "date": "2026-09-22",
+      "appId": "ptimer",
+      "version": "1.4.1",
+      "title": "PTimer 1.4.1 を公開しました",
+      "body": "設定からいつでもApp Storeのレビューを書けるようになりました。",
+      "url": "https://apps.apple.com/jp/app/id6762259538"
+    },
+    {
+      "date": "2026-09-22",
+      "appId": "phonoria",
+      "version": "2.1.1",
+      "title": "Phonoria 2.1.1 を公開しました",
+      "body": "設定からいつでもApp Storeのレビューを書けるようになりました。",
+      "url": "https://apps.apple.com/jp/app/id6771007670"
+    },
+    {
+      "date": "2026-09-22",
+      "appId": "divisionmaster4",
+      "version": "2.1.3",
+      "title": "わり算の筆算マスター 2.1.3 を公開しました",
+      "body": "設定からいつでもApp Storeのレビューを投稿できるようになりました。",
+      "url": "https://apps.apple.com/jp/app/id6767220587"
+    },
+    {
+      "date": "2026-09-22",
+      "appId": "multiplicationmaster3",
+      "version": "2.1.3",
+      "title": "かけ算の筆算マスター 2.1.3 を公開しました",
+      "body": "設定からいつでもApp Storeのレビューを投稿できるようになりました。",
+      "url": "https://apps.apple.com/jp/app/id6771003502"
+    },
+    {
+      "date": "2026-09-22",
+      "appId": "additionsubtractionmaster",
+      "version": "2.1.3",
+      "title": "たし算ひき算の筆算マスター 2.1.3 を公開しました",
+      "body": "設定からいつでもApp Storeのレビューを投稿できるようになりました。",
+      "url": "https://apps.apple.com/jp/app/id6775512584"
     },
     {
       "date": "2026-09-08",
@@ -239,12 +314,20 @@
       "url": "https://apps.apple.com/jp/app/id6807662203"
     },
     {
+      "date": "2026-09-02",
+      "appId": "palarm",
+      "version": "1.0.2",
+      "title": "PAlarm 1.0.2 を公開しました",
+      "body": "バグ修正：Live Activityを利用したアラームが設定時刻より遅れて鳴る問題を修正し、祝日スキップ時の曜日表示を分かりやすく改善しました。",
+      "url": "https://apps.apple.com/jp/app/id6800244742"
+    },
+    {
       "date": "2026-08-25",
       "appId": "pantry",
       "version": "1.3.0",
       "title": "Pantry 1.3.0 を公開しました",
       "body": "・シェアPantryを追加: Pantry+メンバーが共有在庫を作成し、招待した人と食品・期限を共有できます。招待された人は無料で参加できます\n・追加、編集、使用済み、復元、削除、一括操作、ウィジェットからの操作がiCloud経由で同期されます\n・設定またはホーム画面のクイックアクションから、任意の返信先メール付きでフィードバックを送れるようになりました\n・アプリアイコンを調整しました",
-      "url": "https://apple.co/4y0pEsF"
+      "url": "https://apps.apple.com/jp/app/id6781726758"
     },
     {
       "date": "2026-08-24",
@@ -252,7 +335,7 @@
       "version": "2.1.1",
       "title": "わり算の筆算マスター 2.1.1 を公開しました",
       "body": "ダークモードでも、アプリアイコンがライトモードと同じ見た目になるよう調整しました。",
-      "url": "https://apple.co/4fHlqiT"
+      "url": "https://apps.apple.com/jp/app/id6767220587"
     },
     {
       "date": "2026-08-24",
@@ -260,7 +343,7 @@
       "version": "2.1.1",
       "title": "かけ算の筆算マスター 2.1.1 を公開しました",
       "body": "ダークモードでも、アプリアイコンがライトモードと同じ見た目になるよう調整しました。",
-      "url": "https://apple.co/4dG6cIf"
+      "url": "https://apps.apple.com/jp/app/id6771003502"
     },
     {
       "date": "2026-08-24",
@@ -268,7 +351,7 @@
       "version": "2.1.1",
       "title": "たし算ひき算の筆算マスター 2.1.1 を公開しました",
       "body": "ダークモードでも、アプリアイコンがライトモードと同じ見た目になるよう調整しました。",
-      "url": "https://apple.co/4uL1MqU"
+      "url": "https://apps.apple.com/jp/app/id6775512584"
     },
     {
       "date": "2026-08-23",
@@ -276,7 +359,7 @@
       "version": "2.1.0",
       "title": "Phonoria 2.1.0 を公開しました",
       "body": "大きな音楽ライブラリを、より快適に。\n\n・大規模ライブラリの表示、検索、スクロールを改善\n・新しいデフォルトアプリアイコンを追加\n・アイコン／アクセントと Light/Dark の外観を独立して選択可能に\n・設定画面を開いたままでも外観がすぐ反映されるよう改善",
-      "url": "https://apple.co/4uDgsbM"
+      "url": "https://apps.apple.com/jp/app/id6771007670"
     },
     {
       "date": "2026-08-23",
@@ -292,7 +375,7 @@
       "version": "2.1.0",
       "title": "たし算ひき算の筆算マスター 2.1.0 を公開しました",
       "body": "このアップデートでiPhoneに対応しました。\n\n・筆算全体を見ながら、選んだ1マスを大きく表示して指で入力\n・答えを一の位から順に「次のマス」へ移動\n・認識した数字をテンキーですぐ確認・修正\n・iPadのApple Pencil直接入力はこれまでどおり利用可能\n\n手書きデータは外部に送信されません。",
-      "url": "https://apple.co/4uL1MqU"
+      "url": "https://apps.apple.com/jp/app/id6775512584"
     },
     {
       "date": "2026-08-17",
@@ -300,7 +383,7 @@
       "version": "2.1.0",
       "title": "わり算の筆算マスター 2.1.0 を公開しました",
       "body": "このアップデートでiPhoneに対応しました。\n\n・筆算全体を見ながら、選んだ1マスを大きく表示して指で入力\n・割り算の手順に沿って「次のマス」へ移動\n・縦長の途中式は、選択中のマスが見える位置へ自動スクロール\n・認識した数字をテンキーですぐ確認・修正\n・iPadのApple Pencil直接入力はこれまでどおり利用可能\n\n手書きデータは外部に送信されません。",
-      "url": "https://apple.co/4fHlqiT"
+      "url": "https://apps.apple.com/jp/app/id6767220587"
     },
     {
       "date": "2026-08-17",
@@ -308,7 +391,7 @@
       "version": "2.1.0",
       "title": "かけ算の筆算マスター 2.1.0 を公開しました",
       "body": "このアップデートでiPhoneに対応しました。\n\n・筆算全体を見ながら、選んだ1マスを大きく表示して指で入力\n・掛け算の手順に沿って「次のマス」へ移動\n・認識した数字をテンキーですぐ確認・修正\n・iPadのApple Pencil直接入力はこれまでどおり利用可能\n\n手書きデータは外部に送信されません。",
-      "url": "https://apple.co/4dG6cIf"
+      "url": "https://apps.apple.com/jp/app/id6771003502"
     },
     {
       "date": "2026-08-14",
@@ -316,7 +399,7 @@
       "version": "2.0.0",
       "title": "Prompter 2.0.0 を公開しました",
       "body": "原稿一覧を、より速く使いやすくしました。\n\n・iCloudの更新を待たずに、端末内の原稿をすぐ表示\n・タイトルと本文から原稿を検索\n・同期状況の表示と「今すぐ同期」を追加\n・新規原稿は保存した時だけ一覧へ追加\n・アカウントなしで、設定またはホーム画面のクイックアクションからご意見・ご要望を送信。返信用メールアドレスは任意で、キャンセル時や送信失敗時は入力内容を保持し、送信成功時にのみ消去します。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-08-02",
@@ -332,7 +415,7 @@
       "version": "1.9.0",
       "title": "Prompter 1.9.0 を公開しました",
       "body": "原稿リストウィジェットに中サイズを追加しました。\n\n中サイズでは1ページに3件の原稿を表示し、前後のページへ切り替えられます。大サイズ・特大サイズと同じく、原稿をタップするとPrompterですぐ開けます。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-07-23",
@@ -348,7 +431,7 @@
       "version": "2.0.0",
       "title": "わり算の筆算マスター 2.0.0 を公開しました",
       "body": "手書き認識が、このiPadに合わせて学習できるようになりました。\n\n・見直しで認識結果を直した数字だけを端末内で学習\n・設定から学習の停止、保存件数の確認、初期化が可能\n・ほかの筆算マスター2本へのリンクをホームに追加\n・アプリアイコンを刷新\n\n手書きデータは外部に送信されません。",
-      "url": "https://apple.co/4fHlqiT"
+      "url": "https://apps.apple.com/jp/app/id6767220587"
     },
     {
       "date": "2026-07-22",
@@ -356,7 +439,7 @@
       "version": "2.0.0",
       "title": "かけ算の筆算マスター 2.0.0 を公開しました",
       "body": "手書き認識が、このiPadに合わせて学習できるようになりました。\n\n・見直しで認識結果を直した数字だけを端末内で学習\n・設定から学習の停止、保存件数の確認、初期化が可能\n・ほかの筆算マスター2本へのリンクをホームに追加\n・アプリアイコンを刷新\n\n手書きデータは外部に送信されません。",
-      "url": "https://apple.co/4dG6cIf"
+      "url": "https://apps.apple.com/jp/app/id6771003502"
     },
     {
       "date": "2026-07-22",
@@ -364,7 +447,7 @@
       "version": "2.0.0",
       "title": "たし算ひき算の筆算マスター 2.0.0 を公開しました",
       "body": "手書き認識が、このiPadに合わせて学習できるようになりました。\n\n・見直しで認識結果を直した数字だけを端末内で学習\n・設定から学習の停止、保存件数の確認、初期化が可能\n・ほかの筆算マスター2本へのリンクをホームに追加\n・アプリアイコンを刷新\n\n手書きデータは外部に送信されません。",
-      "url": "https://apple.co/4uL1MqU"
+      "url": "https://apps.apple.com/jp/app/id6775512584"
     },
     {
       "date": "2026-07-14",
@@ -372,7 +455,7 @@
       "version": "1.8.0",
       "title": "Prompter 1.8.0 を公開しました",
       "body": "ホーム画面ウィジェットに対応しました。\n\n原稿リストをホーム画面に置き、タップするとその原稿をすぐ開けます。原稿の追加や変更はウィジェットに自動で反映されます。\n\niPhone / iPad の大サイズと、iPad の特大サイズに対応しています。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-07-09",
@@ -380,7 +463,7 @@
       "version": "1.7.0",
       "title": "Prompter 1.7.0 を公開しました",
       "body": "表示設定をプリセット登録できるようにしました。\n\nフォントサイズ、行間、スクロール速度の組み合わせを保存し、原稿や場面に合わせて使えます。\n\n右上メニューから原稿を新規作成できるようにし、テーマ選択も表示設定の中で扱いやすくしました。\n\nそのほか、他の端末から更新がない場合でも同期通知が表示されることがある問題を修正しました。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-07-09",
@@ -388,7 +471,7 @@
       "version": "1.3.2",
       "title": "PTimer 1.3.2 を公開しました",
       "body": "設定画面とサポートまわりを整えました。\n・任意のチップ機能をより安定して使えるようにしました\n・AkkyApps のほかのアプリや公式リンクを設定画面から見つけやすくしました\n・チップ購入後のメッセージを改善\n・細かな安定性を改善",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-07-08",
@@ -396,7 +479,7 @@
       "version": "2.0.1",
       "title": "Phonoria 2.0.1 を公開しました",
       "body": "設定画面とサポートまわりを整えました。\n\n・任意のチップ機能をより安定して使えるようにしました\n・AkkyApps のほかのアプリや公式リンクを設定画面から見つけやすくしました\n・チップ購入後の感謝メッセージを改善\n・細かな安定性を改善",
-      "url": "https://apple.co/4uDgsbM"
+      "url": "https://apps.apple.com/jp/app/id6771007670"
     },
     {
       "date": "2026-07-08",
@@ -404,7 +487,7 @@
       "version": "1.2.0",
       "title": "Pantry 1.2.0 を公開しました",
       "body": "・通知アクションを追加: 期限通知を長押しして、Pantryを開く／通知内の食品でレシピ検索を選べるようになりました\n・Siri、ショートカット、新しい「食品アクション」ウィジェットからレシピ検索を起動できるようになりました\n・中サイズ／大サイズの「食品アクション」ウィジェットを追加し、登録とレシピ検索をすばやく使えるようにしました\n・設定に、AkkyAppsの他のアプリへのリンクを追加しました",
-      "url": "https://apple.co/4y0pEsF"
+      "url": "https://apps.apple.com/jp/app/id6781726758"
     },
     {
       "date": "2026-07-04",
@@ -412,7 +495,7 @@
       "version": "1.1.0",
       "title": "Pantry 1.1.0 を公開しました",
       "body": "・期限通知を追加: 期限当日の朝と前日の夜に、対象の食品をまとめてお知らせします（設定で時刻の変更・オフが可能）\n・手動追加に対応: 左下の＋ボタンから、声を出せない場所でもキーボードで登録できるようになりました\n・ホーム画面の中サイズウィジェットで最大5件まで表示できるようになりました\n・「牛乳が15日まで」のような言い回しで「まで」が品名に混ざることがある問題を修正\n・「使用済み」操作時のリストの動きを滑らかにしました",
-      "url": "https://apple.co/4y0pEsF"
+      "url": "https://apps.apple.com/jp/app/id6781726758"
     },
     {
       "date": "2026-07-01",
@@ -420,7 +503,7 @@
       "version": "1.0.0",
       "title": "Pantry 1.0.0 を公開しました",
       "body": "初回リリース",
-      "url": "https://apple.co/4y0pEsF"
+      "url": "https://apps.apple.com/jp/app/id6781726758"
     },
     {
       "date": "2026-06-24",
@@ -428,7 +511,7 @@
       "version": "1.6.0",
       "title": "Prompter 1.6.0 を公開しました",
       "body": "ミラーモードを追加しました。\n\nハーフミラー式のプロンプターで読みやすいよう、設定から発表画面を鏡越しの表示に切り替えられます。端末は通常向きのまま置けます。\n\nそのほか、以前の原稿でも表示設定を安定して読み込めるようにしました。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-06-17",
@@ -436,7 +519,7 @@
       "version": "2.0.0",
       "title": "Phonoria 2.0.0 を公開しました",
       "body": "3つの音源を、ひとつのプレーヤーに。\n\n・ローカルの曲に加え、Apple Music ライブラリの曲を一覧に混ぜて表示・再生（再生には Apple Music の契約が必要）\n・iPhone の購入・取り込み曲（DRM フリー）も表示・再生（契約は不要）\n・アルバム / アーティスト / プレイリスト / 検索もすべてのソースに対応\n・細かな安定性の改善",
-      "url": "https://apple.co/4uDgsbM"
+      "url": "https://apps.apple.com/jp/app/id6771007670"
     },
     {
       "date": "2026-06-15",
@@ -444,7 +527,7 @@
       "version": "1.0.1",
       "title": "たし算ひき算の筆算マスター 1.0.1 を公開しました",
       "body": "軽微な修正を行いました。操作に慣れるまで「みなおしをしよう」の吹き出しを表示するようにしました。",
-      "url": "https://apple.co/4uL1MqU"
+      "url": "https://apps.apple.com/jp/app/id6775512584"
     },
     {
       "date": "2026-06-12",
@@ -452,7 +535,7 @@
       "version": "1.3.1",
       "title": "PTimer 1.3.1 を公開しました",
       "body": "不具合を修正しました。\n・Apple Watch でフェーズ名（WORKING など）が一部の言語で正しく表示されない問題を修正\n・サウンドで「なし」を選んでもデフォルトの音が鳴ってしまう問題を修正",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-06-12",
@@ -460,7 +543,7 @@
       "version": "1.1.0",
       "title": "Phonoria 1.1.0 を公開しました",
       "body": "再生と操作まわりを磨きました。\n\n・A-B ループの範囲を 0.1 秒単位で精密に指定できるようになりました\n・ナビゲーションバーを iOS 標準のデザインに刷新し、設定や追加などの操作ボタンを見やすく整えました\n・細かな安定性の改善",
-      "url": "https://apple.co/4uDgsbM"
+      "url": "https://apps.apple.com/jp/app/id6771007670"
     },
     {
       "date": "2026-06-11",
@@ -468,7 +551,7 @@
       "version": "1.5.1",
       "title": "Prompter 1.5.1 を公開しました",
       "body": "発表原稿の編集画面を改善しました。\n\nスワイプや画面外のタップで誤って編集画面が閉じないようにしました。閉じる操作は左上の×（未保存の変更がある場合は確認します）と右上のチェックに統一しています。\n\niPad と Mac では編集画面を全画面で表示し、より広い領域で原稿を編集できるようになりました。\n\nその他、細かな不具合を修正しました。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-06-08",
@@ -476,7 +559,7 @@
       "version": "1.5.0",
       "title": "Prompter 1.5.0 を公開しました",
       "body": "発表中の画面と速度調整を改善しました。\n\n目標時間を設定している場合、ヘッダーに経過時間と目標時間を並べて表示します。速度の自動計算は開始インターバルも含めて調整し、目標時間により近いペースでスクロールします。\n\niPhone の下部コントローラーは一段で見やすく整理しました。速度倍率ボタンは新規ユーザーでは初期非表示になり、必要な場合だけ設定から表示できます。\n\n設定画面も整理し、音声認識による「既読検知」と表示設定を見つけやすくしました。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-06-06",
@@ -484,7 +567,7 @@
       "version": "1.0.1",
       "title": "かけ算の筆算マスター 1.0.1 を公開しました",
       "body": "軽微な修正を行いました。操作に慣れるまで「みなおしをしよう」の吹き出しを表示するようにしました。",
-      "url": "https://apple.co/4dG6cIf"
+      "url": "https://apps.apple.com/jp/app/id6771003502"
     },
     {
       "date": "2026-06-05",
@@ -492,7 +575,7 @@
       "version": "1.0.2",
       "title": "わり算の筆算マスター 1.0.2 を公開しました",
       "body": "軽微な修正を行いました。操作に慣れるまで「みなおしをしよう」の吹き出しを表示するようにしました。",
-      "url": "https://apple.co/4fHlqiT"
+      "url": "https://apps.apple.com/jp/app/id6767220587"
     },
     {
       "date": "2026-06-04",
@@ -500,7 +583,7 @@
       "version": "1.3.0",
       "title": "PTimer 1.3.0 を公開しました",
       "body": "休憩をマインドフル時間として Apple ヘルスケアに記録できるようになりました（設定でオン/オフ）。\nPTimer を開いたまま、休憩中に画面を触ったり端末を持ち上げたりしなかった場合のみ記録されます。",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-06-03",
@@ -508,7 +591,7 @@
       "version": "1.0",
       "title": "たし算ひき算の筆算マスター 1.0 を公開しました",
       "body": "初回リリース",
-      "url": "https://apple.co/4uL1MqU"
+      "url": "https://apps.apple.com/jp/app/id6775512584"
     },
     {
       "date": "2026-05-31",
@@ -516,7 +599,7 @@
       "version": "1.4.0",
       "title": "Prompter 1.4.0 を公開しました",
       "body": "原稿をiCloudで同期できるようになりました。\n\n原稿一覧から「iCloudで同期」をオンにすると、複数の端末間で原稿を共有・編集できます。同じiCloudアカウントなら、新しい端末でも原稿を引き継げます。\n\nフォントサイズや読み上げ速度などの表示設定は、端末ごとに最適化できるよう、端末側にのみ保存されます。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-05-29",
@@ -524,7 +607,7 @@
       "version": "1.2.0",
       "title": "PTimer 1.2.0 を公開しました",
       "body": "「画面をスリープさせない」設定が省エネ表示中も正しく働くよう修正しました。\n省エネ表示では画面を実際に暗くして電池の消費を抑え、端末を持ち上げると元の明るさに戻ります。\nフェーズ切り替え時の表示もより自然になりました。",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-05-27",
@@ -532,7 +615,7 @@
       "version": "1.1.3",
       "title": "PTimer 1.1.3 を公開しました",
       "body": "8言語に対応しました（日本語・英語・ドイツ語・スペイン語・フランス語・韓国語・ポルトガル語・簡体字中国語）。\n細かな表示の調整もあわせて行いました。",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-05-23",
@@ -540,7 +623,7 @@
       "version": "1.3.0",
       "title": "Prompter 1.3.0 を公開しました",
       "body": "複数の原稿を保存して切り替えられるようになりました。\n\nプレゼン、スピーチ、動画撮影など、用途ごとに原稿を分けて管理できます。各原稿のタイトル、本文、表示設定、スクロール速度、目標時間、読み上げガイド設定も保存されます。\n\n音声認識で読んだ位置を検知し、読み終えた部分を自動でフェードする読み上げガイドも引き続き利用できます。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-05-22",
@@ -548,7 +631,7 @@
       "version": "1.1.2",
       "title": "PTimer 1.1.2 を公開しました",
       "body": "軽微な修正と表示の調整を行いました。",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-05-22",
@@ -556,7 +639,7 @@
       "version": "1.0",
       "title": "Phonoria 1.0 を公開しました",
       "body": "初回リリース",
-      "url": "https://apple.co/4uDgsbM"
+      "url": "https://apps.apple.com/jp/app/id6771007670"
     },
     {
       "date": "2026-05-20",
@@ -564,7 +647,7 @@
       "version": "1.0",
       "title": "かけ算の筆算マスター 1.0 を公開しました",
       "body": "初回リリース",
-      "url": "https://apple.co/4dG6cIf"
+      "url": "https://apps.apple.com/jp/app/id6771003502"
     },
     {
       "date": "2026-05-19",
@@ -572,7 +655,7 @@
       "version": "1.1.1",
       "title": "PTimer 1.1.1 を公開しました",
       "body": "コントロールセンター・ロック画面・アクションボタンに追加できる「コントロール」に対応しました（iOS 18 以降）。タップひとつで PTimer をすぐに開けます。",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-05-19",
@@ -580,7 +663,7 @@
       "version": "1.0.1",
       "title": "わり算の筆算マスター 1.0.1 を公開しました",
       "body": "iPadのウィンドウモードで幅を狭くしたときも、筆算レイアウトが崩れにくくなるよう調整しました。",
-      "url": "https://apple.co/4fHlqiT"
+      "url": "https://apps.apple.com/jp/app/id6767220587"
     },
     {
       "date": "2026-05-17",
@@ -588,7 +671,7 @@
       "version": "1.1.0",
       "title": "PTimer 1.1.0 を公開しました",
       "body": "カスタム音源をタイマー用に切り出し、名前変更・視聴停止・削除の取り消しができるようになりました。\nライブアクティビティとウィジェットの表示を見直し、完了時の「次へ」「終了」操作を分かりやすくしました。\niOS のタイマー画面、テーマ選択、操作ボタンの見た目と使い心地を整えました。\nApple Watch の設定同期と単独タイマーの流れを改善しました。",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-05-12",
@@ -596,7 +679,7 @@
       "version": "1.0.0",
       "title": "わり算の筆算マスター 1.0.0 を公開しました",
       "body": "初回リリース",
-      "url": "https://apple.co/4fHlqiT"
+      "url": "https://apps.apple.com/jp/app/id6767220587"
     },
     {
       "date": "2026-05-05",
@@ -604,7 +687,7 @@
       "version": "1.2.2",
       "title": "Prompter 1.2.2 を公開しました",
       "body": "複数の原稿を保存して切り替えられるようになりました。\n\nプレゼン、スピーチ、動画撮影など、用途ごとに原稿を分けて管理できます。各原稿のタイトル、本文、表示設定、スクロール速度、目標時間、読み上げガイド設定も保存されます。\n\n音声認識で読んだ位置を検知し、読み終えた部分を自動でフェードする読み上げガイドも引き続き利用できます。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-05-05",
@@ -612,7 +695,7 @@
       "version": "1.0.2",
       "title": "PTimer 1.0.2 を公開しました",
       "body": "設定画面でのサウンドファイル選択を修正しました。\nサウンドの視聴ボタンも、実際のタイマー音と同じくマナーモード中に鳴るようにしました。",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-04-30",
@@ -620,7 +703,7 @@
       "version": "1.2.1",
       "title": "Prompter 1.2.1 を公開しました",
       "body": "読み上げガイドを追加しました。対応デバイスでは、マイクで原稿の読み上げ位置を検知し、原稿の読み終えた部分が自然に薄く表示されます。\n新しいアプリアイコンを追加し、設定から選べるようにしました。\niPhone / iPad / Mac で使えるアプリとして、App Store テキストも整理しました。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-04-30",
@@ -628,7 +711,7 @@
       "version": "1.0.1",
       "title": "PTimer 1.0.1 を公開しました",
       "body": "Apple Watch 版をより確実に入手できるよう、配信まわりを調整しました。\n開発を応援する任意のチップにも対応しました。\n新しいアプリアイコンを追加し、設定から選べるようにしました。\nテーマカラーの初期設定を Green にしました。\n表示モードをシステム / ライト / ダークから選べるようにしました。\nライブアクティビティの完了時表示と操作を改善しました。",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-04-27",
@@ -636,7 +719,7 @@
       "version": "1.0",
       "title": "PTimer 1.0 を公開しました",
       "body": "初回リリース",
-      "url": "https://apple.co/49oRu7f"
+      "url": "https://apps.apple.com/jp/app/id6762259538"
     },
     {
       "date": "2026-04-25",
@@ -644,7 +727,7 @@
       "version": "1.1.1",
       "title": "Prompter 1.1.1 を公開しました",
       "body": "英語環境での表示を修正しました。テーマ名・スクロールステータス・カウントダウンが正しく英語で表示されます。日本語環境での VoiceOver 読み上げも改善しました。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-04-24",
@@ -652,7 +735,7 @@
       "version": "1.1",
       "title": "Prompter 1.1 を公開しました",
       "body": "Mac（Designed for iPad）でのマウスホイール・トラックパッドスクロールに対応しました。iPad + Magic Keyboard のトラックパッドにも対応。自動スクロール中の手動操作もより自然に動作します。",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     },
     {
       "date": "2026-04-20",
@@ -660,7 +743,7 @@
       "version": "1.0",
       "title": "Prompter 1.0 を公開しました",
       "body": "初回リリース",
-      "url": "https://apps.apple.com/us/app/prompter-script-reader/id6762259685"
+      "url": "https://apps.apple.com/jp/app/id6762259685"
     }
   ]
 }
