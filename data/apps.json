@@ -98,14 +98,14 @@
       "name": "PAlarm",
       "section": "apps",
       "category": "Utilities · Alarm",
-      "desc": "次の1回だけ時刻変更やスキップができるアラーム。曜日指定、日本の祝日、雨・雪の予報によるスキップに対応。予報を取得できない回は通常どおり鳴らします。",
+      "desc": "次の1回だけ時間調整やスキップができるアラーム。iPhoneの横向きやiPadでは、画面幅に応じて一覧と編集・設定を並べて表示。祝日や雨・雪の予報によるスキップにも対応し、予報を取得できない回は通常どおり鳴らします。",
       "icon": {
         "type": "pair",
         "light": "icons/palarm-light.png?v=20260827",
         "dark": "icons/palarm-dark.png?v=20260827"
       },
       "status": "released",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "appStoreId": "6800244742",
       "appStoreUrl": "https://apps.apple.com/jp/app/id6800244742"
     },
@@ -225,6 +225,14 @@
     }
   ],
   "news": [
+    {
+      "date": "2026-10-30",
+      "appId": "palarm",
+      "version": "1.2.0",
+      "title": "PAlarm 1.2.0 を公開しました",
+      "body": "アラームの一覧と編集画面を改善しました。\n・iPhoneの横向きやiPadで、画面の幅に応じて一覧と編集・設定を並べて表示します。\n・画面幅が変わったときの編集状態の保持、ボタンやカードの配置を改善しました。\n・操作結果のメッセージと、削除を取り消す操作を見直しました。\n・Widgetの表示と、天気でスキップした予定の読み上げを改善しました。",
+      "url": "https://apps.apple.com/jp/app/id6800244742"
+    },
     {
       "date": "2026-10-22",
       "appId": "pantry",
