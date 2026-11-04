@@ -508,19 +508,18 @@
     .hero h1 { color: #183e2e; }
     .hero p { max-width: 600px; line-height: 1.75; }
     .hero-en { display: block; margin-top: 14px; font-size: 16px; color: var(--text-3); }
-    .featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
-    .featured-card { padding: 36px; gap: 24px; border: 1px solid #e1e9e1; }
+    .featured-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+    .featured-card { padding: 28px; gap: 24px; border: 1px solid #e1e9e1; }
     .featured-card--prompter { background: #f1f7f0; }
     .featured-card--pictorb { background: #f0f3fa; border-color: #e0e5f0; }
-    .featured-card--pantry { grid-column: 1/-1; display: grid; grid-template-columns: 132px minmax(0,1fr) auto; align-items: center; background: #faf7ef; }
+    .featured-card--palarm { background: #faf7ef; }
     .featured-card .app-icon { width: 80px; height: 80px; border-radius: 18px; margin-bottom: 10px; }
     .featured-card .app-icon-pair { height: 90px; }
     .featured-card .mode-icon { width: 72px; height: 72px; border-radius: 16px; }
     .featured-name { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #42554c; }
-    .featured-copy h3 { font-size: clamp(24px,3vw,32px); font-weight: 700; line-height: 1.4; letter-spacing: 0; margin-bottom: 16px; }
+    .featured-copy h3 { font-size: 24px; font-weight: 700; line-height: 1.4; letter-spacing: 0; margin-bottom: 16px; }
     .featured-copy .app-desc { max-width: 36em; }
     .featured-links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: auto; }
-    .featured-card--pantry .featured-links { margin-top: 0; }
     .app-category, .footer-copy, .footer-links a { font-size: 14px; }
     .app-store-btn, .open-tool-btn, .news-text, .news-title, .news-history summary { font-size: 16px; }
     .open-tool-btn, .footer-links a, .news-history summary { color: var(--blue-dark); }
@@ -528,11 +527,12 @@
     p { line-break: strict; overflow-wrap: anywhere; }
     section[id] { scroll-margin-top: 80px; }
     a:focus-visible, summary:focus-visible { outline: 3px solid #2465b3; outline-offset: 4px; }
+    @media (max-width: 1000px) {
+      .featured-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 700px) {
       .featured-grid { grid-template-columns: 1fr; }
       .featured-card { padding: 28px; }
-      .featured-card--pantry { display: flex; }
-      .featured-card--pantry .featured-links { margin-top: auto; }
       .nav-inner { padding-inline: 16px; }
       .nav-links { gap: 14px; }
       .hero { padding: 48px 20px 40px; }

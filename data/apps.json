@@ -6,14 +6,14 @@
       "description": "原稿管理と自動スクロールに加え、演出モードで区間ごとの速度・自動停止・メモを設定。iPhone・iPad・Mac対応。買い切り・サブスクなし。"
     },
     {
-      "appId": "pictorb",
-      "headline": "いつもの景色で遊ぶ。",
-      "description": "カメラや保存済みの写真・動画に、動かせるOrb・Cubeのレンズで効果を追加。原本を残して新しく保存。一部の効果は買い切りのPictOrb Proで利用できます。"
+      "appId": "palarm",
+      "headline": "鳴る前に、予定に合わせる。",
+      "description": "次の1回だけ時間調整やスキップができるアラーム。祝日や雨・雪の予報によるスキップにも対応。iPhoneの横向きやiPadでは、一覧と編集・設定を並べて表示できます。"
     },
     {
-      "appId": "pantry",
-      "headline": "食品を忘れないために。",
-      "description": "食品・調味料・買うものを声や手入力で管理。iPadの複数ウィンドウにも対応。AIレシピはiOS 27以降とAppleの対応環境が必要です。Pantry+は月額・年額・買い切りから選べます。"
+      "appId": "pictorb",
+      "headline": "いつもの景色で遊ぶ。",
+      "description": "Original・Lens・Frameで、原画・部分加工・画面全体の加工を切り替え。動かせるOrb・長方形にもなるCubeで、写真や動画を自分らしく。一部の効果の保存には買い切りのPictOrb Proが必要です。"
     }
   ],
   "sections": [
@@ -40,13 +40,13 @@
       "name": "PictOrb",
       "section": "apps",
       "category": "Photo & Video · Orb Camera",
-      "desc": "カメラや保存済みの写真・動画に、動かせるOrb・Cubeのレンズでエフェクトを追加。原本を残して新しく保存できます。一部の効果は買い切りのPictOrb Proで利用できます。",
+      "desc": "カメラや保存済みの写真・動画を、Original・Lens・Frameで原画・部分加工・画面全体の加工に切り替え。透明なOrb・長方形にもなるCubeを動かして遊べます。Triangle Pixelなど一部の効果の保存には、買い切りのPictOrb Proが必要です。",
       "icon": {
         "type": "single",
         "src": "icons/pictorb.png"
       },
       "status": "released",
-      "version": "1.5.0",
+      "version": "2.0.0",
       "appStoreUrl": "https://apps.apple.com/jp/app/id6807662203",
       "appStoreId": "6807662203"
     },
@@ -95,7 +95,7 @@
     {
       "id": "palarm",
       "comment": "PAlarm",
-      "name": "PAlarm",
+      "name": "Pアラーム",
       "section": "apps",
       "category": "Utilities · Alarm",
       "desc": "次の1回だけ時間調整やスキップができるアラーム。iPhoneの横向きやiPadでは、画面幅に応じて一覧と編集・設定を並べて表示。祝日や雨・雪の予報によるスキップにも対応し、予報を取得できない回は通常どおり鳴らします。",
@@ -225,6 +225,14 @@
     }
   ],
   "news": [
+    {
+      "date": "2026-11-04",
+      "appId": "pictorb",
+      "version": "2.0.0",
+      "title": "PictOrb 2.0.0 を公開しました",
+      "body": "PictOrb 2.0\n・Original / Lens / Frameで、原画・部分加工・画面全体の加工を切り替えられるようになりました。\n・全レンズの透明なガラス表現と、動かしたときの滑らかな伸び・弾力を刷新しました。\n・Cubeの角をドラッグして長方形に変更できます。ピンチでの拡大・回転も使えます。\n・Triangle PixelをPictOrb Proに追加。Pixelの細かさ調整を改善し、スライダー終端で加工をOFFにできます。\n・iPhone DuoとiPadの画面サイズに応じた操作配置に対応しました。\n・ギャラリーから選んだ写真・動画を写真アプリからも削除できます。\n・保存名を日付と通し番号に統一し、共有時も元のファイル名を保持します。",
+      "url": "https://apps.apple.com/jp/app/id6807662203"
+    },
     {
       "date": "2026-10-30",
       "appId": "palarm",

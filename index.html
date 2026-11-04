@@ -508,19 +508,18 @@
     .hero h1 { color: #183e2e; }
     .hero p { max-width: 600px; line-height: 1.75; }
     .hero-en { display: block; margin-top: 14px; font-size: 16px; color: var(--text-3); }
-    .featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 24px; }
-    .featured-card { padding: 36px; gap: 24px; border: 1px solid #e1e9e1; }
+    .featured-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 24px; }
+    .featured-card { padding: 28px; gap: 24px; border: 1px solid #e1e9e1; }
     .featured-card--prompter { background: #f1f7f0; }
     .featured-card--pictorb { background: #f0f3fa; border-color: #e0e5f0; }
-    .featured-card--pantry { grid-column: 1/-1; display: grid; grid-template-columns: 132px minmax(0,1fr) auto; align-items: center; background: #faf7ef; }
+    .featured-card--palarm { background: #faf7ef; }
     .featured-card .app-icon { width: 80px; height: 80px; border-radius: 18px; margin-bottom: 10px; }
     .featured-card .app-icon-pair { height: 90px; }
     .featured-card .mode-icon { width: 72px; height: 72px; border-radius: 16px; }
     .featured-name { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: #42554c; }
-    .featured-copy h3 { font-size: clamp(24px,3vw,32px); font-weight: 700; line-height: 1.4; letter-spacing: 0; margin-bottom: 16px; }
+    .featured-copy h3 { font-size: 24px; font-weight: 700; line-height: 1.4; letter-spacing: 0; margin-bottom: 16px; }
     .featured-copy .app-desc { max-width: 36em; }
     .featured-links { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: auto; }
-    .featured-card--pantry .featured-links { margin-top: 0; }
     .app-category, .footer-copy, .footer-links a { font-size: 14px; }
     .app-store-btn, .open-tool-btn, .news-text, .news-title, .news-history summary { font-size: 16px; }
     .open-tool-btn, .footer-links a, .news-history summary { color: var(--blue-dark); }
@@ -528,11 +527,12 @@
     p { line-break: strict; overflow-wrap: anywhere; }
     section[id] { scroll-margin-top: 80px; }
     a:focus-visible, summary:focus-visible { outline: 3px solid #2465b3; outline-offset: 4px; }
+    @media (max-width: 1000px) {
+      .featured-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 700px) {
       .featured-grid { grid-template-columns: 1fr; }
       .featured-card { padding: 28px; }
-      .featured-card--pantry { display: flex; }
-      .featured-card--pantry .featured-links { margin-top: auto; }
       .nav-inner { padding-inline: 16px; }
       .nav-links { gap: 14px; }
       .hero { padding: 48px 20px 40px; }
@@ -594,28 +594,28 @@
         </a>
       </div></div>
     </article>
-<article class="app-card featured-card featured-card--pictorb">
-              <div class="app-icon">
-          <img src="icons/pictorb.png" alt="PictOrb app icon">
+<article class="app-card featured-card featured-card--palarm">
+              <div class="app-icon-pair" aria-label="Pアラーム app icon, light and dark modes">
+          <img class="mode-icon mode-icon--light" src="icons/palarm-light.png?v=20260827" alt="">
+          <img class="mode-icon mode-icon--dark" src="icons/palarm-dark.png?v=20260827" alt="">
         </div>
-      <div class="featured-copy"><p class="featured-name">PictOrb</p>
-      <h3>いつもの景色で遊ぶ。</h3><p class="app-desc">カメラや保存済みの写真・動画に、動かせるOrb・Cubeのレンズで効果を追加。原本を残して新しく保存。一部の効果は買い切りのPictOrb Proで利用できます。</p></div>
+      <div class="featured-copy"><p class="featured-name">Pアラーム</p>
+      <h3>鳴る前に、予定に合わせる。</h3><p class="app-desc">次の1回だけ時間調整やスキップができるアラーム。祝日や雨・雪の予報によるスキップにも対応。iPhoneの横向きやiPadでは、一覧と編集・設定を並べて表示できます。</p></div>
       <div class="featured-links">      <div class="app-footer">
-        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6807662203" target="_blank" rel="noopener" aria-label="Download PictOrb on the App Store">
+        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6800244742" target="_blank" rel="noopener" aria-label="Download Pアラーム on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
           App Store
         </a>
       </div></div>
     </article>
-<article class="app-card featured-card featured-card--pantry">
-              <div class="app-icon-pair" aria-label="Pantry app icon, light and dark modes">
-          <img class="mode-icon mode-icon--light" src="icons/pantry-light.png" alt="">
-          <img class="mode-icon mode-icon--dark" src="icons/pantry-dark.png" alt="">
+<article class="app-card featured-card featured-card--pictorb">
+              <div class="app-icon">
+          <img src="icons/pictorb.png" alt="PictOrb app icon">
         </div>
-      <div class="featured-copy"><p class="featured-name">Pantry</p>
-      <h3>食品を忘れないために。</h3><p class="app-desc">食品・調味料・買うものを声や手入力で管理。iPadの複数ウィンドウにも対応。AIレシピはiOS 27以降とAppleの対応環境が必要です。Pantry+は月額・年額・買い切りから選べます。</p></div>
+      <div class="featured-copy"><p class="featured-name">PictOrb</p>
+      <h3>いつもの景色で遊ぶ。</h3><p class="app-desc">Original・Lens・Frameで、原画・部分加工・画面全体の加工を切り替え。動かせるOrb・長方形にもなるCubeで、写真や動画を自分らしく。一部の効果の保存には買い切りのPictOrb Proが必要です。</p></div>
       <div class="featured-links">      <div class="app-footer">
-        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6781726758" target="_blank" rel="noopener" aria-label="Download Pantry on the App Store">
+        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6807662203" target="_blank" rel="noopener" aria-label="Download PictOrb on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
           App Store
         </a>
@@ -648,27 +648,6 @@
       </div>
     </div>
 
-    <!-- PAlarm -->
-    <div class="app-card">
-      <div class="app-header">
-        <div class="app-icon-pair" aria-label="PAlarm app icon, light and dark modes">
-          <img class="mode-icon mode-icon--light" src="icons/palarm-light.png?v=20260827" alt="">
-          <img class="mode-icon mode-icon--dark" src="icons/palarm-dark.png?v=20260827" alt="">
-        </div>
-        <div class="app-meta">
-          <div class="app-name">PAlarm</div>
-          <div class="app-category">Utilities · Alarm</div>
-        </div>
-      </div>
-      <p class="app-desc">次の1回だけ時間調整やスキップができるアラーム。iPhoneの横向きやiPadでは、画面幅に応じて一覧と編集・設定を並べて表示。祝日や雨・雪の予報によるスキップにも対応し、予報を取得できない回は通常どおり鳴らします。</p>
-      <div class="app-footer">
-        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6800244742" target="_blank" rel="noopener" aria-label="Download PAlarm on the App Store">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
-          App Store
-        </a>
-      </div>
-    </div>
-
     <!-- Phonoria -->
     <div class="app-card">
       <div class="app-header">
@@ -684,6 +663,27 @@
       <p class="app-desc">ローカル／クラウドの音源、Apple Musicライブラリ、購入・取り込み曲をひとつにまとめる音楽プレーヤー。大規模ライブラリの検索とA-Bループに対応。</p>
       <div class="app-footer">
         <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6771007670" target="_blank" rel="noopener" aria-label="Download Phonoria on the App Store">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
+          App Store
+        </a>
+      </div>
+    </div>
+
+    <!-- Pantry -->
+    <div class="app-card">
+      <div class="app-header">
+        <div class="app-icon-pair" aria-label="Pantry app icon, light and dark modes">
+          <img class="mode-icon mode-icon--light" src="icons/pantry-light.png" alt="">
+          <img class="mode-icon mode-icon--dark" src="icons/pantry-dark.png" alt="">
+        </div>
+        <div class="app-meta">
+          <div class="app-name">Pantry</div>
+          <div class="app-category">Food &amp; Drink · Expiry Tracker</div>
+        </div>
+      </div>
+      <p class="app-desc">声や手入力で食品・調味料・買うものを管理し、期限通知やiCloud共有に対応。iPadでは複数ウィンドウも利用できます。AIレシピはiOS 27以降とAppleの対応環境が必要。Pantry+は月額・年額・買い切りから選べます。</p>
+      <div class="app-footer">
+        <a class="app-store-btn" href="https://apps.apple.com/jp/app/id6781726758" target="_blank" rel="noopener" aria-label="Download Pantry on the App Store">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M11.182 8.39C11.17 6.888 12.42 6.16 12.48 6.12c-.7-1.023-1.793-1.162-2.18-1.18-0.93-.094-1.814.549-2.285.549-.47 0-1.197-.535-1.97-.52-1.014.015-1.95.59-2.473 1.5C2.47 8.13 3.23 10.91 4.24 12.44c.5.722 1.098 1.537 1.884 1.508.754-.03 1.04-.487 1.952-.487.912 0 1.172.487 1.972.472.813-.014 1.326-.74 1.82-1.463.576-.836.812-1.651.824-1.693-.018-.008-1.528-.587-1.51-2.387z" fill="white"/><path d="M9.773 3.48C10.198 2.97 10.48 2.27 10.4 1.56c-.596.025-1.323.4-1.75.904-.388.45-.726 1.172-.635 1.86.666.05 1.34-.34 1.758-.844z" fill="white"/></svg>
           App Store
         </a>
@@ -797,6 +797,20 @@
   <h2 class="section-label">News</h2>
   <div class="news-list">
     <div class="news-item">
+      <div class="news-date">2026-11-04</div>
+      <div class="news-content">
+        <div class="news-title"><a href="https://apps.apple.com/jp/app/id6807662203" target="_blank" rel="noopener">PictOrb 2.0.0 を公開しました</a></div>
+        <p class="news-text">PictOrb 2.0
+・Original / Lens / Frameで、原画・部分加工・画面全体の加工を切り替えられるようになりました。
+・全レンズの透明なガラス表現と、動かしたときの滑らかな伸び・弾力を刷新しました。
+・Cubeの角をドラッグして長方形に変更できます。ピンチでの拡大・回転も使えます。
+・Triangle PixelをPictOrb Proに追加。Pixelの細かさ調整を改善し、スライダー終端で加工をOFFにできます。
+・iPhone DuoとiPadの画面サイズに応じた操作配置に対応しました。
+・ギャラリーから選んだ写真・動画を写真アプリからも削除できます。
+・保存名を日付と通し番号に統一し、共有時も元のファイル名を保持します。</p>
+      </div>
+    </div>
+    <div class="news-item">
       <div class="news-date">2026-10-30</div>
       <div class="news-content">
         <div class="news-title"><a href="https://apps.apple.com/jp/app/id6800244742" target="_blank" rel="noopener">PAlarm 1.2.0 を公開しました</a></div>
@@ -892,6 +906,10 @@
         <p class="news-text">設定からいつでもApp Storeのレビューを投稿できるようになりました。</p>
       </div>
     </div>
+  </div>
+  <details class="news-history">
+    <summary>過去の更新履歴を表示（55件）</summary>
+    <div class="news-list news-list--archive">
     <div class="news-item">
       <div class="news-date">2026-09-08</div>
       <div class="news-content">
@@ -899,10 +917,6 @@
         <p class="news-text">初回リリース</p>
       </div>
     </div>
-  </div>
-  <details class="news-history">
-    <summary>過去の更新履歴を表示（54件）</summary>
-    <div class="news-list news-list--archive">
     <div class="news-item">
       <div class="news-date">2026-09-02</div>
       <div class="news-content">

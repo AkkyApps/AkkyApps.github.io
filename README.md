@@ -19,7 +19,7 @@ icons/                       # アプリアイコン PNG
 ## 更新手順
 
 1. `data/apps.json` を編集
-   - トップの主役は `featured[]` の順序・見出し・説明で管理。現在はPrompter、PictOrb、Pantry。アイコンとリンクは `apps[]` を共用し、通常一覧との重複を除外する
+   - トップの主役は `featured[]` の順序・見出し・説明で管理。現在はPrompter、Pアラーム、PictOrb。アイコンとリンクは `apps[]` を共用し、通常一覧との重複を除外する
    - アプリ追加/更新: `apps[]`(`section`: apps / kids / tools、`icon.type`: pair / single / silhouette / emoji)
    - リリース告知: 日本向けApp Storeの「バージョン履歴」と同じ内容を `news[]` に `{date, appId, version, title, body, url}` で保持
    - App Store側に説明がない初回版だけ、本文を `初回リリース` とする
