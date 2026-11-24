@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-08T14:10:00Z",
+  "generatedAt": "2026-11-24T08:47:13Z",
   "apps": [
     {
       "id": "pictorb",
@@ -829,6 +829,89 @@
         "hi": {
           "name": "漢字ていねいマスター",
           "description": "iPad पर साफ़-सुथरे ढंग से कांजी लिखने का अभ्यास"
+        }
+      }
+    },
+    {
+      "id": "netsudeta",
+      "order": 10,
+      "appStoreURL": "https://apps.apple.com/app/id6831968125",
+      "localizations": {
+        "ja": {
+          "name": "熱でた？",
+          "description": "自分と家族の体温を記録"
+        },
+        "en-US": {
+          "name": "NetsuDeta",
+          "description": "Log body temperature for yourself and your family"
+        },
+        "zh-Hans": {
+          "name": "NetsuDeta",
+          "description": "记录自己和家人的体温"
+        },
+        "zh-Hant": {
+          "name": "NetsuDeta",
+          "description": "記錄自己和家人的體溫"
+        },
+        "ko": {
+          "name": "NetsuDeta",
+          "description": "나와 가족의 체온을 기록하세요"
+        },
+        "es-ES": {
+          "name": "NetsuDeta",
+          "description": "Registra tu temperatura corporal y la de tu familia"
+        },
+        "fr-FR": {
+          "name": "NetsuDeta",
+          "description": "Notez votre température corporelle et celle de votre famille"
+        },
+        "de-DE": {
+          "name": "NetsuDeta",
+          "description": "Erfasse deine Körpertemperatur und die deiner Familie"
+        },
+        "it": {
+          "name": "NetsuDeta",
+          "description": "Registra la tua temperatura corporea e quella dei tuoi familiari"
+        },
+        "pt-BR": {
+          "name": "NetsuDeta",
+          "description": "Registre sua temperatura corporal e a da sua família"
+        },
+        "ru": {
+          "name": "NetsuDeta",
+          "description": "Записывайте температуру тела для себя и членов семьи"
+        },
+        "nl-NL": {
+          "name": "NetsuDeta",
+          "description": "Houd je eigen lichaamstemperatuur en die van je gezinsleden bij"
+        },
+        "pl": {
+          "name": "NetsuDeta",
+          "description": "Zapisuj pomiary temperatury ciała u siebie i członków rodziny"
+        },
+        "sv": {
+          "name": "NetsuDeta",
+          "description": "Registrera din och familjens kroppstemperatur"
+        },
+        "tr": {
+          "name": "NetsuDeta",
+          "description": "Kendi vücut sıcaklığınızı ve ailenizinkini kaydedin"
+        },
+        "th": {
+          "name": "NetsuDeta",
+          "description": "บันทึกอุณหภูมิร่างกายของคุณและคนในครอบครัว"
+        },
+        "vi": {
+          "name": "NetsuDeta",
+          "description": "Ghi lại thân nhiệt của bạn và người thân trong gia đình"
+        },
+        "id": {
+          "name": "NetsuDeta",
+          "description": "Catat suhu tubuh Anda dan anggota keluarga"
+        },
+        "hi": {
+          "name": "NetsuDeta",
+          "description": "अपने और अपने परिवार के सदस्यों के शरीर का तापमान दर्ज करें"
         }
       }
     }
